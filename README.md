@@ -6,19 +6,17 @@ Demo site: http:tbd/demos-php/index.php
 
 ## Overview
 
-This feature WET based Design templates for use with YesSoftware CodeCharge Studio 5.x
-to facilitate rapid web application development (ASP,.net,Coldfusion,JSP,Perl,php) 
-for use on IIS or Apache web server and almost any user database (MySQL, Oracle, DB2, MSSQL,...).
-Demo features a multi-language application framework making showcasing a database driven navigation menu and breadcrum.
-
+This features WET based Design templates for use with YesSoftware CodeCharge Studio 5.x (CCS).
+CCS facilitates Rapid web Application Development (RAD) in ASP, dotnet, Coldfusion, JSP, Perl,or php.
+Application can be generated to run on IIS or Apache web server, and to support a variety of databases (MySQL, Oracle, DB2, MSSQL, PostgreSQL,...).
 
 ##Benefits
 
-* Provides theme-gcwu-intranet as design template for existing and new projects.
-* All languages variables managed as external resource text file.
-* site menu, navigation menu and breadcrum are database driven.
-* One template file for all instance of languages and option selection (subsite,submenu,signin/signout)
-
+* Provides CodeChargeStudio developers with a clf compliant design template for existing and new projects, starting with the boew-intranet-theme.
+* Simplify interface language management by capturing all values in separate external resource text files.
+* Allow conversion of existing static page based web clf site into a consolidated data driven web application.
+* Truly separates look and feel format and content development for the web development team.
+* Reuse meta-data variable definition found in wet-boew-php sub-project to facilitate migration.
 
 * Conforms to WCAG 2.0 AA
 * Uses WAI-ARIA to enhance accessibility
@@ -26,18 +24,17 @@ Demo features a multi-language application framework making showcasing a databas
 
 ##Minimum Requirements
 
-* CodeCharge Studio 5.X
-* dist folder from WET 3.1 Core
+* Design Template: CodeCharge Studio 5.X
+* Demos: LAMP server (Linux-Apache-MySQL-Php). 
 
 ##Additional Notes
-Demo provided has been generated to run on LAMP solution. It has been generated to use php, MySQL, and Linux based www service.
-To obtain a demo using any other available languages (ASP,.net,Coldfusion,JSP,Perl), or database (DB2,Oracle, PostgreSQL,MSSQL)
-please obtain a copy Codecharge Studio or contact us. All the source files required to re-generate in any way required are provided in dist folder.
+* Demo environment tailoring
+**To run demos on Windows: Get CodechargeStudio, change output file format from Unix/Linux to Windows, and re-generate demo.
+**To run demos using ASP/dotnet/JSP/Coldfusion: Get CodechargeStudio, change Code Language, and re-generate demo.
+**To run demos with MSAccess/Oracle/MSSQL/DB2/PostgresSQL: Get CodechargeStudio, change database connections, and re-generate demo.
 
-Key differences with this demo and wet-boew-php subprojects are:
-* All user interface language variables are defined into external resource text file, one per language, for easier maintainance.
-* html and php code file are separated files, keeping a clear separation between presentation and code.
-* demo features a database driven menu and paramateric content strategy, whereby many look and feel theme can be defined and used dynamically. 
-* To the extent possible, theme variable names defined in the php subproject has been retained for compatiblity/transition.
-
-
+* wet-boew-codecharge vs wet-boew-php:
+** php is the default language of the demos provided. The design template is good for all languages.
+** All user interface language variables are defined in external resource text file, one per language, for easier maintenance.
+** html and php code files are completely separated (.php and .html), keeping a clear separation between presentation and code.
+* Theme variable names in wet-boew-php have been preserved in the design template, to facilitate compatiblity/transition efforts.
