@@ -28,10 +28,11 @@ Application can be generated to run on IIS or Apache web server, and to support 
 * Demos: LAMP server (Linux-Apache-MySQL-Php). 
 
 ##Additional Notes
+
 * Demo environment tailoring
-**To run demos on Windows: Get CodechargeStudio, change output file format from Unix/Linux to Windows, and re-generate demo.
-**To run demos using ASP/dotnet/JSP/Coldfusion: Get CodechargeStudio, change Code Language, and re-generate demo.
-**To run demos with MSAccess/Oracle/MSSQL/DB2/PostgresSQL: Get CodechargeStudio, change database connections, and re-generate demo.
+** To run demos on Windows: Get CodechargeStudio, change output file format from Unix/Linux to Windows, and re-generate demo.
+** To run demos using ASP/dotnet/JSP/Coldfusion: Get CodechargeStudio, change Code Language, and re-generate demo.
+** To run demos with MSAccess/Oracle/MSSQL/DB2/PostgresSQL: Get CodechargeStudio, change database connections, and re-generate demo.
 
 * wet-boew-codecharge vs wet-boew-php:
 ** php is the default language of the demos provided. The design template is good for all languages.
