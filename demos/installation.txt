@@ -1,12 +1,11 @@
 INTRODUCTION
 clf and cadms demo applications has been generated using CodechargeStudio, a great and cost-effective 
-Rapid Application Development (RAD) tool. Both demo has been generated with the following parameters:
+Rapid Application Development (RAD) tool. Each demo has been generated with the following selectable parameters:
 
 1. server code language: php;
 2. OS: Linux (lf)
 
-Only cadms demo requires MySQL on localhost, showcasing database driven menu, breadcrum and content viewing.
-
+Only cadms demo requires MySQL on localhost, showcasing database driven menu-breadcrum-content viewing.
 Other combinations of languages and databases are possible. See readme file in dist folder.
 
 CLF DEMO
@@ -38,6 +37,7 @@ security considerations before it can be operated safely.
 1. Ensure MySQL is only accessible on localhost where it is installed (no remote user);
 2. cadms/Common.php file contains application Access Control credentials and must be protected: 
 Ensure the file is only readeable by the application owner and never through the web server.
+
 
 
 
