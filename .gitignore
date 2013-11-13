@@ -1,1 +1,9 @@
-wet-boew/
+# OS generated files #
+._*
+.Trashes
+ethumbs.db
+Thumbs.db
+*.orig
+*.tmp
+*.log
+*.bak
