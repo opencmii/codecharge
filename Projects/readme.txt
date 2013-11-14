@@ -8,7 +8,7 @@ It showcases the use of a clf compliant Design Template to dynamically generate 
 view of the application. This is to say that the application could change its look and feel 
 from intranet theme (default provided) to any other existing clf or non-clf theme by a simple mouse click.
 
-This demo application, suitable for small business and government,and can be used to manage most common 
+This demo application, suitable for small business and government, can be used and extended to manage most common 
 data services in an organization (org,project,staff,contract,documents,items,forms,tasks,..)
 
 3. PROCEDURES
