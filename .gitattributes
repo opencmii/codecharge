@@ -1,4 +1,4 @@
-# Set default behaviour, in case users don't have core.autocrlf set.
+﻿# Set default behaviour, in case users don't have core.autocrlf set.
 * text=auto
 
 # These files are text and should be normalized (convert crlf => lf)
@@ -13,8 +13,8 @@
 *.txt     text
 
 # Extensions spécifiques à CodechargeStudio
-*.ccs
-*.ccp
+*.ccs 	text
+*.ccp	text
 
 
 # Images should be treated as binary.

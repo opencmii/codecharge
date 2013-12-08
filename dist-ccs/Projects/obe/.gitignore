@@ -1,6 +1,5 @@
 # OS generated files #
-dist/
-demos/
+dist/*
 ._*
 .Trashes
 ethumbs.db
