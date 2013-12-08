@@ -1,7 +1,7 @@
-# OS generated files #
-dist/
-demos/
+# CodeChargeStudio generated temp files
+~*.*
 ._*
+.*
 .Trashes
 ethumbs.db
 Thumbs.db
