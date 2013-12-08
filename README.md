@@ -48,5 +48,5 @@ To run demo on Windows: Get CodechargeStudio, open demo project file, change out
 
 To run demo using ASP/dotnet/JSP/Coldfusion: Get CodechargeStudio, open demo project file, change Code Language, and re-generate demo.
 
-To run demo with MSAccess/Oracle/MSSQL/DB2/PostgresSQL: Get CodechargeStudio, , open demo project file, change database connections, and re-generate demo. 
+To run demo with MSAccess/Oracle/MSSQL/DB2/PostgresSQL: Get CodechargeStudio, , open demo project file, change database connections, and re-generate demo. Conversion of schema from MySQL SQL syntax to the other SQL dbms may be required.
 
