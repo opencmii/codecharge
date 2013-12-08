@@ -8,10 +8,12 @@ Each demo application is generated with CodeCharge for a specific server OS, dat
 By default, demo provided will be ready for use on Linux Apache MySQL PHP (LAMP) infrastructure, being the most common and open source.
 Generation of the demo in any other combination requires (as a minimum) CodeChargeStudio application
 
-Demo Summary
+See each demo change.log for their features and bug fixes.
 
-basic-php-mysql	Initial demo application, LAMPP ready, that features:
-		a. Dynamic language selection: Each page supports many user interface languages;
-		b. Common Look and Feel intranet Design Template (default);
-		c. Database driven dynamic navigation menu selection (v 0.2)
+Each demo folder contains a set of files that has been generated directly from CCS build command.
+Each CCS demo project files are located in the root dist-ccs folder.
+
+
+
+
 		
