@@ -1,0 +1,175 @@
+<LldlCache allCatalogs="True" allSchemes="True" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False">
+  <catalog allSchemes="True" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="False">
+    <schema SCHEMA_NAME="information_schema" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="cadms" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="cdcol" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="internet" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="intranet" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True">
+      <table TABLE_NAME="absence_types" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="absence_type_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="absence_type_name" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="absence_type_is_paid" ORDINAL_POSITION="3" DATA_TYPE="16" CCS_TYPE="0" NATIVE_TYPE="System.SByte" NUMERIC_PRECISION="3" IS_NULLABLE="True" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="cache" TABLE_TYPE="5" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="cache_key" ORDINAL_POSITION="1" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="65" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="cache_expiration" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="cache_data" ORDINAL_POSITION="3" DATA_TYPE="130" CCS_TYPE="4" NATIVE_TYPE="System.String" MAX_LENGTH="4294967295" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="customers" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="customer_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="customer_name" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="customer_phone" ORDINAL_POSITION="3" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="customer_address" ORDINAL_POSITION="4" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="customer_city" ORDINAL_POSITION="5" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="customer_state" ORDINAL_POSITION="6" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="customer_zip" ORDINAL_POSITION="7" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="departments" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="department_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="department_name" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="department_manager_id" ORDINAL_POSITION="3" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="department_is_active" ORDINAL_POSITION="4" DATA_TYPE="11" CCS_TYPE="5" NATIVE_TYPE="System.UInt64" NUMERIC_PRECISION="1" IS_NULLABLE="True" DEFAULT_VALUE="b'1'" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="emp_times" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="emp_time_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="emp_id" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="emp_time_date" ORDINAL_POSITION="3" DATA_TYPE="135" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="emp_time_in" ORDINAL_POSITION="4" DATA_TYPE="135" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="emp_time_out" ORDINAL_POSITION="5" DATA_TYPE="135" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="emp_time_in2" ORDINAL_POSITION="6" DATA_TYPE="135" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="emp_time_out2" ORDINAL_POSITION="7" DATA_TYPE="135" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="emp_time_total" ORDINAL_POSITION="8" DATA_TYPE="5" CCS_TYPE="1" NATIVE_TYPE="System.Double" NUMERIC_PRECISION="22" IS_NULLABLE="True" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="emp_time_with_pay" ORDINAL_POSITION="9" DATA_TYPE="5" CCS_TYPE="1" NATIVE_TYPE="System.Double" NUMERIC_PRECISION="22" IS_NULLABLE="True" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="emp_time_no_pay" ORDINAL_POSITION="10" DATA_TYPE="5" CCS_TYPE="1" NATIVE_TYPE="System.Double" NUMERIC_PRECISION="22" IS_NULLABLE="True" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="absence_type_with_pay" ORDINAL_POSITION="11" DATA_TYPE="2" CCS_TYPE="0" NATIVE_TYPE="System.Int16" NUMERIC_PRECISION="5" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="absence_type_no_pay" ORDINAL_POSITION="12" DATA_TYPE="2" CCS_TYPE="0" NATIVE_TYPE="System.Int16" NUMERIC_PRECISION="5" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="employees" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="emp_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="emp_login" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="20" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="emp_password" ORDINAL_POSITION="3" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="20" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="emp_name" ORDINAL_POSITION="4" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="title" ORDINAL_POSITION="5" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="group_id" ORDINAL_POSITION="6" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="department_id" ORDINAL_POSITION="7" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="email" ORDINAL_POSITION="8" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="@company.com" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="picture" ORDINAL_POSITION="9" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="images/photos/" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="phone_home" ORDINAL_POSITION="10" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="phone_work" ORDINAL_POSITION="11" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="phone_cell" ORDINAL_POSITION="12" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="fax" ORDINAL_POSITION="13" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="city" ORDINAL_POSITION="14" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="zip" ORDINAL_POSITION="15" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="20" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="address" ORDINAL_POSITION="16" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="employee_is_active" ORDINAL_POSITION="17" DATA_TYPE="11" CCS_TYPE="5" NATIVE_TYPE="System.UInt64" NUMERIC_PRECISION="1" IS_NULLABLE="True" DEFAULT_VALUE="b'1'" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="files" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="file_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="file_name" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="file_owner_id" ORDINAL_POSITION="3" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="file_uploaded_by" ORDINAL_POSITION="4" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="file_date_uploaded" ORDINAL_POSITION="5" DATA_TYPE="135" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="file_status" ORDINAL_POSITION="6" DATA_TYPE="16" CCS_TYPE="0" NATIVE_TYPE="System.SByte" NUMERIC_PRECISION="3" IS_NULLABLE="True" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="groups" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="group_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="group_name" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="menu" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="menu_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="menu_name" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="menu_id_parent" ORDINAL_POSITION="3" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="menu_link" ORDINAL_POSITION="4" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="order_items" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="order_item_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="order_id" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="product_id" ORDINAL_POSITION="3" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="quantity" ORDINAL_POSITION="4" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="price" ORDINAL_POSITION="5" DATA_TYPE="5" CCS_TYPE="1" NATIVE_TYPE="System.Double" NUMERIC_PRECISION="22" IS_NULLABLE="True" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="orders" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="order_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="order_customer_id" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="order_date" ORDINAL_POSITION="3" DATA_TYPE="135" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="order_ship_address" ORDINAL_POSITION="4" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="order_ship_city" ORDINAL_POSITION="5" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="order_ship_state" ORDINAL_POSITION="6" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="order_ship_zip" ORDINAL_POSITION="7" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="person" TABLE_TYPE="5" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="emp_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="emp_login" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="20" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="emp_password" ORDINAL_POSITION="3" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="512" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="See Security Design Note for details" full="True" />
+        <column COLUMN_NAME="emp_name" ORDINAL_POSITION="4" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="title" ORDINAL_POSITION="5" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="group_id" ORDINAL_POSITION="6" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="department_id" ORDINAL_POSITION="7" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="email" ORDINAL_POSITION="8" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="@company.com" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="picture" ORDINAL_POSITION="9" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="images/photos/" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="phone_home" ORDINAL_POSITION="10" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="phone_work" ORDINAL_POSITION="11" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="phone_cell" ORDINAL_POSITION="12" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="fax" ORDINAL_POSITION="13" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="city" ORDINAL_POSITION="14" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="zip" ORDINAL_POSITION="15" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="20" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="address" ORDINAL_POSITION="16" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="employee_is_active" ORDINAL_POSITION="17" DATA_TYPE="11" CCS_TYPE="5" NATIVE_TYPE="System.UInt64" NUMERIC_PRECISION="1" IS_NULLABLE="True" DEFAULT_VALUE="b'1'" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <primaryKey PK_COLUMN_NAME="emp_id" KEY_NAME="PRIMARY" ENABLED="True" full="True" />
+      </table>
+      <table TABLE_NAME="priorities" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="priority_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="priority_name" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="30" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="products" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="product_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="product_name" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="255" IS_NULLABLE="False" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="price" ORDINAL_POSITION="3" DATA_TYPE="5" CCS_TYPE="1" NATIVE_TYPE="System.Double" NUMERIC_PRECISION="22" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="projects" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="project_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="project_name" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="project_is_active" ORDINAL_POSITION="3" DATA_TYPE="11" CCS_TYPE="5" NATIVE_TYPE="System.UInt64" NUMERIC_PRECISION="1" IS_NULLABLE="True" DEFAULT_VALUE="b'1'" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="projects_employees" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="project_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="emp_id" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="percent_allocation" ORDINAL_POSITION="3" DATA_TYPE="5" CCS_TYPE="1" NATIVE_TYPE="System.Double" NUMERIC_PRECISION="22" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="statuses" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="status_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="status_name" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="30" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="tasks" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="task_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="project_id" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="priority_id" ORDINAL_POSITION="3" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="status_id" ORDINAL_POSITION="4" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="type_id" ORDINAL_POSITION="5" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="task_name" ORDINAL_POSITION="6" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="task_desc" ORDINAL_POSITION="7" DATA_TYPE="130" CCS_TYPE="4" NATIVE_TYPE="System.String" MAX_LENGTH="4294967295" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="user_id_assign_by" ORDINAL_POSITION="8" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="user_id_assign_to" ORDINAL_POSITION="9" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="task_start_date" ORDINAL_POSITION="10" DATA_TYPE="135" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="task_finish_date" ORDINAL_POSITION="11" DATA_TYPE="135" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="types" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="type_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="type_name" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="user_events" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="user_event_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="priority_id" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="user_event_title" ORDINAL_POSITION="3" DATA_TYPE="130" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="user_event_date" ORDINAL_POSITION="4" DATA_TYPE="135" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="user_event_time" ORDINAL_POSITION="5" DATA_TYPE="135" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="user_event_desc" ORDINAL_POSITION="6" DATA_TYPE="130" CCS_TYPE="4" NATIVE_TYPE="System.String" MAX_LENGTH="4294967295" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
+      </table>
+    </schema>
+    <schema SCHEMA_NAME="mysql" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="performance_schema" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="phpmyadmin" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="test" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="webauth" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  </catalog>
+</LldlCache>

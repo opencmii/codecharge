@@ -1,0 +1,196 @@
+.timepicker {
+	font-size: 16px;
+	margin: 5px 0;
+	clear: both;
+    border: 1px solid #AAA/*	border: 1px solid #C0CBCE;*/;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    padding-top: 5px;
+}
+.timepicker table { 
+    width: 30%;
+    width: 25%;
+    margin: 0 auto;
+}
+.timepicker td {
+	vertical-align: middle;
+	width-: 10px;
+}
+.timepicker-input[type=text] {
+	border: 1px solid #999;
+	font-size: 16px;
+	width: 30px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.timepicker-up, .timepicker-down {
+	cursor: pointer;
+	border: 1px solid #999;
+	width: 30px;
+	height: 10px;
+}
+.timepicker-up {
+	border-bottom: 0;
+	border-radius: 6px 6px 0 0;
+	-moz-border-radius: 6px 6px 0 0;
+	-webkit-border-radius: 6px 6px 0 0;
+}
+.timepicker-down {
+	border-top: 0;
+	border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	-webkit-border-radius: 0 0 6px 6px;
+	/*margin-top: -2px;*/
+}
+.timepicker-up-bg, .timepicker-down-bg {
+    width: 10px;
+	height: 10px;
+	background-image: url(Images/jquery/ui-icons_default.png);
+}
+.timepicker-up-bg {
+	background-position: 0 -18px;       
+	margin-left: 8px;
+	margin-top: -2px;
+}
+.timepicker-down-bg {
+	background-position: -64px -18px;       
+	margin-left: 7px;
+	/*margin-top: 2px;*/
+}
+
+.timepicker-ampm, .timepicker-ampm-active {
+    border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	font-size: 11px;
+	margin: 2px;
+	padding: 3px;
+	cursor: pointer;
+}
+    
+.timepicker-ampm {
+	background: #BFDDEE;
+	background: linear-gradient(top, #FFFFFF 0, #7AB9DC 100%) no-repeat;
+	background: -webkit-linear-gradient(top, #FFFFFF 0, #7AB9DC 100%) no-repeat;
+	background: -moz-linear-gradient(top, #FFFFFF 0, #7AB9DC 100%) no-repeat;
+	background: -o-linear-gradient(top, #FFFFFF 0, #7AB9DC 100%) no-repeat;
+	background: -ms-linear-gradient(top, #FFFFFF 0, #7AB9DC 100%) no-repeat;
+	background: linear-gradient(top, #FFFFFF 0, #7AB9DC 100%) no-repeat;
+	border: 1px solid #BFDDEE;
+	color: #0D2430;
+	font-weight: bold;
+}
+.timepicker-ampm-active {
+	background: #B6BFC9 !important;
+	background: linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	background: -webkit-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	background: -moz-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	background: -o-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	background: -ms-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	background: linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	border: 1px solid #2f83b2 !important;
+	color: #FFFFFF !important;
+	font-weight: bold;
+}
+.timepicker-state-hover {
+	background: #C0CBCE;
+	background: linear-gradient(top, #D7DEE0 0, #A9B8BC 100%) no-repeat;
+	background: -webkit-linear-gradient(top, #D7DEE0 0, #A9B8BC 100%) no-repeat;
+	background: -moz-linear-gradient(top, #D7DEE0 0, #A9B8BC 100%) no-repeat;
+	background: -o-linear-gradient(top, #D7DEE0 0, #A9B8BC 100%) no-repeat;
+	background: -ms-linear-gradient(top, #D7DEE0 0, #A9B8BC 100%) no-repeat;
+	background: linear-gradient(top, #D7DEE0 0, #A9B8BC 100%) no-repeat;
+	font-weight: normal;
+}
+.timepicker-state-hover .timepicker-up-bg, .timepicker-state-hover .timepicker-down-bg {
+	background-image: url(Images/jquery/ui-icons_hover.png); 
+}
+
+/******************************  calendar week-end  ********************************/
+.ccs-calendar-week-end .ui-datepicker-week-end .ui-state-default {
+	background: #acc7d6;
+	background: linear-gradient(top, #e6e6e6 0, #6ea7c6 100%) no-repeat;
+	background: -webkit-linear-gradient(top, #e6e6e6 0, #6ea7c6 100%) no-repeat;
+	background: -moz-linear-gradient(top, #e6e6e6 0, #6ea7c6 100%) no-repeat;
+	background: -o-linear-gradient(top, #e6e6e6 0, #6ea7c6 100%) no-repeat;
+	background: -ms-linear-gradient(top, #e6e6e6 0, #6ea7c6 100%) no-repeat;
+	background: linear-gradient(top, #e6e6e6 0, #6ea7c6 100%) no-repeat;
+	border: 1px solid #BFDDEE;
+	color: #0f2937;
+}
+
+.ccs-calendar-week-end .ui-datepicker-week-end .ui-state-hover {
+	background: #82BEDE;
+	background: linear-gradient(top, #BFDDEE 0, #429CCD 100%) no-repeat;
+	background: -webkit-linear-gradient(top, #BFDDEE 0, #429CCD 100%) no-repeat;
+	background: -moz-linear-gradient(top, #BFDDEE 0, #429CCD 100%) no-repeat;
+	background: -o-linear-gradient(top, #BFDDEE 0, #429CCD 100%) no-repeat;
+	background: -ms-linear-gradient(top, #BFDDEE 0, #429CCD 100%) no-repeat;
+	background: linear-gradient(top, #BFDDEE 0, #429CCD 100%) no-repeat;
+	border: 1px solid #BFDDEE;
+	color: #0D2430;
+}
+
+/**********************************************************************************/
+.ccs-calendar .ui-state-default,
+.ccs-calendar .ui-widget-content .ui-state-default,
+.ccs-calendar .ui-widget-header .ui-state-default {
+	background: #BFDDEE;
+	background: linear-gradient(top, #FFFFFF 0, #7AB9DC 100%) no-repeat;
+	background: -webkit-linear-gradient(top, #FFFFFF 0, #7AB9DC 100%) no-repeat;
+	background: -moz-linear-gradient(top, #FFFFFF 0, #7AB9DC 100%) no-repeat;
+	background: -o-linear-gradient(top, #FFFFFF 0, #7AB9DC 100%) no-repeat;
+	background: -ms-linear-gradient(top, #FFFFFF 0, #7AB9DC 100%) no-repeat;
+	background: linear-gradient(top, #FFFFFF 0, #7AB9DC 100%) no-repeat;
+	border: 1px solid #BFDDEE;
+	color: #0D2430;
+}
+
+.ccs-calendar .ui-state-hover,
+.ccs-calendar .ui-widget-content .ui-state-hover,
+.ccs-calendar .ui-widget-header .ui-state-hover,
+.ccs-calendar .ui-state-focus,
+.ccs-calendar .ui-widget-content .ui-state-focus,
+.ccs-calendar .ui-widget-header .ui-state-focus {
+	background: #82BEDE;
+	background: linear-gradient(top, #BFDDEE 0, #429CCD 100%) no-repeat;
+	background: -webkit-linear-gradient(top, #BFDDEE 0, #429CCD 100%) no-repeat;
+	background: -moz-linear-gradient(top, #BFDDEE 0, #429CCD 100%) no-repeat;
+	background: -o-linear-gradient(top, #BFDDEE 0, #429CCD 100%) no-repeat;
+	background: -ms-linear-gradient(top, #BFDDEE 0, #429CCD 100%) no-repeat;
+	background: linear-gradient(top, #BFDDEE 0, #429CCD 100%) no-repeat;
+	border: 1px solid #BFDDEE;
+	color: #0D2430;
+}
+
+/* active */
+.ccs-calendar .ui-state-active,
+.ccs-calendar .ui-widget-content .ui-state-active,
+.ccs-calendar .ui-widget-header .ui-state-active {
+	background: #B6BFC9 !important;
+	background: linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	background: -webkit-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	background: -moz-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	background: -o-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	background: -ms-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	background: linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	border: 1px solid #2f83b2 !important;
+	color: #FFFFFF !important;
+}
+
+/* today */
+.ccs-calendar .ui-state-highlight,
+.ccs-calendar .ui-widget-content .ui-state-highlight,
+.ccs-calendar .ui-widget-header .ui-state-highlight {
+/*	background: #B6BFC9 !important;
+	background: linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	background: -webkit-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	background: -moz-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	background: -o-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	background: -ms-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;
+	background: linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat !important;*/
+	border: 1px solid #2f83b2 !important;
+/*	color: #FFFFFF !important;*/
+}

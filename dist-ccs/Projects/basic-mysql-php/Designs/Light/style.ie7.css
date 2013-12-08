@@ -1,0 +1,139 @@
+/* Created by Artisteer v4.1.0.60473 */
+
+.header, #header-bg, .layout-cell, .layout-wrapper, .footer, .nav, #hmenu-bg, .sheet,
+.clearfix {
+   zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).className="cleared");
+}
+
+.textblock > div {
+   display: block;
+   line-height: normal;
+   zoom: 1;
+}
+
+.header
+{
+   z-index: 1;
+   background-image: [headerimage];
+   background-position: [headerposition];
+}
+
+#header-bg 
+{
+   display: none;
+}
+
+.hmenu>li, .hmenu>li>a
+{
+   display: inline !important;
+   zoom: 1;
+   float: none !important;
+   vertical-align: top;
+}
+ul.hmenu, ul.hmenu ul {
+   zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).className="cleared");
+}
+#hmenu-bg 
+{
+   display: none;
+}
+
+ul.hmenu>li:first-child {
+   padding-right:1px;
+}
+ul.hmenu>li{
+   zoom:expression(runtimeStyle.zoom=1,insertBefore(document.createElement('span'),firstChild).className='hmenu-separator');
+}
+ul.hmenu>li>span.hmenu-separator
+{
+   position:absolute;
+   display: block;
+   top:0;
+   left:  -1px;
+   width: 1px;
+   height: 24px;
+   background: url('Images/menuseparator.png') center center no-repeat;
+}
+ul.hmenu>li:first-child>span.hmenu-separator
+{
+   display:none;
+}
+
+ul.hmenu ul{
+   background-color: #EFF2F5 !important;
+}
+
+.content-layout, .content-layout-row, .layout-cell 
+{
+   display: block;
+   zoom: 1;
+}
+.layout-cell
+{
+   position:relative;
+   float: left;
+   clear: right;
+}
+
+ul.vmenu, ul.vmenu ul, ul.vmenu li{
+   zoom: 1;
+}
+
+ul.vmenu ul 
+{
+}
+
+input[type="text"]
+{
+   margin:0 0 0 -3px;
+   zoom:expression(runtimeStyle.zoom = 1, parentNode.insertBefore(document.createElement('div'), this).appendChild(this));
+}
+
+* html input[type="text"]
+{
+   margin :0;
+}
+
+form.search>input[type="text"]
+{
+   margin:0 0 0 -3px;
+   zoom:expression(runtimeStyle.zoom = 1, parentNode.insertBefore(document.createElement('div'), this).appendChild(this));
+}
+
+form.search div>input[type="text"]
+{
+   width: 100%;
+}
+
+* html form.search>input[type="text"] 
+{
+   margin :0;
+}
+
+form.search
+{
+   zoom: 1;
+}
+.postheadericons span{
+   zoom: 1;
+}
+.postcontent {
+   height: 1%;
+}
+
+.postfootericons span{
+   zoom: 1;
+}
+.close-alt, .arrow-right-alt, .arrow-left-alt {
+   display: block !important;
+}
+.cw, .ccw {
+   display: none !important;
+}
+
+.content 
+{
+   width: auto;
+   float:none;
+}
+
