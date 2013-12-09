@@ -1,120 +1,217 @@
-<!DOCTYPE html>
-<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
-<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="en" class="no-js">
-<!--<![endif]-->
-<head>
-<meta charset="utf-8" />
-<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
-wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licence-fra.html -->
-<title>Welcome / Bienvenue</title>
+<?php
+//Error reporting @1-8F636958
+error_reporting(E_ALL | E_STRICT);
+//End Error reporting
 
-<link rel="shortcut icon" href="/wet-boew/dist/theme-gcwu-fegc/images/favicon.ico" />
-<meta name="dcterms.title" title="ISO639-2" content="Welcome" />
-<meta name="dcterms.language" title="ISO639-2" content="eng" />
-<meta name="dcterms.title" lang="fr" title="ISO639-2" content="Bienvenue" />
-<meta name="dcterms.language" lang="fr" title="ISO639-2" content="fra" />
-<meta name="dcterms.issued" title="W3CDTF" content="YYYY-MM-DD" />
-<meta name="dcterms.modified" title="W3CDTF" content="YYYY-MM-DD" />
+//Include Common Files @1-82042FB9
+define("RelativePath", ".");
+define("PathToCurrentPage", "/");
+define("FileName", "index.php");
+include_once(RelativePath . "/Common.php");
+include_once(RelativePath . "/Template.php");
+include_once(RelativePath . "/Sorter.php");
+include_once(RelativePath . "/Navigator.php");
+//End Include Common Files
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- custom page metadata start -->
-<meta name="description" content="English description / Description en anglais" />
-<meta name="description" lang="fr" content="French description / Description en français" />
-<meta name="dcterms.creator" content="English name of the content author / Nom en anglais de l'auteur du contenu" />
-<meta name="dcterms.creator" lang="fr" content="French name of the content author / Nom en français de l'auteur du contenu" />
-<!-- end of custom metadata -->
+//Master Page implementation @1-04BB7BEF
+include_once(RelativePath . "/Designs/theme-gcwu-intranet/MasterPage.php");
+//End Master Page implementation
 
-<!--[if lte IE 8]>
-<script src="/wet-boew/dist/js/jquery-ie.min.js"></script>
-<script src="/wet-boew/dist/js/polyfills/html5shiv-min.js"></script>
-<link rel="stylesheet" href="/wet-boew/dist/grids/css/util-ie-min.css" />
-<link rel="stylesheet" href="/wet-boew/dist/js/css/pe-ap-ie-min.css" />
-<link rel="stylesheet" href="/wet-boew/dist/theme-gcwu-fegc/css/theme-sp-pe-ie-min.css" />
-<noscript><link rel="stylesheet" href="/wet-boew/dist/theme-gcwu-fegc/css/theme-ns-ie-min.css" /></noscript>
-<![endif]-->
-<!--[if gt IE 8]><!-->
-<script src="/wet-boew/dist/js/jquery.min.js"></script>
-<link rel="stylesheet" href="/wet-boew/dist/grids/css/util-min.css" />
-<link rel="stylesheet" href="/wet-boew/dist/js/css/pe-ap-min.css" />
-<link rel="stylesheet" href="/wet-boew/dist/theme-gcwu-fegc/css/theme-sp-pe-min.css" />
-<noscript><link rel="stylesheet" href="/wet-boew/dist/theme-gcwu-fegc/css/theme-ns-min.css" /></noscript>
-<!--<![endif]-->
-<!-- CustomCSSStart -->
-<!-- CustomCSSEnd -->
-</head>
+//Include Page implementation @11-874ABD28
+include_once(RelativePath . "/top_menu.php");
+//End Include Page implementation
 
-<body><div id="wb-body">
+//Include Page implementation @8-EBA5EA16
+include_once(RelativePath . "/footer.php");
+//End Include Page implementation
 
-<div id="wb-head"><div id="wb-head-in"><header>
+//Include Page implementation @22-E800DB2A
+include_once(RelativePath . "/site_menu.php");
+//End Include Page implementation
 
-<!-- HeaderStart -->
-<div id="gcwu-sig" class="span-8"><div id="gcwu-sig-in"><object data="/wet-boew/dist/theme-gcwu-fegc/images/sig-blk-eng.svg" role="img" tabindex="-1" aria-label="Government of Canada" type="image/svg+xml"><img src="/wet-boew/dist/theme-gcwu-fegc/images/sig-eng-alt.png" class="image-actual" alt="Government of Canada" /></object></div></div>
-<!-- HeaderEnd -->
+//Include Page implementation @19-72A92FB7
+include_once(RelativePath . "/breadcrum.php");
+//End Include Page implementation
 
-</header></div></div>
-<div id="wb-core"><div id="wb-core-in" class="equalize">
-<div id="wb-main" role="main"><div id="wb-main-in">
-<!-- MainContentStart -->
-<h1 id="wb-cont">Welcome / <span lang="fr">Bienvenue</span></h1>
+//Initialize Page @1-D143BE23
+// Variables
+$FileName = "";
+$Redirect = "";
+$Tpl = "";
+$TemplateFileName = "";
+$BlockToParse = "";
+$ComponentName = "";
+$Attributes = "";
+$PathToCurrentMasterPage = "";
+$TemplatePathValue = "";
 
-<div id="gcwu-title">
-<div id="gcwu-title-left" class="span-3 margin-bottom-none">CodeChargeStudio Variant</div>
-<div class="span-2 margin-bottom-none"></div>
-<div id="gcwu-title-right" class="span-3 margin-bottom-none">Variante pour CodeChargeStudio</div>
-<div class="clear"></div>
-</div>
-<!-- Main content start -->
-<!-- no content needed for splash page -->
-<!-- MainContentEnd -->
+// Events;
+$CCSEvents = "";
+$CCSEventResult = "";
+$MasterPage = null;
+$TemplateSource = "";
 
-<div id="gcwu-lang"><nav role="navigation"><h2>Language selection links / <span lang="fr">Liens de sélection de langue</span></h2>
-<div class="span-6 grid-12 margin-bottom-none">
-<ul id="gcwu-ef-lang">
-<li><div class="span-2 row-start margin-bottom-none"><a href="/demos-php/index-eng.php">English</a></div></li>
+$FileName = FileName;
+$Redirect = "";
+$TemplateFileName = "index.html";
+$BlockToParse = "main";
+$TemplateEncoding = "UTF-8";
+$ContentType = "text/html";
+$PathToRoot = "./";
+$PathToRootOpt = "";
+$Scripts = "|";
+$Charset = $Charset ? $Charset : "utf-8";
+//End Initialize Page
 
-<li lang="fr"><div class="span-2 row-end margin-bottom-none"><a href="/demos-php/index-fra.php">Français</a></div></li>
-</ul>
-</div>
-<div id="gcwu-wmms" class="span-2 margin-bottom-none"><div id="gcwu-wmms-in"><object data="/wet-boew/dist/theme-gcwu-fegc/images/wmms-blk.svg" role="img" tabindex="-1" aria-label="Symbol of the Government of Canada" type="image/svg+xml"><img src="/wet-boew/dist/theme-gcwu-fegc/images/wmms.png" alt="Symbol of the Government of Canada" /></object></div></div>
-<div class="clear"></div>
-</nav></div>
-<div class="clear"></div>
-</div></div>
-</div></div>
+//Before Initialize @1-E870CEBC
+$CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
+//End Before Initialize
 
-<div id="wb-foot"><div id="wb-foot-in"><footer><h2 id="wb-nav">Footer</h2>
-<!-- FooterStart -->
-<div id="gcwu-tc" class="span-8">
-<div class="span-6 grid-12 margin-bottom-none margin-top-none row-start row-end">
-<ul id="gcwu-ef-tc">
-<li><div class="span-2 row-start"><a href="#" rel="license">Terms and conditions</a></div></li>
-<li lang="fr"><div class="span-2 row-end"><a href="#" rel="license">Avis</a></div></li>
-</ul>
-</div>
+//Initialize Objects @1-BB8B8F7E
+$Attributes = new clsAttributes("page:");
+$Attributes->SetValue("pathToRoot", $PathToRoot);
+$MainPage->Attributes = & $Attributes;
 
-<div class="clear"></div>
-</div>
-<!-- FooterEnd --></footer>
+// Controls
+$MasterPage = new clsMasterPage("/Designs/" . $CCProjectDesign . "/", "MasterPage", $MainPage);
+$MasterPage->Attributes = $Attributes;
+$MasterPage->Initialize();
+$Head = new clsPanel("Head", $MainPage);
+$Head->PlaceholderName = "Head";
+$TopMenu = new clsPanel("TopMenu", $MainPage);
+$TopMenu->PlaceholderName = "gcwu_gcnb";
+$gcwu_gcnb = new clstop_menu("", "gcwu_gcnb", $MainPage);
+$gcwu_gcnb->Initialize();
+$CustomCSS = new clsPanel("CustomCSS", $MainPage);
+$CustomCSS->PlaceholderName = "CustomCSS";
+$CustomScripts = new clsPanel("CustomScripts", $MainPage);
+$CustomScripts->PlaceholderName = "CustomScripts";
+$Footer = new clsPanel("Footer", $MainPage);
+$Footer->PlaceholderName = "Footer";
+$gcwu_footer = new clsfooter("", "gcwu_footer", $MainPage);
+$gcwu_footer->Initialize();
+$Content = new clsPanel("Content", $MainPage);
+$Content->PlaceholderName = "Content";
+$SiteMenu = new clsPanel("SiteMenu", $MainPage);
+$gcwu_psnb = new clssite_menu("", "gcwu_psnb", $MainPage);
+$gcwu_psnb->Initialize();
+$Breadcrum = new clsPanel("Breadcrum", $MainPage);
+$Breadcrum->PlaceholderName = "cgwu_breadcrum";
+$gcwu_breadcrum = new clsbreadcrum("", "gcwu_breadcrum", $MainPage);
+$gcwu_breadcrum->Initialize();
+$NavMenu = new clsPanel("NavMenu", $MainPage);
+$MainPage->Head = & $Head;
+$MainPage->TopMenu = & $TopMenu;
+$MainPage->gcwu_gcnb = & $gcwu_gcnb;
+$MainPage->CustomCSS = & $CustomCSS;
+$MainPage->CustomScripts = & $CustomScripts;
+$MainPage->Footer = & $Footer;
+$MainPage->gcwu_footer = & $gcwu_footer;
+$MainPage->Content = & $Content;
+$MainPage->SiteMenu = & $SiteMenu;
+$MainPage->gcwu_psnb = & $gcwu_psnb;
+$MainPage->Breadcrum = & $Breadcrum;
+$MainPage->gcwu_breadcrum = & $gcwu_breadcrum;
+$MainPage->NavMenu = & $NavMenu;
+$TopMenu->AddComponent("gcwu_gcnb", $gcwu_gcnb);
+$Footer->AddComponent("gcwu_footer", $gcwu_footer);
+$SiteMenu->AddComponent("gcwu_psnb", $gcwu_psnb);
+$Breadcrum->AddComponent("gcwu_breadcrum", $gcwu_breadcrum);
+$ScriptIncludes = "";
+$SList = explode("|", $Scripts);
+foreach ($SList as $Script) {
+    if ($Script != "") $ScriptIncludes = $ScriptIncludes . "<script src=\"" . $PathToRoot . $Script . "\" type=\"text/javascript\"></script>\n";
+}
+$Attributes->SetValue("scriptIncludes", $ScriptIncludes);
 
-</div></div></div>
+$CCSEventResult = CCGetEvent($CCSEvents, "AfterInitialize", $MainPage);
 
-<!-- ScriptsStart -->
-<script src="/wet-boew/dist/js/settings.js"></script>
-<!--[if lte IE 8]>
-<script src="/wet-boew/dist/theme-gcwu-fegc/js/theme-ie-min.js"></script>
-<script src="/wet-boew/dist/js/pe-ap-ie-min.js"></script>
-<script src="/wet-boew/dist/js/jquerymobile/jquery.mobile-ie.min.js"></script>
-<![endif]-->
-<!--[if gt IE 8]><!-->
-<script src="/wet-boew/dist/theme-gcwu-fegc/js/theme-min.js"></script>
-<script src="/wet-boew/dist/js/pe-ap-min.js"></script>
-<script src="/wet-boew/dist/js/jquerymobile/jquery.mobile.min.js"></script>
-<!--<![endif]-->
-<!-- ScriptsEnd -->
+if ($Charset) {
+    header("Content-Type: " . $ContentType . "; charset=" . $Charset);
+} else {
+    header("Content-Type: " . $ContentType);
+}
+//End Initialize Objects
 
-<!-- CustomScriptsStart -->
-<!-- CustomScriptsEnd -->
-</body>
-</html>
+//Initialize HTML Template @1-577E43E0
+$CCSEventResult = CCGetEvent($CCSEvents, "OnInitializeView", $MainPage);
+$Tpl = new clsTemplate($FileEncoding, $TemplateEncoding);
+if (strlen($TemplateSource)) {
+    $Tpl->LoadTemplateFromStr($TemplateSource, $BlockToParse, "UTF-8", "replace");
+} else {
+    $Tpl->LoadTemplate(PathToCurrentPage . $TemplateFileName, $BlockToParse, "UTF-8", "replace");
+}
+$Tpl->SetVar("CCS_PathToRoot", $PathToRoot);
+$Tpl->SetVar("CCS_PathToMasterPage", RelativePath . $PathToCurrentMasterPage);
+$Tpl->block_path = "/$BlockToParse";
+$CCSEventResult = CCGetEvent($CCSEvents, "BeforeShow", $MainPage);
+$Attributes->SetValue("pathToRoot", "");
+$Attributes->Show();
+//End Initialize HTML Template
+
+//Execute Components @1-9D2D491A
+$MasterPage->Operations();
+$gcwu_breadcrum->Operations();
+$gcwu_psnb->Operations();
+$gcwu_footer->Operations();
+$gcwu_gcnb->Operations();
+//End Execute Components
+
+//Go to destination page @1-0D9FD341
+if($Redirect)
+{
+    $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
+    header("Location: " . $Redirect);
+    $gcwu_gcnb->Class_Terminate();
+    unset($gcwu_gcnb);
+    $gcwu_footer->Class_Terminate();
+    unset($gcwu_footer);
+    $gcwu_psnb->Class_Terminate();
+    unset($gcwu_psnb);
+    $gcwu_breadcrum->Class_Terminate();
+    unset($gcwu_breadcrum);
+    unset($Tpl);
+    exit;
+}
+//End Go to destination page
+
+//Show Page @1-8F4E32EB
+$Head->Show();
+$TopMenu->Show();
+$CustomCSS->Show();
+$CustomScripts->Show();
+$Footer->Show();
+$Content->Show();
+$SiteMenu->Show();
+$Breadcrum->Show();
+$NavMenu->Show();
+$MasterPage->Tpl->SetVar("Head", $Tpl->GetVar("Panel Head"));
+$MasterPage->Tpl->SetVar("gcwu_gcnb", $Tpl->GetVar("Panel TopMenu"));
+$MasterPage->Tpl->SetVar("CustomCSS", $Tpl->GetVar("Panel CustomCSS"));
+$MasterPage->Tpl->SetVar("CustomScripts", $Tpl->GetVar("Panel CustomScripts"));
+$MasterPage->Tpl->SetVar("Footer", $Tpl->GetVar("Panel Footer"));
+$MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
+$MasterPage->Tpl->SetVar("cgwu_breadcrum", $Tpl->GetVar("Panel Breadcrum"));
+$MasterPage->Show();
+if (!isset($main_block)) $main_block = $MasterPage->HTML;
+$main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
+$CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
+if ($CCSEventResult) echo $main_block;
+//End Show Page
+
+//Unload Page @1-7DBA7B27
+$CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
+unset($MasterPage);
+$gcwu_gcnb->Class_Terminate();
+unset($gcwu_gcnb);
+$gcwu_footer->Class_Terminate();
+unset($gcwu_footer);
+$gcwu_psnb->Class_Terminate();
+unset($gcwu_psnb);
+$gcwu_breadcrum->Class_Terminate();
+unset($gcwu_breadcrum);
+unset($Tpl);
+//End Unload Page
+
+
+?>

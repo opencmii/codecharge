@@ -24,7 +24,7 @@ $CCConnectionSettings = array (
 );
 //End Connection Settings
 
-//Initialize Common Variables @0-31235005
+//Initialize Common Variables @0-31C97E50
 $PHPVersion = explode(".",  phpversion());
 if (($PHPVersion[0] < 4) || ($PHPVersion[0] == 4  && $PHPVersion[1] < 1)) {
     echo "Sorry. This program requires PHP 4.1 and above to run. You may upgrade your php at <a href='http://www.php.net/downloads.php'>http://www.php.net/downloads.php</a>";
@@ -45,8 +45,9 @@ $CCSUseAmp = true;
 $CipherBox = array();
 $CipherKey = array();
 $CCSLocales = new clsLocales(RelativePath);
-$CCSLocales->AddLocale("en-CA", Array("en", "CA", array("Yes", "No", ""), 2, ".", ",", array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"), array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"), array("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"), array("S", "M", "T", "W", "T", "F", "S"), array("dd", "/", "mm", "/", "yyyy"), array("mmmm", " ", "d", ", ", "yyyy"), array("h", ":", "nn", " ", "tt"), array("h", ":", "nn", ":", "ss", " ", "tt"), "AM", "PM", 0, false, "", "utf-8", "UTF-8", array(1, 7)));
-$CCSLocales->DefaultLocale = strtolower("en-CA");
+$CCSLocales->AddLocale("en", Array("en", "CA", array("Yes", "No", ""), 2, ".", ",", array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"), array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"), array("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"), array("S", "M", "T", "W", "T", "F", "S"), array("dd", "/", "mm", "/", "yyyy"), array("mmmm", " ", "d", ", ", "yyyy"), array("h", ":", "nn", " ", "tt"), array("h", ":", "nn", ":", "ss", " ", "tt"), "AM", "PM", 0, false, "", "utf-8", "UTF-8", array(1, 7)));
+$CCSLocales->AddLocale("fr", Array("fr", "CA", array(1, 0, ""), 2, ",", " ", array("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"), array("janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."), array("dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"), array("dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."), array("D", "L", "M", "M", "J", "V", "S"), array("yyyy", "-", "mm", "-", "dd"), array("d", " ", "mmmm", ", ", "yyyy"), array("HH", ":", "nn"), array("HH", ":", "nn", ":", "ss"), "", "", 0, false, "", "utf-8", "UTF-8", array(1, 7)));
+$CCSLocales->DefaultLocale = strtolower("en");
 $CCSLocales->Init();
 $Charset = "utf-8";
 

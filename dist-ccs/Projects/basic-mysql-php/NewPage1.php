@@ -3,10 +3,10 @@
 error_reporting(E_ALL | E_STRICT);
 //End Error reporting
 
-//Include Common Files @1-EDC1CE42
+//Include Common Files @1-82042FB9
 define("RelativePath", ".");
 define("PathToCurrentPage", "/");
-define("FileName", "NewPage1.php");
+define("FileName", "index.php");
 include_once(RelativePath . "/Common.php");
 include_once(RelativePath . "/Template.php");
 include_once(RelativePath . "/Sorter.php");
@@ -17,7 +17,9 @@ include_once(RelativePath . "/Navigator.php");
 include_once(RelativePath . "/Designs/theme-gcwu-intranet/MasterPage.php");
 //End Master Page implementation
 
-//Initialize Page @1-B9B7D1CC
+
+
+//Initialize Page @1-C7B9F74F
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -37,7 +39,7 @@ $TemplateSource = "";
 
 $FileName = FileName;
 $Redirect = "";
-$TemplateFileName = "NewPage1.html";
+$TemplateFileName = "index.html";
 $BlockToParse = "main";
 $TemplateEncoding = "UTF-8";
 $ContentType = "text/html";
@@ -50,7 +52,7 @@ $Scripts = "|";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-7A1D402C
+//Initialize Objects @1-62FB85FE
 $Attributes = new clsAttributes("page:");
 $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
@@ -59,14 +61,14 @@ $MainPage->Attributes = & $Attributes;
 $MasterPage = new clsMasterPage("/Designs/" . $CCProjectDesign . "/", "MasterPage", $MainPage);
 $MasterPage->Attributes = $Attributes;
 $MasterPage->Initialize();
-$Content = new clsPanel("Content", $MainPage);
-$Content->PlaceholderName = "Content";
 $Head = new clsPanel("Head", $MainPage);
 $Head->PlaceholderName = "Head";
+$Content = new clsPanel("Content", $MainPage);
+$Content->PlaceholderName = "Content";
 $gcwu_gcnb = new clsPanel("gcwu_gcnb", $MainPage);
 $gcwu_gcnb->PlaceholderName = "gcwu_gcnb";
-$MainPage->Content = & $Content;
 $MainPage->Head = & $Head;
+$MainPage->Content = & $Content;
 $MainPage->gcwu_gcnb = & $gcwu_gcnb;
 $ScriptIncludes = "";
 $SList = explode("|", $Scripts);
@@ -115,12 +117,12 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-385ABD9D
-$Content->Show();
+//Show Page @1-8256A33C
 $Head->Show();
+$Content->Show();
 $gcwu_gcnb->Show();
-$MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
 $MasterPage->Tpl->SetVar("Head", $Tpl->GetVar("Panel Head"));
+$MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
 $MasterPage->Tpl->SetVar("gcwu_gcnb", $Tpl->GetVar("Panel gcwu_gcnb"));
 $MasterPage->Show();
 if (!isset($main_block)) $main_block = $MasterPage->HTML;

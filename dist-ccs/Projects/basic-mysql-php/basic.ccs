@@ -1,10 +1,62 @@
-<Site id="0" language="PHPTemplates" name="basic" siteLanguage="en-CA" publishingType="Project" FTPpublishingType="Project" securityType="Table" urlType="Absolute" useCCSCultureFormats="True" defaultDateFormat="ShortDate" LSEnableQueryString="True" LSQueryStringName="locale" LSEnableHTTPHeader="False" LSEnableSession="True" LSSessionName="locale" LSLanguageSessionName="lang" LSEnableCookie="False" LSCookieName="locale" LSCookieExpired="365" cachingMethod="None" useI18nFeatures="True" showDepreciatedStyles="Styles" useDynamicStyles="False" SSEnableQueryString="True" SSQueryStringName="style" SSEnableSession="True" SSSessionName="style" SSEnableCookie="False" SSCookieName="style" SSCookieExpired="365" htmlTemplateType="HTML 5" isSection508="True" isJQuery="True" createIdsForControls="True" createIdsForNonEditableControls="True" createLablesForControls="False" generateJS="True" useDynamicDesigns="True" DDEnableQueryString="True" DDQueryStringName="design" DDEnableSession="True" DDSessionName="design" DDEnableCookie="False" DDCookieName="design" DDCookieExpired="365" fileExtension=".php" improvedHTTPCaching="True" outputFileFormat="windows" PHPVersion="5" userIDStoreMethod="Session" userIDVariable="UserID" userLoginVariable="UserLogin" groupIDVariable="GroupID" cookieVariable="UserInfo" automatedLogin="False" defaultHTMLEncoding="utf-8" omitIfEmpty="True" separateEvents="False" designFolder="Designs" PHPEncodeExtension="iconv" FCKBasePath="inc/ckeditor" ccsVersion="5.1.1.18990" useAmp="True" codeFileEncoding="utf-8" ALLoginCookieName="basicLogin" ALCookieExpired="30" ALEncryptionKey="UWeVgC8W77Y95t63" ALAutoProlong="False" ProtectPasswordsCodeExpression="md5({password})" ProtectPasswordsDBFunction="SHA2({CONCAT(&quot;5a1t&quot;,password)},512)" HTMLTemplates="Templates" higherLevel="True" SCProvider="1:SOFTWARE\PushOk Software\GITSCC:PushOk GITSCC" sourceControlProjectPath="E:\users\cadms\git\wet-boew-codecharge\dist-ccs\Projects" sourceControlProjectName="$/basic-mysql-php" defaultDesign="Light" templateFolder="Template" PHPErrorReporting="E_ALL | E_STRICT" charset="utf-8" startPage="index.ccp" newPageTemplate="F:\git\wet-boew-codecharge\dist-ccs\Projects\basic-mysql-php\Templates\index.ccp" connection="basic_mysql_php" securityConnection="basic_mysql_php" usersTable="person" userIDField="emp_id" userLoginField="emp_login" userPasswordField="emp_password" userGroupField="group_id" ALEnabled="False" ProtectPasswordsInDB="True" ProtectPasswordsMethod="DBFunction" useOpenID="False" HTTPOnlyCookie="False">
+<Site id="0" language="PHPTemplates" name="basic" siteLanguage="en" publishingType="Project" FTPpublishingType="Project" securityType="None" urlType="Absolute" useCCSCultureFormats="True" defaultDateFormat="ShortDate" LSEnableQueryString="True" LSQueryStringName="locale" LSEnableHTTPHeader="False" LSEnableSession="True" LSSessionName="locale" LSLanguageSessionName="lang" LSEnableCookie="False" LSCookieName="locale" LSCookieExpired="365" cachingMethod="None" useI18nFeatures="True" showDepreciatedStyles="Styles" useDynamicStyles="False" SSEnableQueryString="True" SSQueryStringName="style" SSEnableSession="True" SSSessionName="style" SSEnableCookie="False" SSCookieName="style" SSCookieExpired="365" htmlTemplateType="HTML 5" isSection508="True" isJQuery="True" createIdsForControls="True" createIdsForNonEditableControls="True" createLablesForControls="False" generateJS="True" useDynamicDesigns="True" DDEnableQueryString="True" DDQueryStringName="design" DDEnableSession="True" DDSessionName="design" DDEnableCookie="False" DDCookieName="design" DDCookieExpired="365" fileExtension=".php" improvedHTTPCaching="True" outputFileFormat="windows" PHPVersion="5" userIDStoreMethod="Session" userIDVariable="UserID" userLoginVariable="UserLogin" groupIDVariable="GroupID" cookieVariable="UserInfo" automatedLogin="False" defaultHTMLEncoding="utf-8" omitIfEmpty="True" separateEvents="False" designFolder="Designs" PHPEncodeExtension="iconv" FCKBasePath="inc/ckeditor" ccsVersion="5.1.1.18990" useAmp="True" codeFileEncoding="utf-8" ALLoginCookieName="basicLogin" ALCookieExpired="30" ALEncryptionKey="UWeVgC8W77Y95t63" ALAutoProlong="False" ProtectPasswordsCodeExpression="md5({password})" ProtectPasswordsDBFunction="SHA2({CONCAT(&quot;5a1t&quot;,password)},512)" HTMLTemplates="Templates" higherLevel="True" SCProvider="1:SOFTWARE\PushOk Software\GITSCC:PushOk GITSCC" sourceControlProjectPath="E:\users\cadms\git\wet-boew-codecharge\dist-ccs\Projects" sourceControlProjectName="$/basic-mysql-php" defaultDesign="theme-gcwu-intranet" templateFolder="Template" PHPErrorReporting="E_ALL | E_STRICT" charset="utf-8" startPage="index.ccp" newPageTemplate="F:\git\wet-boew-codecharge\dist-ccs\Projects\basic-mysql-php\Templates\ContentTemplate.ccp" connection="basic_mysql_php" securityConnection="basic_mysql_php" usersTable="person" userIDField="emp_id" userLoginField="emp_login" userPasswordField="emp_password" userGroupField="group_id" ALEnabled="False" ProtectPasswordsInDB="True" ProtectPasswordsMethod="DBFunction" useOpenID="False" HTTPOnlyCookie="False">
 	<Components>
 	</Components>
 	<Connections>
 	</Connections>
 	<CodeFiles>
-	</CodeFiles>
+		<CodeFile id="Templates" language="PHPTemplates" name="Template.php" forShow="False" comment="//" codePage="utf-8"/>
+<CodeFile id="Common" language="PHPTemplates" name="Common.php" forShow="False" comment="//" codePage="utf-8"/>
+<CodeFile id="Sorter" language="PHPTemplates" name="Sorter.php" forShow="False" comment="//" codePage="utf-8"/>
+<CodeFile id="Navigator" language="PHPTemplates" name="Navigator.php" forShow="False" comment="//" codePage="utf-8"/>
+<CodeFile id="CalendarNavigator" language="PHPTemplates" name="CalendarNavigator.php" forShow="False" comment="//" codePage="utf-8"/>
+<CodeFile id="Classes" language="PHPTemplates" name="Classes.php" forShow="False" comment="//" codePage="utf-8"/>
+<CodeFile id="db_mysql" language="PHPTemplates" name="db_mysql.php" forShow="False" comment="//" codePage="utf-8"/>
+<CodeFile id="db_array" language="PHPTemplates" name="db_array.php" forShow="False" comment="//" codePage="utf-8"/>
+<CodeFile id="db_adapter" language="PHPTemplates" name="db_adapter.php" forShow="False" comment="//" codePage="utf-8"/>
+<CodeFile id="JSFunctions" language="PHPTemplates" name="Functions.js" forShow="False" comment="//" codePage="utf-8"/>
+<CodeFile id="JSGlobalize" language="PHPTemplates" name="Globalize.js" forShow="False" comment="//" codePage="utf-8"/>
+<CodeFile id="JSDatePickerHTML" language="PHPTemplates" name="DatePicker.html" forShow="False" comment="&lt;!--" commentEnd="--&gt;" codePage="utf-8"/>
+<CodeFile id="JSDatePicker" language="PHPTemplates" name="DatePicker.js" forShow="False" comment="//" codePage="utf-8"/>
+<CodeFile id="Client" language="PHPTemplates" name="ClientI18N.php" forShow="False" comment="//" codePage="utf-8"/>
+<CodeFile id="Services" language="PHPTemplates" name="Services.php" forShow="False" comment="//" codePage="utf-8"/>
+<CodeFile id="jQuery" language="PHPTemplates" name="jquery.js" path="js\jquery" forShow="False" comment="//" codePage="utf-8" CheckSum="5DA52498"/>
+<CodeFile id="selectors" language="PHPTemplates" name="selectors.js" path="js\jquery" forShow="False" comment="//" codePage="utf-8" CheckSum="11C7B931"/>
+<CodeFile id="event-manager" language="PHPTemplates" name="event-manager.js" path="js\jquery" forShow="False" comment="//" codePage="utf-8" CheckSum="FAD88F9A"/>
+<CodeFile id="ccs-menu.js" language="PHPTemplates" name="ccs-menu.js" path="js\jquery\menu" forShow="False" comment="//" codePage="utf-8" CheckSum="D362A267"/>
+<CodeFile id="ccs-captcha.js" language="PHPTemplates" name="ccs-captcha.js" path="js\jquery\captcha" forShow="False" comment="//" codePage="utf-8" CheckSum="C585DA4F"/>
+<CodeFile id="ccs-auto-fill.js" language="PHPTemplates" name="ccs-auto-fill.js" path="js\jquery\autofill" forShow="False" comment="//" codePage="utf-8" CheckSum="ED1C790E"/>
+<CodeFile id="ccs-dependent-listbox.js" language="PHPTemplates" name="ccs-dependent-listbox.js" path="js\jquery\dependentlistbox" forShow="False" comment="//" codePage="utf-8" CheckSum="313AB5A7"/>
+<CodeFile id="ccs-update-panel.js" language="PHPTemplates" name="ccs-update-panel.js" path="js\jquery\updatepanel" forShow="False" comment="//" codePage="utf-8" CheckSum="C767E7A4"/>
+<CodeFile id="ccs-update-panel-im.js" language="PHPTemplates" name="ccs-update-panel-im.js" path="js\jquery\updatepanel" forShow="False" comment="//" codePage="utf-8" CheckSum="5765A9CD"/>
+<CodeFile id="ccs-data-sheet-view.js" language="PHPTemplates" name="ccs-data-sheet-view.js" path="js\jquery\datasheetview" forShow="False" comment="//" codePage="utf-8" CheckSum="68809390"/>
+<CodeFile id="jQueryUiMin" language="PHPTemplates" name="jquery-ui.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="04D8AC6D"/>
+<CodeFile id="jQueryUiAccordionMin" language="PHPTemplates" name="jquery.ui.accordion.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="26F794C2"/>
+<CodeFile id="jQueryUiAutocompleteMin" language="PHPTemplates" name="jquery.ui.autocomplete.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="6576AFD5"/>
+<CodeFile id="jQueryUiCcsAutocomplete" language="PHPTemplates" name="ccs-autocomplete.js" path="js\jquery\autocomplete" forShow="False" comment="//" codePage="utf-8" CheckSum="FC5C62CD"/>
+<CodeFile id="jQueryUiButtonMin" language="PHPTemplates" name="jquery.ui.button.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="409A282E"/>
+<CodeFile id="jQueryUiCoreMin" language="PHPTemplates" name="jquery.ui.core.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="A9F7B6ED"/>
+<CodeFile id="jQueryUiDatePickerMin" language="PHPTemplates" name="jquery.ui.datepicker.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="64E1AFAB"/>
+<CodeFile id="jQueryUiDateTimepickerMin" language="PHPTemplates" name="ccs-date-timepicker.js" path="js\jquery\datepicker" forShow="False" comment="//" codePage="utf-8" CheckSum="64BBA289"/>
+<CodeFile id="jQueryUiDialogMin" language="PHPTemplates" name="jquery.ui.dialog.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="1420884F"/>
+<CodeFile id="jQueryUiCcsDialog" language="PHPTemplates" name="ccs-dialog.js" path="js\jquery\dialog" forShow="False" comment="//" codePage="utf-8" CheckSum="A1DA7BF2"/>
+<CodeFile id="jQueryUiDraggableMin" language="PHPTemplates" name="jquery.ui.draggable.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="7DD03D33"/>
+<CodeFile id="jQueryUiDroppableMin" language="PHPTemplates" name="jquery.ui.droppable.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="D0300F0C"/>
+<CodeFile id="jQueryUiMenuMin" language="PHPTemplates" name="jquery.ui.menu.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="E3AC404E"/>
+<CodeFile id="jQueryUiMouseMin" language="PHPTemplates" name="jquery.ui.mouse.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="FDD60163"/>
+<CodeFile id="jQueryUiPositionMin" language="PHPTemplates" name="jquery.ui.position.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="9F76B5C9"/>
+<CodeFile id="jQueryUiResizableMin" language="PHPTemplates" name="jquery.ui.resizable.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="365728D3"/>
+<CodeFile id="jQueryUiSelectableMin" language="PHPTemplates" name="jquery.ui.selectable.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="F38D4732"/>
+<CodeFile id="jQueryUiSliderMin" language="PHPTemplates" name="jquery.ui.slider.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="F9CAF4BC"/>
+<CodeFile id="jQueryUiCcsSlider" language="PHPTemplates" name="ccs-slider.js" path="js\jquery\slider" forShow="False" comment="//" codePage="utf-8" CheckSum="D22DFFD3"/>
+<CodeFile id="jQueryUiSpinnerMin" language="PHPTemplates" name="jquery.ui.spinner.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="7D83AB71"/>
+<CodeFile id="jQueryUiCcsSpinnerMin" language="PHPTemplates" name="ccs-numeric-up-down.js" path="js\jquery\spinner" forShow="False" comment="//" codePage="utf-8" CheckSum="02F17B78"/>
+<CodeFile id="jQueryUiTabsMin" language="PHPTemplates" name="jquery.ui.tabs.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="2651B1DB"/>
+<CodeFile id="jQueryUiCcsTabs" language="PHPTemplates" name="ccs-tabs.js" path="js\jquery\tab" forShow="False" comment="//" codePage="utf-8" CheckSum="666F5A00"/>
+<CodeFile id="jQueryUiWidgetMin" language="PHPTemplates" name="jquery.ui.widget.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="D0FBD52A"/>
+<CodeFile id="jQueryGlobalizeMin" language="PHPTemplates" name="globalize.js" path="js\jquery\external" forShow="False" comment="//" codePage="utf-8" CheckSum="B77BA092"/>
+<CodeFile id="jQueryCookieMin" language="PHPTemplates" name="jquery.cookie.js" path="js\jquery\external" forShow="False" comment="//" codePage="utf-8" CheckSum="6CEFD119"/>
+<CodeFile id="jQueryUiMousewheelMin" language="PHPTemplates" name="jquery.mousewheel.js" path="js\jquery\external" forShow="False" comment="//" codePage="utf-8" CheckSum="4332426C"/>
+</CodeFiles>
 	<OAuthProviders>
 	</OAuthProviders>
 	<Groups>
@@ -18,19 +70,22 @@
 	<Profiles>
 		<Profile name="DEV_local" FTPPassiveMode="True" FTPSecureConnection="False" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" fileExtension=".php" location="Local" publishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;jpeg;png;apng;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;svg;swf;master;res;ico" publishingExceptMask="" publishingType="ExceptMask" FTPFolder="" FTPLogin="" FTPPassword="" FTPServer="" FTPServerURL="" __specValue="" localServerPath="E:\users\cadms\xampp\htdocs\basic" localServerURL="http://localhost/basic">
 			<Connections>
-<Connection id="5" serverDatabase="ANSI" DBNameUppercase="True" OptimizeSQL="True" PHPDBLib="MySQL" database="MySQL" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" serverPersistentConnection="False" serverUseODBCCursor="0" connectionType="mysql_native" connectionString="localhost;Port=3306;Database=intranet" name="basic_mysql_php" ddXMLPath="basic_mysql_php_DataDictionary.xml" login="root" catalog="intranet" typeMode="Simple" serverSameAsDesign="True" connection="basic_mysql_php"/>
-</Connections>
+				<Connection id="5" serverDatabase="ANSI" DBNameUppercase="True" OptimizeSQL="True" PHPDBLib="MySQL" database="MySQL" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" serverPersistentConnection="False" serverUseODBCCursor="0" connectionType="mysql_native" connectionString="localhost;Port=3306;Database=intranet" name="basic_mysql_php" ddXMLPath="basic_mysql_php_DataDictionary.xml" login="root" catalog="intranet" typeMode="Simple" serverSameAsDesign="True" connection="basic_mysql_php"/>
+			</Connections>
 		</Profile>
 		<Profile name="PROD_dist_ccs" FTPPassiveMode="True" FTPSecureConnection="False" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" fileExtension=".php" location="Local" publishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;jpeg;png;apng;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;svg;swf;master;res;ico" publishingExceptMask="ccs;ccp" publishingType="ExceptMask" FTPFolder="" FTPLogin="" FTPPassword="" FTPServer="" FTPServerURL="" __specValue="" localServerPath="E:\users\cadms\git\wet-boew-codecharge\demos-ccs\basic-mysql-php" localServerURL="http://localhost/basic-mysql-php">
 			<Connections>
-<Connection id="5" serverDatabase="ANSI" DBNameUppercase="True" OptimizeSQL="True" PHPDBLib="MySQL" database="ANSI" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" serverPersistentConnection="False" serverUseODBCCursor="0" name="basic_mysql_php"/>
-</Connections>
+				<Connection id="5" serverDatabase="ANSI" DBNameUppercase="True" OptimizeSQL="True" PHPDBLib="MySQL" database="ANSI" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" serverPersistentConnection="False" serverUseODBCCursor="0" name="basic_mysql_php"/>
+			</Connections>
 		</Profile>
 	</Profiles>
 	<Languages>
-		<Language name="en" defaultCountry="CA" encoding="utf-8" country="CA">
+		<Language name="en" defaultCountry="CA" encoding="utf-8" country="">
 			<LocaleInfo language="en" country="US" encoding="windows-1252" msValue="4105" booleanFormat="Yes;No;" decimalDigits="2" decimalSeparator="." groupSeparator="," monthNames="January;February;March;April;May;June;July;August;September;October;November;December" monthShortNames="Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec" weekdayNames="Sunday;Monday;Tuesday;Wednesday;Thursday;Friday;Saturday" weekdayShortNames="Sun;Mon;Tue;Wed;Thu;Fri;Sat" shortDate="m/d/yyyy" longDate="dddd, mmmm dd, yyyy" shortTime="h:nn tt" longTime="h:nn:ss tt" firstWeekDay="0" AMDesignator="AM" PMDesignator="PM" weekdayNarrowNames="S;M;T;W;T;F;S" overrideDateFormats="False" overrideNumberFormats="False" phpValue=""/>
 		</Language>
-	</Languages>
+		<Language name="fr" defaultCountry="CA" encoding="utf-8">
+<LocaleInfo overrideDateFormats="False" booleanFormat="1;0;" overrideNumberFormats="False" msValue="3084" phpValue=""/>
+</Language>
+</Languages>
 	<Events/>
 </Site>

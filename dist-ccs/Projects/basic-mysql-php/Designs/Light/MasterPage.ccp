@@ -27,7 +27,8 @@
 		</ContentPlaceholder>
 	</Components>
 	<CodeFiles>
-	</CodeFiles>
+		<CodeFile id="Code" language="PHPTemplates" name="MasterPage.php" forShow="True" url="MasterPage.php" comment="//" codePage="utf-8"/>
+</CodeFiles>
 	<SecurityGroups/>
 	<CachingParameters/>
 	<Attributes/>

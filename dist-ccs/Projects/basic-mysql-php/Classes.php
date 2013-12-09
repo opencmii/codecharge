@@ -2371,7 +2371,7 @@ class clsLocale {
 
 //End clsLocale Class
 
-//clsLocales Class @0-755429AA
+//clsLocales Class @0-56E9E3A4
 class clsLocales {
   public $Locale;
   public $DefaultLocale;
@@ -2386,6 +2386,11 @@ class clsLocales {
   }
 
   function Init() {
+    $this->SetLocale(CCGetFromGet("locale"));
+    $this->SetLocale(CCGetSession("locale"));
+    $this->SetLocale($this->DefaultLocale);
+    CCSetSession("locale", $this->GetFormatInfo("Name"));
+    CCSetSession("lang", $this->GetFormatInfo("Language"));
   }
 
   function AddLocale($name, $LocaleInfoArray) {

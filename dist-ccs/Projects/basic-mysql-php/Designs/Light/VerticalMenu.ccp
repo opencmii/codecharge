@@ -12,7 +12,8 @@
 		</ContentPlaceholder>
 	</Components>
 	<CodeFiles>
-	</CodeFiles>
+		<CodeFile id="Code" language="PHPTemplates" name="VerticalMenu.php" forShow="True" url="VerticalMenu.php" comment="//" codePage="utf-8"/>
+</CodeFiles>
 	<SecurityGroups/>
 	<CachingParameters/>
 	<Attributes/>
