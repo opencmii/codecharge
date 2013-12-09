@@ -2,7 +2,8 @@
 	<Components>
 	</Components>
 	<CodeFiles>
-	</CodeFiles>
+		<CodeFile id="Code" language="PHPTemplates" name="menu_site.php" forShow="True" url="menu_site.php" comment="//" codePage="utf-8"/>
+</CodeFiles>
 	<SecurityGroups/>
 <CachingParameters/>
 <Attributes/>
