@@ -8,7 +8,7 @@
 		</Panel>
 		<Panel id="14" visible="True" generateDiv="False" name="TopMenu" contentPlaceholder="gcwu_gcnb">
 			<Components>
-				<IncludePage id="11" name="gcwu_gcnb" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="TopMenugcwu_gcnb" page="top_menu.ccp">
+				<IncludePage id="11" name="gcwu_gcnb" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="TopMenugcwu_gcnb" page="inc/top_menu.ccp">
 					<Components/>
 					<Events/>
 					<Features/>

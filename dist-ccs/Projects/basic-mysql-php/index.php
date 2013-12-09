@@ -17,16 +17,16 @@ include_once(RelativePath . "/Navigator.php");
 include_once(RelativePath . "/Designs/theme-gcwu-intranet/MasterPage.php");
 //End Master Page implementation
 
-//Include Page implementation @11-874ABD28
-include_once(RelativePath . "/top_menu.php");
+//Include Page implementation @11-7FA6A3DF
+include_once(RelativePath . "/inc/top_menu.php");
 //End Include Page implementation
 
-//Include Page implementation @8-EBA5EA16
-include_once(RelativePath . "/footer.php");
+//Include Page implementation @8-E5D4CE8B
+include_once(RelativePath . "/inc/footer.php");
 //End Include Page implementation
 
-//Include Page implementation @22-E800DB2A
-include_once(RelativePath . "/site_menu.php");
+//Include Page implementation @22-CB21508B
+include_once(RelativePath . "/inc/site_menu.php");
 //End Include Page implementation
 
 //Include Page implementation @19-72A92FB7
@@ -67,7 +67,7 @@ $Charset = $Charset ? $Charset : "utf-8";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-BB8B8F7E
+//Initialize Objects @1-6DC092F1
 $Attributes = new clsAttributes("page:");
 $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
@@ -80,7 +80,7 @@ $Head = new clsPanel("Head", $MainPage);
 $Head->PlaceholderName = "Head";
 $TopMenu = new clsPanel("TopMenu", $MainPage);
 $TopMenu->PlaceholderName = "gcwu_gcnb";
-$gcwu_gcnb = new clstop_menu("", "gcwu_gcnb", $MainPage);
+$gcwu_gcnb = new clstop_menu("inc/", "gcwu_gcnb", $MainPage);
 $gcwu_gcnb->Initialize();
 $CustomCSS = new clsPanel("CustomCSS", $MainPage);
 $CustomCSS->PlaceholderName = "CustomCSS";
@@ -88,12 +88,12 @@ $CustomScripts = new clsPanel("CustomScripts", $MainPage);
 $CustomScripts->PlaceholderName = "CustomScripts";
 $Footer = new clsPanel("Footer", $MainPage);
 $Footer->PlaceholderName = "Footer";
-$gcwu_footer = new clsfooter("", "gcwu_footer", $MainPage);
+$gcwu_footer = new clsfooter("inc/", "gcwu_footer", $MainPage);
 $gcwu_footer->Initialize();
 $Content = new clsPanel("Content", $MainPage);
 $Content->PlaceholderName = "Content";
 $SiteMenu = new clsPanel("SiteMenu", $MainPage);
-$gcwu_psnb = new clssite_menu("", "gcwu_psnb", $MainPage);
+$gcwu_psnb = new clssite_menu("inc/", "gcwu_psnb", $MainPage);
 $gcwu_psnb->Initialize();
 $Breadcrum = new clsPanel("Breadcrum", $MainPage);
 $Breadcrum->PlaceholderName = "cgwu_breadcrum";
