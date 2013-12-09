@@ -1,3 +1,13 @@
+app_name=CodeCharge Demo
+basic_base_theme_description=A theme template aid to in the creation of new themes.
+basic_theme_and_style=Theme and style
+basic_theme_gcwu_fegc_description=The GC Web usability theme was developed to comply with the <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=24227">Standard on Web Usability</a> and is recommended for use with all Government of Canada websites.
+basic_theme_gcwu_fegc_description2=Standard on Web Usability
+basic_theme_gcwu_fegc_description3=and is recommended for use with all Government of Canada websites.
+basic_theme_gcwu_intranet_description1=The GC Intranet usability theme was developed to comply with the <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=24227">Standard on Web Usability</a> and is recommended for use with all Government of Canada intranet sites.
+basic_theme_gcwu_intranet_title=GC Intranet usability theme (v3.1)
+basic_theme_wet_boew_description=The WET theme was developed to provide an example implementation of the <a href="http://wet-boew.github.io/wet-boew/demos/theme-base/index-en.html">Base Theme</a>.
+basic_theme_wet_boew_title=WET theme (v3.1)
 CCS_AdvSearchAllWords=All Words
 CCS_AdvSearchAnyOfWords=Any Of Words
 CCS_AdvSearchConditionsCaption=Search For
@@ -109,11 +119,15 @@ CCS_UploadComponentNotFound={0} uploading component {1} is not found. Please ins
 CCS_UploadingError=An error occured when uploading file specified in {0}. Error description: {1}.
 CCS_UploadingTempFolderError=An error occured when uploading file specified in {0} into temporary folder. Error description: {1}.
 CCS_WrongType=The file type specified in field {0} is not allowed.
-gcwu_gcnb_lang=Français
-gcwu_gcnb_lang_reverse2=fr
-app_name=CCS Demo
-gcwu_gcnb_lang_reverse=Français
 gcwu_gcnb1=Custom link 1
 gcwu_gcnb2=Custom Link 2
 gcwu_gcnb3=Custom Link 3
 gcwu_gcnb4=Custom Link 4
+gcwu_gcnb_lang=Français
+gcwu_gcnb_lang_reverse=Français
+gcwu_gcnb_lang_reverse2=fr
+app_ame=Basic Demo
+basic_theme_light=Light CCS Theme (for demonstration)
+basic_theme_light_description=One of default CCS 5.X theme. Very light.
+app_purpose=Base demo - Showcase theme and language switching using only one web page
+gcwu_wet_project=WET Project

@@ -1,12 +1,12 @@
-<Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="True" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes">
+<Page id="1" templateExtension="html" relativePath=".." fullRelativePath=".\inc" secured="False" urlType="Relative" isIncluded="True" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" needGeneration="0">
 	<Components>
 	</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="top_menu.php" forShow="True" url="top_menu.php" comment="//" codePage="utf-8"/>
-</CodeFiles>
+	</CodeFiles>
 	<SecurityGroups/>
-<CachingParameters/>
-<Attributes/>
-<Features/>
-<Events/>
+	<CachingParameters/>
+	<Attributes/>
+	<Features/>
+	<Events/>
 </Page>

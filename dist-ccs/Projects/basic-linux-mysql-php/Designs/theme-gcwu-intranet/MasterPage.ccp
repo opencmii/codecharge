@@ -60,11 +60,11 @@
 			<Features/>
 		</ContentPlaceholder>
 		<ContentPlaceholder id="17" name="SiteMenu" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="SiteMenu">
-<Components/>
-<Events/>
-<Features/>
-</ContentPlaceholder>
-</Components>
+			<Components/>
+			<Events/>
+			<Features/>
+		</ContentPlaceholder>
+	</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="MasterPage.php" forShow="True" url="MasterPage.php" comment="//" codePage="utf-8"/>
 	</CodeFiles>

@@ -1,4 +1,17 @@
-app_name=Demo CCS
+app_ame=Démo de base
+app_name=Démo CodeCharge
+app_purpose=Démo de base - Démonstration de changement de langue et de thème en utilisant qu'une seule page web
+basic_base_theme_description=Gabarit de thème d'aide pour la cération de nouveau thèmes.
+basic_theme_and_style=Thème et style
+basic_theme_gcwu_fegc_description=Le thème GC Web a été développé pour répondre aux exigences  de <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=24227"> 
+basic_theme_gcwu_fegc_description2=Standard sur l'usabilité Web
+basic_theme_gcwu_fegc_description3=et il est recommandé pour usage dans tous les sites web du Gouvernement du Canada.
+basic_theme_gcwu_intranet_description1=Le blablabla...
+basic_theme_gcwu_intranet_title=Thème d'usabilité Intranet du GC (v3.1)
+basic_theme_light=Thème CCS léger (pour démonstration)
+basic_theme_light_description=Un des thèmes par défaut de CCS 5.X. Très Léger.
+basic_theme_wet_boew_description=Le thème BOEW fut développé pour fournir un exemple d'implantation du <a href="http://wet-boew.github.io/wet-boew/demos/theme-base/index-fr.html">Thème de Base </a>.              
+basic_theme_wet_boew_title=Thème WET (v3.1)
 CCS_AdvSearchAllWords= Tous les mots
 CCS_AdvSearchAnyOfWords= N'importe lequel des mots
 CCS_AdvSearchConditionsCaption= Recherche pour 
@@ -96,7 +109,8 @@ CCS_WrongType=Le type de fichier spécifié dans le champ {0} n'est pas autoris�
 gcwu_gcnb1=lien 1
 gcwu_gcnb2=Lien 2
 gcwu_gcnb3=Lien 3
+gcwu_gcnb4=Lien 4
 gcwu_gcnb_lang=English
 gcwu_gcnb_lang_reverse=English
 gcwu_gcnb_lang_reverse2=en
-gcwu_gcnb4=Lien 4
+gcwu_wet_project=Projet BOEW
