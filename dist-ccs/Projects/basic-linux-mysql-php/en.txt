@@ -138,3 +138,4 @@ Name=Name
 app_description=Codecharge generated demo called Basic showcasing wet based clf design template
 app_author=L.P. Durocher
 app_title=Base Demo
+locale3=eng
