@@ -140,3 +140,4 @@ Keywords=Keywords
 locale3=eng
 Name=Name
 app_no=basic-mysql-php
+locale=en
