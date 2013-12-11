@@ -134,3 +134,4 @@ gcwu_wet_project=WET Project
 Name=Name
 Category=Category
 Description=Description
+Keywords=Keywords
