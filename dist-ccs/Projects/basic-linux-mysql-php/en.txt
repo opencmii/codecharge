@@ -144,3 +144,4 @@ locale=en
 gcwu_tc=Terms and conditions
 gcwu_tr=Transparency
 Link=Link
+locale2=en
