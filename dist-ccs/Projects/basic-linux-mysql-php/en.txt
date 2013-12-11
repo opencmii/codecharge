@@ -132,3 +132,4 @@ gcwu_gcnb_lang_reverse=Français
 gcwu_gcnb_lang_reverse2=fr
 gcwu_wet_project=WET Project
 Name=Name
+Category=Category
