@@ -84,18 +84,6 @@
 			<Attributes/>
 			<Features/>
 		</Panel>
-		<Panel id="25" visible="True" generateDiv="False" name="Menu" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Menu" contentPlaceholder="Menu">
-			<Components>
-				<IncludePage id="26" name="light_menu" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Menulight_menu" page="inc/light_menu.ccp">
-					<Components/>
-					<Events/>
-					<Features/>
-				</IncludePage>
-			</Components>
-			<Events/>
-			<Attributes/>
-			<Features/>
-		</Panel>
 	</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="index.php" forShow="True" url="index.php" comment="//" codePage="utf-8"/>
