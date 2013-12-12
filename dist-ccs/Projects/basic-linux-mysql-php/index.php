@@ -1,7 +1,4 @@
 <?php
-//Error reporting @1-8F636958
-error_reporting(E_ALL | E_STRICT);
-//End Error reporting
 
 //Include Common Files @1-82042FB9
 define("RelativePath", ".");
@@ -153,7 +150,7 @@ if ($Charset) {
 }
 //End Initialize Objects
 
-//Initialize HTML Template @1-577E43E0
+//Initialize HTML Template @1-17121F43
 $CCSEventResult = CCGetEvent($CCSEvents, "OnInitializeView", $MainPage);
 $Tpl = new clsTemplate($FileEncoding, $TemplateEncoding);
 if (strlen($TemplateSource)) {
@@ -164,6 +161,7 @@ if (strlen($TemplateSource)) {
 $Tpl->SetVar("CCS_PathToRoot", $PathToRoot);
 $Tpl->SetVar("CCS_PathToMasterPage", RelativePath . $PathToCurrentMasterPage);
 $Tpl->block_path = "/$BlockToParse";
+$Attributes->SetValue("Filename", Filename);
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeShow", $MainPage);
 $Attributes->SetValue("pathToRoot", "");
 $Attributes->Show();

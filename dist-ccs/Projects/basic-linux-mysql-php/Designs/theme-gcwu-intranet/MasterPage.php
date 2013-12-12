@@ -1,7 +1,4 @@
 <?php
-//Error reporting @1-8F636958
-error_reporting(E_ALL | E_STRICT);
-//End Error reporting
 
 class clsMasterPage { //MasterPage class @1-BFE8F48A
 
@@ -124,12 +121,13 @@ class clsMasterPage { //MasterPage class @1-BFE8F48A
     }
 //End Initialize Method
 
-//Show Method @1-8A7828AF
+//Show Method @1-0E2A4256
     function Show()
     {
         global $CCSLocales;
         $this->Tpl->block_path = "/main";
         $this->Attributes->SetValue("project_name", "Project X");
+        $this->Attributes->SetValue("Filename", "");
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeShow", $this);
         if(!$this->Visible) {
             $this->Tpl->block_path = $block_path;

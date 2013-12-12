@@ -1,30 +1,34 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="{res:locale}">
 <head>
 <!--[if IE 7]><![endif]-->
 <!--[if IE 8]><![endif]-->
 <!--[if gt IE 8]><!-->
 <!--<![endif]-->
-<!-- Web Experience Toolkit (WET) / Boite À  outils de l'expérience Web (BOEW)
+<!-- Web Experience Toolkit (WET) / Boite à outils de l'expérience Web (BOEW)
 wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<meta name="author" content="{res:app_author}">
+<meta name="application" content="{res:app_no}">
+<link rel="canonical" href="{page:FileName}">
+<meta name="description" content="{res:app_description}">
+<meta name="dcterms.creator" content="{res:app_author}">
+<meta name="dcterms.title" content="{res:app_title}">
+<meta name="dcterms.issued" content="{res:meta_issued}" title="W3CDTF">
+<meta name="dcterms.modified" content="{res:meta_modified}" title="W3CDTF">
+<meta name="dcterms.subject" content="{res:meta_subject}" title="scheme">
+<meta name="dcterms.language" content="{res:locale3}" title="ISO639-2">
 <!-- CustomHeadStart -->
 {Head} 
 <!-- CustomHeadEnd -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--[if lte IE 8]>
-<SCRIPT 
-src="{page:pathToCurrentPage}/../../js/jquery-ie.min.js"></SCRIPT>
-
-<SCRIPT 
-src="{page:pathToCurrentPage}/../../js/polyfills/html5shiv-min.js"></SCRIPT>
-<LINK rel=stylesheet 
-href="{page:pathToCurrentPage}/../../grids/css/util-ie-min.css"><LINK 
-rel=stylesheet 
-href="{page:pathToCurrentPage}/../../js/css/pe-ap-ie-min.css"><LINK 
-rel=stylesheet 
-href="{page:pathToCurrentPage}/css/theme-ie-min.css"><noscript><LINK 
-rel=stylesheet 
-href="{page:pathToCurrentPage}/css/theme-ns-ie-min.css"></noscript><![endif]-->
+<script src="{page:pathToCurrentPage}/../../js/jquery-ie.min.js"></script>
+<script src="{page:pathToCurrentPage}/../../js/polyfills/html5shiv-min.js"></script>
+<link rel=stylesheet href="{page:pathToCurrentPage}/../../grids/css/util-ie-min.css">
+<link rel=stylesheet href="{page:pathToCurrentPage}/../../js/css/pe-ap-ie-min.css">
+<link rel=stylesheet href="{page:pathToCurrentPage}/css/theme-ie-min.css"><noscript>
+<link rel=stylesheet href="{page:pathToCurrentPage}/css/theme-ns-ie-min.css"></noscript>
+<![endif]-->
 <!--[if gt IE 8]><!-->
 <script src="{page:pathToCurrentPage}/../../js/jquery.min.js"></script>
 <link rel="stylesheet" href="{page:pathToCurrentPage}/../../grids/css/util-min.css">
@@ -42,9 +46,9 @@ href="{page:pathToCurrentPage}/css/theme-ns-ie-min.css"></noscript><![endif]-->
 <div id="wb-body">
   <div id="wb-skip">
     <ul id="wb-tphp">
-      <li id="wb-skip1"><a href="#wb-cont">Skip to main content</a> </li>
+      <li id="wb-skip1"><a href="#wb-cont">{res:wb_skip1}</a> </li>
  
-      <li id="wb-skip2"><a href="#wb-nav">Skip to footer</a> </li>
+      <li id="wb-skip2"><a href="#wb-nav">{res:wb_skip2}</a> </li>
  
     </ul>
  
@@ -56,7 +60,7 @@ href="{page:pathToCurrentPage}/css/theme-ns-ie-min.css"></noscript><![endif]-->
       <!-- HeaderStart -->
       <nav role="navigation">
       <div id="gcwu-gcnb">
-        <h2>Intranet navigation bar</h2>
+        <h2>{res:gcwu_gcnb}</h2>
  
         <div id="gcwu-gcnb-in">
           <div id="gcwu-intranetnb">
@@ -74,7 +78,7 @@ href="{page:pathToCurrentPage}/css/theme-ns-ie-min.css"></noscript><![endif]-->
           <div id="gcwu-gcnb-fip">
             <div id="gcwu-sig">
               <div id="gcwu-sig-in">
-                <object type="image/svg+xml" aria-label="Government of Canada" tabindex="-1" role="img" data="{page:pathToCurrentPage}/images/sig-blk-en.svg">
+                <object type="image/svg+xml" aria-label="{res:gcwu_sig_label}" tabindex="-1" role="img" data="{page:pathToCurrentPage}/images/sig-blk-{res:gcwu_locale_en_fr}.svg">
                   <!-- BEGIN img null --><!-- END img null -->
                 </object>
  
@@ -84,7 +88,7 @@ href="{page:pathToCurrentPage}/css/theme-ns-ie-min.css"></noscript><![endif]-->
  
             <div id="gcwu-wmms">
               <div id="gcwu-wmms-in">
-                <object type="image/svg+xml" aria-label="Symbol of the Government of Canada" tabindex="-1" role="img" data="{page:pathToCurrentPage}/images/wmms-intra.svg">
+                <object type="image/svg+xml" aria-label="{res:gcwu_wmms_label}" tabindex="-1" role="img" data="{page:pathToCurrentPage}/images/wmms-intra.svg">
                   <!-- BEGIN img null --><!-- END img null -->
                 </object>
  
@@ -102,7 +106,7 @@ href="{page:pathToCurrentPage}/css/theme-ns-ie-min.css"></noscript><![endif]-->
       <div role="banner" id="gcwu-bnr" aria-owns="gcwu-subsite">
         <div id="gcwu-bnr-in">
           <div id="gcwu-title">
-            <p id="gcwu-title-in"><a href="#">{res:app_name}</a></p>
+            <p id="gcwu-title-in"><a href="{res:wet_boew_codecharge_github}">{res:wet_boew_codecharge}</a></p>
  
           </div>
  
@@ -113,7 +117,7 @@ href="{page:pathToCurrentPage}/css/theme-ns-ie-min.css"></noscript><![endif]-->
  
             <form method="post" action="#">
               <div id="gcwu-srchbx-in">
-                <label for="gcwu-srch">Search website</label> <input id="gcwu-srch" maxlength="150" size="27" name="gcwu-srch"><input type="submit" id="gcwu-srch-submit" value="Search" name="gcwu-srch-submit">
+                <label for="gcwu-srch">{res:gcwu_srch_label}</label> <input id="gcwu-srch" maxlength="150" size="27" name="gcwu-srch"><input type="submit" id="gcwu-srch-submit" value="Search" name="gcwu-srch-submit">
               </div>
  
             </form>
@@ -125,7 +129,7 @@ href="{page:pathToCurrentPage}/css/theme-ns-ie-min.css"></noscript><![endif]-->
  
         <!-- BEGIN Panel gcwu_subsite -->
         <div id="gcwu-subsite" class="gcwu-subsite-1">
-          <p><a href="#">{res:app_purpose}</a></p>
+          <p><a title="{res:app_purpose}" href="#">{res:gcwu_subsite}</a></p>
           <!--{page:pathToCurrentPage} --></a></p>
  
         </div>
@@ -179,14 +183,9 @@ href="{page:pathToCurrentPage}/css/theme-ns-ie-min.css"></noscript><![endif]-->
 <!-- ScriptsStart -->
 <script src="{page:pathToCurrentPage}/../../js/settings.js"></script>
 <!--[if lte IE 8]>
-<SCRIPT 
-src="{page:pathToCurrentPage}/../../theme-gcwu-intranet/js/theme-ie-min.js"></SCRIPT>
-
-<SCRIPT 
-src="{page:pathToCurrentPage}/../../js/pe-ap-ie-min.js"></SCRIPT>
-
-<SCRIPT 
-src="{page:pathToCurrentPage}/../../js/jquerymobile/jquery.mobile-ie.min.js"></SCRIPT>
+<script src="{page:pathToCurrentPage}/../../theme-gcwu-intranet/js/theme-ie-min.js"></script>
+<script src="{page:pathToCurrentPage}/../../js/pe-ap-ie-min.js"></script>
+<script src="{page:pathToCurrentPage}/../../js/jquerymobile/jquery.mobile-ie.min.js"></script>
 <![endif]-->
 <!--[if gt IE 8]><!-->
 <script src="{page:pathToCurrentPage}/../../theme-gcwu-intranet/js/theme-min.js"></script>

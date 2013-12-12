@@ -1,7 +1,4 @@
 <?php
-//Error reporting @1-8F636958
-error_reporting(E_ALL | E_STRICT);
-//End Error reporting
 
 class clstop_menu { //top_menu class @1-0AC2021C
 

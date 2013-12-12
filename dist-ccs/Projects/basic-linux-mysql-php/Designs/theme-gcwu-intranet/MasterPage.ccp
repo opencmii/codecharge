@@ -72,6 +72,7 @@
 	<CachingParameters/>
 	<Attributes>
 		<Attribute id="9" name="project_name" sourceType="Expression" source="&quot;Project X&quot;"/>
+		<Attribute id="18" name="Filename"/>
 	</Attributes>
 	<Features/>
 	<Events/>

@@ -1,7 +1,4 @@
 <?php
-//Error reporting @1-8F636958
-error_reporting(E_ALL | E_STRICT);
-//End Error reporting
 
 class clsbreadcrum { //breadcrum class @1-14FE9525
 
