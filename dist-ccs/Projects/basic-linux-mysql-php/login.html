@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.1.18990">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="Styles/Basic/Style_doctype.css">
+<link rel="stylesheet" type="text/css" href="Styles/Basic/jquery-ui.css">
+</head>
+<body>
+<!-- BEGIN Record Login1 -->
+<form id="Login1" method="post" action="{Action}" name="{HTMLFormName}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table cellspacing="0" cellpadding="0" border="0" class="Header">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Basic/Images/Spacer.gif" alt=""></td> 
+            <td class="th"><strong>{res:CCS_LoginForm}</strong></td> 
+            <td class="HeaderRight"><img src="Styles/Basic/Images/Spacer.gif" alt=""></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="{@error-block}" class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="Login1login">{res:CCS_Login}</label></td> 
+            <td><input type="text" name="{login_Name}" value="{login}" maxlength="100" size="20" id="Login1login"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Login1password">{res:CCS_Password}</label></td> 
+            <td><input type="password" name="{password_Name}" value="{password}" maxlength="100" size="20" id="Login1password"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" style="text-align: right">
+              <!-- BEGIN Button Button_DoLogin --><input name="{Button_Name}" type="submit" value="{res:CCS_LoginBtn}" alt="{res:CCS_LoginBtn}" id="Login1Button_DoLogin" class="Button"><!-- END Button Button_DoLogin --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record Login1 -->
+</body>
+</html>
