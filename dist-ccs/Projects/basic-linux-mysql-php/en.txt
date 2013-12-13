@@ -165,3 +165,7 @@ wet_name=Web Experience Toolkit (WET)
 wet_fullhd_lang_current=English
 Footer=Footer
 Breadcrum_trail=Breadcrumb trail
+wet_title=Web Experience Toolkit (WET)
+wet_subtitle=Collaborative open source project led by the Government of Canada
+Search=Search
+Search_website=Search Website

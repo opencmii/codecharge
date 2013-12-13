@@ -29,8 +29,8 @@ include_once(RelativePath . "/inc/footer.php");
 include_once(RelativePath . "/main.php");
 //End Include Page implementation
 
-//Include Page implementation @22-CB21508B
-include_once(RelativePath . "/inc/site_menu.php");
+//Include Page implementation @22-A45EDC57
+include_once(RelativePath . "/inc/siteMenu.php");
 //End Include Page implementation
 
 //Include Page implementation @19-5188A416
@@ -70,7 +70,7 @@ $Scripts = "|";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-CDF177D9
+//Initialize Objects @1-D3E61D95
 $Attributes = new clsAttributes("page:");
 $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
@@ -82,7 +82,7 @@ $MasterPage->Initialize();
 $Head = new clsPanel("Head", $MainPage);
 $Head->PlaceholderName = "Head";
 $TopMenu = new clsPanel("TopMenu", $MainPage);
-$TopMenu->PlaceholderName = "gcwu_gcnb";
+$TopMenu->PlaceholderName = "TopMenu";
 $gcwu_gcnb = new clstop_menu("inc/", "gcwu_gcnb", $MainPage);
 $gcwu_gcnb->Initialize();
 $CustomCSS = new clsPanel("CustomCSS", $MainPage);
@@ -99,7 +99,7 @@ $main_basic = new clsmain("", "main_basic", $MainPage);
 $main_basic->Initialize();
 $SiteMenu = new clsPanel("SiteMenu", $MainPage);
 $SiteMenu->PlaceholderName = "SiteMenu";
-$gcwu_psnb = new clssite_menu("inc/", "gcwu_psnb", $MainPage);
+$gcwu_psnb = new clssiteMenu("inc/", "gcwu_psnb", $MainPage);
 $gcwu_psnb->Initialize();
 $Breadcrum = new clsPanel("Breadcrum", $MainPage);
 $Breadcrum->PlaceholderName = "cgwu_breadcrum";
@@ -188,7 +188,7 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-13D484C0
+//Show Page @1-19821289
 $Head->Show();
 $TopMenu->Show();
 $CustomCSS->Show();
@@ -199,7 +199,7 @@ $SiteMenu->Show();
 $Breadcrum->Show();
 $NavMenu->Show();
 $MasterPage->Tpl->SetVar("Head", $Tpl->GetVar("Panel Head"));
-$MasterPage->Tpl->SetVar("gcwu_gcnb", $Tpl->GetVar("Panel TopMenu"));
+$MasterPage->Tpl->SetVar("TopMenu", $Tpl->GetVar("Panel TopMenu"));
 $MasterPage->Tpl->SetVar("CustomCSS", $Tpl->GetVar("Panel CustomCSS"));
 $MasterPage->Tpl->SetVar("CustomScripts", $Tpl->GetVar("Panel CustomScripts"));
 $MasterPage->Tpl->SetVar("Footer", $Tpl->GetVar("Panel Footer"));
