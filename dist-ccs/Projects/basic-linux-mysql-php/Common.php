@@ -12,7 +12,7 @@ $CCConnectionSettings = array (
         "DBLib" => "MySQL",
         "Database" => "intranet",
         "Host" => "localhost",
-        "Port" => "3306",
+        "Port" => "3306;Database=intranet",
         "User" => "root",
         "Password" => "",
         "Encoding" => array("", "utf8"),
@@ -23,8 +23,8 @@ $CCConnectionSettings = array (
     )
 );
 //End Connection Settings
-//Initialize Common Variables @0-964CC9DC
 
+//Initialize Common Variables @0-A03E956B
 $PHPVersion = explode(".",  phpversion());
 if (($PHPVersion[0] < 4) || ($PHPVersion[0] == 4  && $PHPVersion[1] < 1)) {
     echo "Sorry. This program requires PHP 4.1 and above to run. You may upgrade your php at <a href='http://www.php.net/downloads.php'>http://www.php.net/downloads.php</a>";
@@ -2040,14 +2040,13 @@ function CCHexToBytes($hexstr) {
     return $result;
 }
 //End CCHexToBytes
-//CCLoginUser @0-581B3D26
 
+//CCLoginUser @0-A5BC967D
 function CCLoginUser($login, $password)
 {
     CCLogoutUser();
     $db = new clsDBbasic_mysql_php();
-    $SQL = "SELECT emp_id, group_id, emp_password FROM person WHERE emp_login=" . $db->ToSQL($login, ccsText) . " AND emp_password=SHA2({CONCAT('5a1t',password)},512)(" . $db->ToSQL($password, ccsText) . ")";
-
+    $SQL = "SELECT emp_id, group_id, emp_password FROM person WHERE emp_login=" . $db->ToSQL($login, ccsText) . " AND emp_password=" . $db->ToSQL($password, ccsText);
     $db->query($SQL);
     $Result = $db->next_record();
     if ($Result) {
