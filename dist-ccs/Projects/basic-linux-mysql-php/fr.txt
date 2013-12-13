@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 app_author=L.P. Durocher
 app_description=Demo appellé basic généré par l'application Codecharge mettant en valeur des gabarits de conception d'interface clf adapté du BOEW.\n
 app_name=Démo de base
 app_no=basic-mysql-php
 app_purpose=Démonstration de changement de langue et de thème en utilisant qu'une seule page web
 app_title=Démo de base
+=======
+app_ame=Démo de base
+app_name=Démo CodeCharge
+app_name_en=Démo CodeCharge
+app_name_rev=CodeCharge Demo
+app_purpose=Démo de base - Démonstration de changement de langue et de thème en utilisant qu'une seule page web
+>>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
 basic_base_theme_description=Gabarit de thème d'aide pour la cération de nouveau thèmes.
 basic_theme_and_style=Thème et style
 basic_theme_gcwu_fegc_description=Le thème GC Web a été développé pour répondre aux exigences  de <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=24227"> 
@@ -104,6 +112,7 @@ CCS_UploadComponentNotFound=Le composant de téléchargement vers le serveur {0}
 CCS_UploadingError=Erreur lors du téléchargement du fichier spécifié dans {0} vers le serveur. Description de l'erreur: {1}.
 CCS_UploadingTempFolderError=Erreur lors du téléchargement du fichier spécifié dans {0} vers le dossier temporaire du serveur. Description de l'erreur: {1}.
 CCS_WrongType=Le type de fichier spécifié dans le champ {0} n'est pas autorisé.
+<<<<<<< HEAD
 Description=Description
 gcwu_gcnb=Barre de navigation d'intranet
 gcwu_gcnb1=Lien personnalisé
@@ -111,6 +120,15 @@ gcwu_gcnb2=Lien personnalisé
 gcwu_gcnb3=Lien personnalisé
 gcwu_gcnb4=Lien personnalisé
 gcwu_gcnb5=Lien personnalisé
+=======
+gcwu_ef_lang1=Français
+gcwu_ef_lang2=English
+gcwu_ef_tc=Avis
+gcwu_gcnb1=lien 1
+gcwu_gcnb2=Lien 2
+gcwu_gcnb3=Lien 3
+gcwu_gcnb4=Lien 4
+>>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
 gcwu_gcnb_lang=English
 gcwu_gcnb_lang_reverse=English
 gcwu_gcnb_lang_reverse2=en
@@ -121,6 +139,7 @@ gcwu_subsite=Démo de base
 gcwu_tc=Termes et conditions
 gcwu_tr=Transparence
 gcwu_wet_project=Projet BOEW
+<<<<<<< HEAD
 gcwu_wmms_label=Symbole du Gouvernement du Canada
 Home=Principal
 Keywords=Mots clés
@@ -134,3 +153,11 @@ wb_skip2=Passer au pied de page
 wet_boew_codecharge=Variante CodeCharge Studio de la boîte à Outil de L'Expérience Web (BOEW)
 wet_name=Boîte à outils de l'expérience Web (BOEW)
 wet_boew_codecharge_github=https://github.com/wet-boew/wet-boew-codecharge
+=======
+Link=Lien
+locale=fr
+locale_full=Français
+locale_full_rev=English
+locale_rev=en
+gcwu_ef_tc_rev=Terms and Conditions
+>>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
