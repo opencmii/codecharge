@@ -114,6 +114,7 @@ CCS_UploadingTempFolderError=Erreur lors du téléchargement du fichier spécifi
 CCS_WrongType=Le type de fichier spécifié dans le champ {0} n'est pas autorisé.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Description=Description
 gcwu_gcnb=Barre de navigation d'intranet
 gcwu_gcnb1=Lien personnalisé
@@ -122,6 +123,8 @@ gcwu_gcnb3=Lien personnalisé
 gcwu_gcnb4=Lien personnalisé
 gcwu_gcnb5=Lien personnalisé
 =======
+=======
+>>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
 =======
 >>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
 gcwu_ef_lang1=Français
@@ -144,6 +147,7 @@ gcwu_tr=Transparence
 gcwu_wet_project=Projet BOEW
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 gcwu_wmms_label=Symbole du Gouvernement du Canada
 Home=Principal
 Keywords=Mots clés
@@ -160,6 +164,8 @@ wet_boew_codecharge_github=https://github.com/wet-boew/wet-boew-codecharge
 =======
 =======
 >>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
+=======
+>>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
 Link=Lien
 locale=fr
 locale_full=Français
@@ -167,6 +173,9 @@ locale_full_rev=English
 locale_rev=en
 gcwu_ef_tc_rev=Terms and Conditions
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
+=======
 >>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
 =======
 >>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
