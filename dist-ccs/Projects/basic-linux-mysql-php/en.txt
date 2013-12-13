@@ -149,9 +149,12 @@ gcwu_locale_en_fr=en
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 gcwu_sig_label=Government of Canada
 gcwu_srch_label=Search website
 gcwu_subsite=Basic demo
+=======
+>>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
 =======
 >>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
 =======
@@ -170,6 +173,7 @@ Name=Name
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 wb_skip1=Skip to main content
 wb_skip2=Skip to footer
 Home=Home
@@ -178,6 +182,8 @@ app_name=Basic demo
 wet_boew_codecharge=CodeCharge Studio variant of the Web Experience Toolkit (WET)
 wet_boew_codecharge_github=https://github.com/wet-boew/wet-boew-codecharge
 =======
+=======
+>>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
 =======
 >>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
 =======
@@ -193,6 +199,9 @@ gcwu_ef_tc=Terms and conditions
 gcwu_ef_tc_rev=Avis
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
+=======
 >>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
 =======
 >>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
