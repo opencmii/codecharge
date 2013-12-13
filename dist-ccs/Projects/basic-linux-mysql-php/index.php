@@ -59,24 +59,8 @@ if ($Charset) {
     header("Content-Type: " . $ContentType);
 }
 //End Initialize Objects
+//Initialize HTML Template @1-F98FCA33
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-//Initialize HTML Template @1-17121F43
-=======
-//Initialize HTML Template @1-F98FCA33
->>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
-=======
-//Initialize HTML Template @1-F98FCA33
->>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
-=======
-//Initialize HTML Template @1-F98FCA33
->>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
-=======
-//Initialize HTML Template @1-F98FCA33
->>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
 $CCSEventResult = CCGetEvent($CCSEvents, "OnInitializeView", $MainPage);
 $Tpl = new clsTemplate($FileEncoding, $TemplateEncoding);
 if (strlen($TemplateSource)) {
