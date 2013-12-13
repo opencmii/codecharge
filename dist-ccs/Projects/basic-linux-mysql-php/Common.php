@@ -25,7 +25,11 @@ $CCConnectionSettings = array (
 //End Connection Settings
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Initialize Common Variables @0-A03E956B
+=======
+//Initialize Common Variables @0-964CC9DC
+>>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
 =======
 //Initialize Common Variables @0-964CC9DC
 >>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
@@ -2046,7 +2050,11 @@ function CCHexToBytes($hexstr) {
 //End CCHexToBytes
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //CCLoginUser @0-A5BC967D
+=======
+//CCLoginUser @0-581B3D26
+>>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
 =======
 //CCLoginUser @0-581B3D26
 >>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
@@ -2055,7 +2063,11 @@ function CCLoginUser($login, $password)
     CCLogoutUser();
     $db = new clsDBbasic_mysql_php();
 <<<<<<< HEAD
+<<<<<<< HEAD
     $SQL = "SELECT emp_id, group_id, emp_password FROM person WHERE emp_login=" . $db->ToSQL($login, ccsText) . " AND emp_password=" . $db->ToSQL($password, ccsText);
+=======
+    $SQL = "SELECT emp_id, group_id, emp_password FROM person WHERE emp_login=" . $db->ToSQL($login, ccsText) . " AND emp_password=SHA2({CONCAT('5a1t',password)},512)(" . $db->ToSQL($password, ccsText) . ")";
+>>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
 =======
     $SQL = "SELECT emp_id, group_id, emp_password FROM person WHERE emp_login=" . $db->ToSQL($login, ccsText) . " AND emp_password=SHA2({CONCAT('5a1t',password)},512)(" . $db->ToSQL($password, ccsText) . ")";
 >>>>>>> 2b967e3761922c32bd8b21f7d85bec95a3932e6e
