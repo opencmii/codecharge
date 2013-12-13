@@ -37,7 +37,7 @@ include_once(RelativePath . "/inc/site_menu.php");
 include_once(RelativePath . "/inc/breadcrum.php");
 //End Include Page implementation
 
-//Initialize Page @1-8E51DD49
+//Initialize Page @1-9F99DBCB
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -64,7 +64,6 @@ $ContentType = "text/html";
 $PathToRoot = "./";
 $PathToRootOpt = "";
 $Scripts = "|";
-$Charset = $Charset ? $Charset : "utf-8";
 //End Initialize Page
 
 //Before Initialize @1-E870CEBC
@@ -142,7 +141,7 @@ if ($Charset) {
 }
 //End Initialize Objects
 
-//Initialize HTML Template @1-577E43E0
+//Initialize HTML Template @1-B62C8EB7
 $CCSEventResult = CCGetEvent($CCSEvents, "OnInitializeView", $MainPage);
 $Tpl = new clsTemplate($FileEncoding, $TemplateEncoding);
 if (strlen($TemplateSource)) {
@@ -153,6 +152,8 @@ if (strlen($TemplateSource)) {
 $Tpl->SetVar("CCS_PathToRoot", $PathToRoot);
 $Tpl->SetVar("CCS_PathToMasterPage", RelativePath . $PathToCurrentMasterPage);
 $Tpl->block_path = "/$BlockToParse";
+$Attributes->SetValue("Filename", "");
+$Attributes->SetValue("FileName", "");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeShow", $MainPage);
 $Attributes->SetValue("pathToRoot", "");
 $Attributes->Show();

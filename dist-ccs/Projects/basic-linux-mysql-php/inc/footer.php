@@ -1,5 +1,9 @@
 <?php
 
+//Error reporting @1-8F636958
+error_reporting(E_ALL | E_STRICT);
+//End Error reporting
+
 class clsfooter { //footer class @1-1DA8A4E8
 
 //Variables @1-EEEBE252
@@ -115,3 +119,4 @@ class clsfooter { //footer class @1-1DA8A4E8
 
 
 ?>
+

@@ -6,7 +6,9 @@
 	</CodeFiles>
 	<SecurityGroups/>
 	<CachingParameters/>
-	<Attributes/>
+	<Attributes>
+<Attribute id="2" name="Filename" sourceType="Expression"/>
+</Attributes>
 	<Features/>
 	<Events/>
 </Page>

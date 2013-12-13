@@ -24,14 +24,13 @@ $CCConnectionSettings = array (
 );
 //End Connection Settings
 
-//Initialize Common Variables @0-A03E956B
+//Initialize Common Variables @0-31C97E50
 $PHPVersion = explode(".",  phpversion());
 if (($PHPVersion[0] < 4) || ($PHPVersion[0] == 4  && $PHPVersion[1] < 1)) {
     echo "Sorry. This program requires PHP 4.1 and above to run. You may upgrade your php at <a href='http://www.php.net/downloads.php'>http://www.php.net/downloads.php</a>";
     exit;
 }
 if (session_id() == "") { session_start(); }
-if (CCGetUserAddr() != $_SERVER["REMOTE_ADDR"]) { CCLogoutUser(); }
 
 header('Pragma: ');
 header('Cache-control: ');
@@ -55,7 +54,7 @@ $Charset = "utf-8";
 if ($PHPLocale = $CCSLocales->GetFormatInfo("PHPLocale"))
     setlocale(LC_ALL, $PHPLocale);
 CCConvertDataArrays();
-$CCProjectStyle = "Basic";
+$CCProjectStyle = "";
 $CCProjectDesign = "theme-gcwu-intranet";
 CCSelectProjectDesign();
 //for compatibility
@@ -90,6 +89,7 @@ define("ccsWeek", 11);
 define("ccsGMT", 12);
 define("ccsAppropriateYear", 13);
 $CCSDesign = "";
+define("CCS_ENCRYPTION_KEY_FOR_COOKIE", 'UWeVgC8W77Y95t63');
 
 $DefaultDateFormat = array("ShortDate");
 
@@ -1848,226 +1848,6 @@ if (!function_exists('file_get_contents')) {
     }
 }
 //End file_get_contents
-
-//CCSecurityRedirect @0-F212A7B7
-function CCSecurityRedirect($GroupsAccess, $URL)
-{
-    global $_SERVER;
-    $ReturnPage = isset($_SERVER["REQUEST_URI"]) ? $_SERVER["REQUEST_URI"] : "";
-    if(!strlen($ReturnPage)) {
-        $ReturnPage = isset($_SERVER["SCRIPT_NAME"]) ? $_SERVER["SCRIPT_NAME"] : "";
-        $QueryString = CCGetQueryString("QueryString", "");
-        if($QueryString !== "")
-            $ReturnPage .= "?" . $QueryString;
-    }
-    $ErrorType = CCSecurityAccessCheck($GroupsAccess);
-    if($ErrorType != "success")
-    {
-        if(!strlen($URL))
-            $Link = ServerURL . "login.php";
-        else
-            $Link = $URL;
-        header("Location: " . $Link . "?ret_link=" . urlencode($ReturnPage) . "&type=" . $ErrorType);
-        exit;
-    }
-}
-//End CCSecurityRedirect
-
-//CCSecurityAccessCheck @0-7B496647
-function CCSecurityAccessCheck($GroupsAccess)
-{
-    $ErrorType = "success";
-    if(!strlen(CCGetUserID()))
-    {
-        $ErrorType = "notLogged";
-    }
-    else
-    {
-        $GroupID = CCGetGroupID();
-        if(!strlen($GroupID))
-        {
-            $ErrorType = "groupIDNotSet";
-        }
-        else
-        {
-            if(!CCUserInGroups($GroupID, $GroupsAccess))
-                $ErrorType = "illegalGroup";
-        }
-    }
-    return $ErrorType;
-}
-//End CCSecurityAccessCheck
-
-//CCGetUserID @0-6FAFFFAE
-function CCGetUserID()
-{
-    return CCGetSession("UserID");
-}
-//End CCGetUserID
-
-//CCGetGroupID @0-89F10997
-function CCGetGroupID()
-{
-    return CCGetSession("GroupID");
-}
-//End CCGetGroupID
-
-//CCGetUserLogin @0-ACD25564
-function CCGetUserLogin()
-{
-    return CCGetSession("UserLogin");
-}
-//End CCGetUserLogin
-
-//CCGetUserPassword @0-D67B1DE1
-function CCGetUserPassword()
-{
-    return "";
-}
-//End CCGetUserPassword
-
-//CCGetUserAddr @0-608F4AF1
-function CCGetUserAddr()
-{
-    return CCGetSession("UserAddr");
-}
-//End CCGetUserAddr
-
-//CCUserInGroups @0-72661549
-function CCUserInGroups($GroupID, $GroupsAccess)
-{
-    $Result = "";
-    if(strlen($GroupsAccess))
-    {
-        $GroupNumber = intval($GroupID);
-        while(!$Result && $GroupNumber >= 0)
-        {
-            $Result = (strpos(";" . $GroupsAccess . ";", ";" . $GroupNumber . ";") !== false);
-            $GroupNumber--;
-        }
-    }
-    else
-    {
-        $Result = true;
-    }
-    return $Result;
-}
-//End CCUserInGroups
-
-//CCCipherInit @0-034764F6
-function CCCipherInit($key) {
-    global $CipherBox, $CipherKey;
-    $temp = '';
-    $idx1 = 0;
-    $idx2 = 0;
-    $keyLength = strlen($key);
-    for ($idx1 = 0; $idx1 < 256; $idx1++) {
-        $CipherBox[$idx1] = $idx1;
-        $CipherKey[$idx1] = ord($key[$idx1 % $keyLength]);
-    }
-    for ($idx1 = 0; $idx1 < 256; $idx1++) {
-        $idx2 = ($idx2 + $CipherBox[$idx1] + $CipherKey[$idx1]) % 256;
-        $temp = $CipherBox[$idx1];
-        $CipherBox[$idx1] = $CipherBox[$idx2];
-        $CipherBox[$idx2] = $temp;
-    }
-}
-//End CCCipherInit
-
-//CCEncryptString @0-1D38A95F
-function CCEncryptString($inputStr, $key) {
-    return strtoupper(CCBytesToHex(CCCipherEnDeCrypt($inputStr, $key)));
-}
-//End CCEncryptString
-
-//CCDecryptString @0-548844D9
-function CCDecryptString($inputStr, $key) {
-    return CCBytesToString(CCCipherEnDeCrypt(CCHexToBytes($inputStr), $key));
-}
-//End CCDecryptString
-
-//CCCipherEnDeCrypt @0-D1CE45DA
-function CCCipherEnDeCrypt($inputStr, $key) {
-    global $CipherBox;
-    $result = array();
-    $i = 0;
-    $j = 0;
-    CCCipherInit($key);
-    for ($a = 0; $a < strlen($inputStr); $a++) {
-        $i = ($i + 1) % 256;
-        $j = ($j + $CipherBox[$i]) % 256;
-        $temp = $CipherBox[$i];
-        $CipherBox[$i] = $CipherBox[$j];
-        $CipherBox[$j] = $temp;
-        $k = $CipherBox[(($CipherBox[$i] + $CipherBox[$j]) % 256)];
-        $crypted = ord($inputStr[$a]) ^ $k;
-        $result[$a] = $crypted;
-    }
-    return $result;
-}
-//End CCCipherEnDeCrypt
-
-//CCBytesToString @0-48925391
-function CCBytesToString($bytesArray) {
-    $result = '';
-    foreach ($bytesArray as $byte) {
-        $result .= chr($byte);
-    }
-    return $result;
-}
-//End CCBytesToString
-
-//CCBytesToHex @0-AC21C0B4
-function CCBytesToHex($bytesArray) {
-    $result = '';
-    foreach ($bytesArray as $byte) {
-        $tmp = dechex($byte);
-        $result .= str_repeat("0", 2 - strlen($tmp)) . $tmp;
-    }
-    return $result;
-}
-//End CCBytesToHex
-
-//CCHexToBytes @0-DE5FE7C5
-function CCHexToBytes($hexstr) {
-    $result = '';
-    $num = 0;
-    for ($i = 0; $i < strlen($hexstr); $i += 2) {
-        $num = hexdec(substr($hexstr, $i, 1)) * 16;
-        $num += hexdec(substr($hexstr, $i + 1, 1));
-        $result .= chr($num);
-    }
-    return $result;
-}
-//End CCHexToBytes
-
-//CCLoginUser @0-A5BC967D
-function CCLoginUser($login, $password)
-{
-    CCLogoutUser();
-    $db = new clsDBbasic_mysql_php();
-    $SQL = "SELECT emp_id, group_id, emp_password FROM person WHERE emp_login=" . $db->ToSQL($login, ccsText) . " AND emp_password=" . $db->ToSQL($password, ccsText);
-    $db->query($SQL);
-    $Result = $db->next_record();
-    if ($Result) {
-        CCSetSession("UserID", $db->f("emp_id"));
-        CCSetSession("UserLogin", $login);
-        CCSetSession("GroupID", $db->f("group_id"));
-        CCSetSession("UserAddr", $_SERVER["REMOTE_ADDR"]);
-    }
-    return $Result;
-}
-//End CCLoginUser
-
-//CCLogoutUser @0-9378664F
-function CCLogoutUser()
-{
-    CCSetSession("UserID", "");
-    CCSetSession("UserLogin", "");
-    CCSetSession("GroupID", "");
-    CCSetSession("UserAddr", "");
-}
-//End CCLogoutUser
 
 
 ?>

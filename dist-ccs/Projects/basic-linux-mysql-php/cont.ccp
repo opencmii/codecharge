@@ -56,7 +56,7 @@
 		</Panel>
 		<Panel id="21" visible="True" generateDiv="False" name="SiteMenu" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="SiteMenu" contentPlaceholder="SiteMenu">
 			<Components>
-				<IncludePage id="22" name="gcwu_psnb" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="SiteMenugcwu_psnb" page="inc/site_menu.ccp">
+				<IncludePage id="22" name="gcwu_psnb" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="SiteMenugcwu_psnb" page="inc/siteMenu.ccp">
 					<Components/>
 					<Events/>
 					<Features/>
@@ -90,7 +90,10 @@
 	</CodeFiles>
 	<SecurityGroups/>
 	<CachingParameters/>
-	<Attributes/>
+	<Attributes>
+		<Attribute id="25" name="Filename" sourceType="Expression"/>
+		<Attribute id="26" name="FileName"/>
+	</Attributes>
 	<Features/>
 	<Events/>
 </Page>
