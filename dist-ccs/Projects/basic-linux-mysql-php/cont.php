@@ -17,8 +17,8 @@ include_once(RelativePath . "/Navigator.php");
 include_once(RelativePath . "/Designs/theme-gcwu-intranet/MasterPage.php");
 //End Master Page implementation
 
-//Include Page implementation @11-7FA6A3DF
-include_once(RelativePath . "/inc/top_menu.php");
+//Include Page implementation @11-2813BFAB
+include_once(RelativePath . "/inc/topMenu.php");
 //End Include Page implementation
 
 //Include Page implementation @8-E5D4CE8B
@@ -70,7 +70,7 @@ $Scripts = "|";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-D3E61D95
+//Initialize Objects @1-3076BFE5
 $Attributes = new clsAttributes("page:");
 $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
@@ -83,7 +83,7 @@ $Head = new clsPanel("Head", $MainPage);
 $Head->PlaceholderName = "Head";
 $TopMenu = new clsPanel("TopMenu", $MainPage);
 $TopMenu->PlaceholderName = "TopMenu";
-$gcwu_gcnb = new clstop_menu("inc/", "gcwu_gcnb", $MainPage);
+$gcwu_gcnb = new clstopMenu("inc/", "gcwu_gcnb", $MainPage);
 $gcwu_gcnb->Initialize();
 $CustomCSS = new clsPanel("CustomCSS", $MainPage);
 $CustomCSS->PlaceholderName = "CustomCSS";
