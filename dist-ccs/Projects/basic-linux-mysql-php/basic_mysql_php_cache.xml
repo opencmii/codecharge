@@ -1,1 +1,36 @@
-<LldlCache allCatalogs="False" allSchemes="False" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" />
+<LldlCache allCatalogs="True" allSchemes="True" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False">
+  <catalog allSchemes="True" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="False">
+    <schema SCHEMA_NAME="information_schema" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="cadms" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="cdcol" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="cml_ops" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="internet" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="intranet" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True">
+      <table TABLE_NAME="absence_types" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="cache" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="customers" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="departments" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="emp_times" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="employees" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="files" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="groups" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="menu" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="order_items" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="orders" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="person" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="priorities" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="products" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="projects" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="projects_employees" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="statuses" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="tasks" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="types" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="user_events" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+    </schema>
+    <schema SCHEMA_NAME="mysql" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="performance_schema" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="phpmyadmin" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="test" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="webauth" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  </catalog>
+</LldlCache>

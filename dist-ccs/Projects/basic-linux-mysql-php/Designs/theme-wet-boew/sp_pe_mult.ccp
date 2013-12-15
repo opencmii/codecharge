@@ -3,10 +3,12 @@
 	</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="sp_pe_mult.php" forShow="True" url="sp_pe_mult.php" comment="//" codePage="utf-8"/>
-</CodeFiles>
+	</CodeFiles>
 	<SecurityGroups/>
 	<CachingParameters/>
-	<Attributes/>
+	<Attributes>
+<Attribute id="2" name="pathToCurrentPage" sourceType="Expression"/>
+</Attributes>
 	<Features/>
 	<Events/>
 </Page>

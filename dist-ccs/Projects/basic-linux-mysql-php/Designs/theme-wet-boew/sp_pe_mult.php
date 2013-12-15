@@ -63,7 +63,7 @@ if ($Charset) {
 }
 //End Initialize Objects
 
-//Initialize HTML Template @1-D7561EFC
+//Initialize HTML Template @1-9340C4A1
 $CCSEventResult = CCGetEvent($CCSEvents, "OnInitializeView", $MainPage);
 $Tpl = new clsTemplate($FileEncoding, $TemplateEncoding);
 if (strlen($TemplateSource)) {
@@ -73,6 +73,7 @@ if (strlen($TemplateSource)) {
 }
 $Tpl->SetVar("CCS_PathToRoot", $PathToRoot);
 $Tpl->block_path = "/$BlockToParse";
+$Attributes->SetValue("pathToCurrentPage", "");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeShow", $MainPage);
 $Attributes->SetValue("pathToRoot", "../../");
 $Attributes->Show();
