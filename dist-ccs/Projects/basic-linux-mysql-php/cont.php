@@ -70,7 +70,7 @@ $Scripts = "|";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-5DF91654
+//Initialize Objects @1-FB6B065E
 $Attributes = new clsAttributes("page:");
 $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
@@ -96,6 +96,8 @@ $SiteMenu->PlaceholderName = "SiteMenu";
 $gcwu_psnb = new clssiteMenu("inc/", "gcwu_psnb", $MainPage);
 $gcwu_psnb->Initialize();
 $TopMenu = new clsPanel("TopMenu", $MainPage);
+global $CCProjectDesign;
+$TopMenu->MasterPageInitialize("MasterPage", "/" . "Designs/theme-wet-boew/", "MasterPage.html");
 $TopMenu->PlaceholderName = "TopMenu";
 $gcwu_gcnb = new clstopMenu("inc/", "gcwu_gcnb", $MainPage);
 $gcwu_gcnb->Initialize();
