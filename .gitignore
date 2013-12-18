@@ -10,4 +10,9 @@ Thumbs.db
 *.log
 *.bak
 *.lnk
+*.xml
+*.php
+*.ccs
+*.ccp
+*.html
 dist-ccs/Projects/cadms-linux-mysql-php/*
