@@ -1,4 +1,4 @@
-<Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" needGeneration="0" useDesign="False" masterPage="{CCS_PathToMasterPage}/MasterPage.ccp">
+<Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" needGeneration="0" useDesign="False" masterPage="Designs/theme-wet-boew/MasterPage.ccp">
 	<Components>
 		<Panel id="13" visible="True" generateDiv="False" name="Head" contentPlaceholder="Head">
 			<Components/>
@@ -6,31 +6,7 @@
 			<Attributes/>
 			<Features/>
 		</Panel>
-		<Panel id="14" visible="True" generateDiv="False" name="TopMenu" contentPlaceholder="TopMenu">
-			<Components>
-				<IncludePage id="11" name="gcwu_gcnb" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="TopMenugcwu_gcnb" page="inc/topMenu.ccp">
-					<Components/>
-					<Events/>
-					<Features/>
-				</IncludePage>
-			</Components>
-			<Events/>
-			<Attributes/>
-			<Features/>
-		</Panel>
-		<Panel id="15" visible="True" generateDiv="False" name="CustomCSS" contentPlaceholder="CustomCSS">
-			<Components/>
-			<Events/>
-			<Attributes/>
-			<Features/>
-		</Panel>
-		<Panel id="16" visible="True" generateDiv="False" name="CustomScripts" contentPlaceholder="CustomScripts">
-			<Components/>
-			<Events/>
-			<Attributes/>
-			<Features/>
-		</Panel>
-		<Panel id="17" visible="True" generateDiv="False" name="Footer" contentPlaceholder="Footer">
+<Panel id="17" visible="True" generateDiv="False" name="Footer" contentPlaceholder="Footer">
 			<Components>
 				<IncludePage id="8" name="gcwu_footer" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Footergcwu_footer" page="inc/footer.ccp">
 					<Components/>
@@ -42,31 +18,19 @@
 			<Attributes/>
 			<Features/>
 		</Panel>
-		<Panel id="20" visible="True" generateDiv="False" name="Content" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Content" contentPlaceholder="Content">
-			<Components>
-				<IncludePage id="24" name="main_basic" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Contentmain_basic" page="main.ccp">
-					<Components/>
-					<Events/>
-					<Features/>
-				</IncludePage>
-			</Components>
-			<Events/>
-			<Attributes/>
-			<Features/>
-		</Panel>
-		<Panel id="21" visible="True" generateDiv="False" name="SiteMenu" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="SiteMenu" contentPlaceholder="SiteMenu">
-			<Components>
-				<IncludePage id="22" name="gcwu_psnb" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="SiteMenugcwu_psnb" page="inc/siteMenu.ccp">
-					<Components/>
-					<Events/>
-					<Features/>
-				</IncludePage>
-			</Components>
-			<Events/>
-			<Attributes/>
-			<Features/>
-		</Panel>
-		<Panel id="18" visible="True" generateDiv="False" name="Breadcrum" contentPlaceholder="cgwu_breadcrum">
+<Panel id="27" visible="True" generateDiv="False" name="CustomScripts">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</Panel>
+<Panel id="28" visible="True" generateDiv="False" name="CustomCSS">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</Panel>
+<Panel id="18" visible="True" generateDiv="False" name="Breadcrum" contentPlaceholder="cgwu_breadcrum">
 			<Components>
 				<IncludePage id="19" name="gcwu_breadcrum" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Breadcrumgcwu_breadcrum" page="inc/breadcrum.ccp">
 					<Components/>
@@ -78,13 +42,43 @@
 			<Attributes/>
 			<Features/>
 		</Panel>
-		<Panel id="23" visible="True" generateDiv="False" name="NavMenu" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="NavMenu">
-			<Components/>
+<Panel id="21" visible="True" generateDiv="False" name="SiteMenu" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="SiteMenu" contentPlaceholder="SiteMenu">
+			<Components>
+				<IncludePage id="22" name="gcwu_psnb" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="SiteMenugcwu_psnb" page="inc/siteMenu.ccp">
+					<Components/>
+					<Events/>
+					<Features/>
+				</IncludePage>
+			</Components>
 			<Events/>
 			<Attributes/>
 			<Features/>
 		</Panel>
-	</Components>
+<Panel id="14" visible="True" generateDiv="False" name="TopMenu" contentPlaceholder="TopMenu" masterPage="Designs/theme-wet-boew/MasterPage.ccp">
+			<Components>
+				<IncludePage id="11" name="gcwu_gcnb" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="TopMenugcwu_gcnb" page="inc/topMenu.ccp">
+					<Components/>
+					<Events/>
+					<Features/>
+				</IncludePage>
+			</Components>
+			<Events/>
+			<Attributes/>
+			<Features/>
+		</Panel>
+<Panel id="29" visible="True" generateDiv="False" name="Content" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Content">
+<Components>
+<IncludePage id="30" name="main" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Contentmain" page="main.ccp">
+<Components/>
+<Events/>
+<Features/>
+</IncludePage>
+</Components>
+<Events/>
+<Attributes/>
+<Features/>
+</Panel>
+</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="cont.php" forShow="True" url="cont.php" comment="//" codePage="utf-8"/>
 	</CodeFiles>

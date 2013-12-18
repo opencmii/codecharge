@@ -1,56 +1,44 @@
 <!DOCTYPE HTML>
+<html>
+<head>
+{Head}
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="../grids/css/util-ie-min.css">
+<link rel="stylesheet" href="../js/css/pe-ap-ie-min.css">
+<link rel="stylesheet" href="css/theme-ie-min.css">
+<link rel="stylesheet" href="css/theme-ns-ie-min.css">
+<link rel="stylesheet" href="../grids/css/util-min.css">
+<link rel="stylesheet" href="../js/css/pe-ap-min.css">
+<link rel="stylesheet" href="css/theme-min.css">
+<link rel="stylesheet" href="css/theme-ns-min.css">
+<meta name="description" content="English description / Description en anglais">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
 <!--[if IE 7]><![endif]-->
 <!--[if IE 8]><![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="{res:locale}">
 <!--<![endif]-->
-<head>
-<meta charset="utf-8">
-<!-- Web Experience Toolkit (WET) / Boite � outils de l'exp�rience Web (BOEW)
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-<!-- CustomHeadStart -->
-{Head}
-<!-- CustomHeadEnd -->
-<link rel="shortcut icon" href="{page:pathToCurrentPage}/images/favicon.ico" />
-<meta name="description" content="{res:app_description}">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="{res:app_author}">
-<meta name="application" content="{res:app_no}">
-<link rel="canonical" href="{page:FileName}">
-<meta name="description" content="{res:app_description}">
-<meta name="dcterms.creator" content="{res:app_author}">
-<meta name="dcterms.title" content="{res:app_title}">
-<meta name="dcterms.issued" content="{res:meta_issued}" title="W3CDTF">
-<meta name="dcterms.modified" content="{res:meta_modified}" title="W3CDTF">
-<meta name="dcterms.subject" content="{res:meta_subject}" title="scheme">
-<meta name="dcterms.language" content="{res:locale3}" title="ISO639-2">
+Content page - Sub-site - WET theme - Working examples - Web Experience Toolkit&nbsp;(WET) 
 <!--[if lte IE 8]>
-<script src="{page:pathToCurrentPage}/../../js/jquery-ie.min.js"></script>
-<script src="{page:pathToCurrentPage}/../../js/polyfills/html5shiv-min.js"></script>
-<link rel=stylesheet href="{page:pathToCurrentPage}/../../grids/css/util-ie-min.css">
-<link rel=stylesheet href="{page:pathToCurrentPage}/../../js/css/pe-ap-ie-min.css">
-<link rel=stylesheet href="{page:pathToCurrentPage}/css/theme-ie-min.css"><noscript>
-<link rel=stylesheet href="{page:pathToCurrentPage}/css/theme-ns-ie-min.css"></noscript>
-<![endif]-->
+<SCRIPT src="../js/jquery-ie.min.js"></SCRIPT>
+<SCRIPT src="../js/polyfills/html5shiv-min.js"></SCRIPT>
+<noscript></noscript><![endif]-->
 <!--[if gt IE 8]><!-->
-<script src="{page:pathToCurrentPage}/../../js/jquery.min.js"></script>
-<link rel="stylesheet" href="{page:pathToCurrentPage}/../../grids/css/util-min.css">
-<link rel="stylesheet" href="{page:pathToCurrentPage}/../../js/css/pe-ap-min.css">
-<link rel="stylesheet" href="{page:pathToCurrentPage}/css/theme-min.css">
-</head><body>
+<script src="../js/jquery.min.js"></script>
 <noscript>
-<link rel="stylesheet" href="{page:pathToCurrentPage}/css/theme-ns-min.css">
 </noscript>
 <!--<![endif]-->
 <!-- CustomCSSStart -->
-{CustomCSS}
 <!-- CustomCSSEnd -->
 <div id="wb-body">
   <div id="wb-skip">
     <ul id="wb-tphp">
-      <li id="wb-skip1"><a href="#wb-cont">{res:wb_skip1}</a> </li>
+      <li id="wb-skip1"><a href="#wb-cont">Skip to main content</a> </li>
  
-      <li id="wb-skip2"><a href="#wb-nav">{res:wb_skip2}</a> </li>
+      <li id="wb-skip2"><a href="#wb-nav">Skip to footer</a> </li>
  
     </ul>
  
@@ -62,39 +50,41 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
       <!-- HeaderStart -->
       <section>
       <div id="wet-fullhd">
-        <h2>{res:gcwu_gcnb}</h2>
+        <h2>Header bar</h2>
  
         <div id="wet-fullhd-in">
           <ul>
-            <li id="wet-fullhd-lang-2"><a href="{page:FileName}?locale={res:gcwu_gcnb_lang_reverse2}" lang="{res:gcwu_gcnb_lang_reverse2}">{res:gcwu_gcnb_lang_reverse}</a></li>
+            <li id="wet-fullhd-lang"><a href="es/cont-subsite-es.html" lang="es">Español</a> </li>
  
-            <li id="wet-fullhd-lang-current">{res:wet_fullhd_lang_current}</li>
+            <li id="wet-fullhd-lang-2"><a href="cont-subsite-fr.html" lang="fr">Français</a> </li>
+ 
+            <li id="wet-fullhd-lang-current">English </li>
  
           </ul>
  
         </div>
  
       </div>
-      </section>
+ </section>
  
-      <div id="wet-bnr" role="banner" aria-ownsid="wet-subsite">
+      <div role="banner" id="wet-bnr" aria-ownsid="wet-subsite">
         <div id="wet-bnr-in">
           <div id="wet-title">
-            <p id="wet-title-in"><a href="index.php">
-            <object data="{page:pathToCurrentPage}/images/logo.svg" role="img" tabindex="-1" type="image/svg+xml">
-              <img src="{page:pathToCurrentPage}/images/logo.png" alt="" />
+            <p id="wet-title-in"><a href="../index-en.html">
+            <object type="image/svg+xml" tabindex="-1" role="img" data=".//images/logo.svg">
+              <!-- BEGIN img null --><!-- END img null -->
             </object>
- <span>{res:wet_title} <small>{res:wet_subtitle}</small></span></a></p>
+ <span>Web Experience Toolkit&nbsp;(WET) <small>Collaborative open source project led by the Government of Canada</small></span></a></p>
  
           </div>
  
           <section role="search">
           <div id="wet-srchbx">
-            <h2>{res:Search}</h2>
+            <h2>Search</h2>
  
-            <form action="#" method="post">
+            <form method="post" action="#">
               <div id="wet-srchbx-in">
-                <label for="wet-srch">{res:Search_website}</label><input id="wet-srch" name="wet-srch" type="search" value="" size="27" maxlength="150" /><input id="wet-srch-submit" name="wet-srch-submit" type="submit" value="Search" data-icon="search" class="button button-accent" />
+                <label for="wet-srch">Search website</label><input id="wet-srch" maxlength="150" size="27" name="wet-srch"><input type="submit" id="wet-srch-submit" class="button button-accent" value="Search" name="wet-srch-submit" data-icon="search">
               </div>
  
             </form>
@@ -105,73 +95,210 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         </div>
  
         <div id="wet-subsite" class="wet-subsite-1">
-          <p><a href="#" title="{res:app_purpose}>{res:gcwu_subsite}</a></p>
-		</div>
-
+          <p><a href="#">Sub-site name</a></p>
+ 
+        </div>
  
       </div>
  
-      <nav role=" navigation">{siteMenu} 
-          <div id="wet-bc">
-            <h2>{res:Breadcrum_trail}</h2>
+      <nav role="navigation">
+      <div id="wet-psnb">
+        <h2>Site menu</h2>
  
-            <div id="wet-bc-in">
-              {Breadcrum} 
+        <div id="wet-psnb-in">
+          <div class="wet-boew-menubar mb-mega">
+            <div>
+              <ul class="mb-menu" data-ajax-replace="../includes/menu-en.txt">
+                <li>
+                <div>
+<a href="http://wet-boew.github.io/wet-boew/index-en.html">WET project</a> 
+                </div>
+ </li>
+ 
+                <li>
+                <div>
+<a href="section2/index-en.html">Section 2</a> 
+                </div>
+ </li>
+ 
+                <li>
+                <div>
+<a href="#">Section 3</a> 
+                </div>
+ </li>
+ 
+                <li>
+                <div>
+<a href="#">Section 4</a> 
+                </div>
+ </li>
+ 
+                <li>
+                <div>
+<a href="#">Section 5</a> 
+                </div>
+ </li>
+ 
+                <li>
+                <div>
+<a href="#">Section 6</a> 
+                </div>
+ </li>
+ 
+                <li>
+                <div>
+<a href="#">Section 7</a> 
+                </div>
+ </li>
+ 
+              </ul>
+ 
             </div>
  
           </div>
+ 
+        </div>
+ 
+      </div>
+ 
+      <div id="wet-bc">
+        <h2>Breadcrumb trail</h2>
+ 
+        <div id="wet-bc-in">
+          <ol>
+            <li><a href="../../index-en.html">Home</a> </li>
+ 
+            <li><a href="../index-en.html">Working examples</a> </li>
+ 
+            <li><a href="index-en.html">WET theme</a> </li>
+ 
+            <li>Content page - Sub-site </li>
+ 
+          </ol>
+ 
+        </div>
+ 
+      </div>
  </nav>
  
-          <!-- HeaderEnd -->
-          </header>
+      <!-- HeaderEnd -->
+      </header>
  
-        </div>
+    </div>
  
-      </div>
+  </div>
  
-      <div id="wb-core">
-        <div id="wb-core-in" class="equalize">
-          <div id="wb-main" role="main">
-            <div id="wb-main-in">
-              <!-- MainContentStart -->
-              {Content} 
-              <!-- MainContentEnd -->
-            </div>
- 
-          </div>
- 
-        </div>
- 
-      </div>
- 
-      <div id="wb-foot">
-        <div id="wb-foot-in">
-          <footer>
-          <h2 id="wb-nav">{res:Footer}</h2>
- {Footer} </footer>
- 
+  <div id="wb-core">
+    <div id="wb-core-in" class="equalize">
+      <div role="main" id="wb-main">
+        <div id="wb-main-in">
+          <!-- MainContentStart -->
+          {Content} 
+          <!-- MainContentEnd -->
         </div>
  
       </div>
  
     </div>
  
-    <!-- ScriptsStart -->
-    <script src="{page:pathToCurrentPage}/../../js/settings.js"></script>
-    <!--[if lte IE 8]>
-<script src="{page:pathToCurrentPage}/js/theme-ie-min.js"></script>
-<script src="{page:pathToCurrentPage}/../../js/pe-ap-ie-min.js"></script>
-<script src="{page:pathToCurrentPage}/../../js/jquerymobile/jquery.mobile-ie.min.js"></script>
-<![endif]-->
-    <!--[if gt IE 8]><!-->
-    <script src="{page:pathToCurrentPage}/js/theme-min.js"></script>
-    <script src="{page:pathToCurrentPage}/../../js/pe-ap-min.js"></script>
-    <script src="{page:pathToCurrentPage}/../../js/jquerymobile/jquery.mobile.min.js"></script>
-    <!--<![endif]-->
-    <!-- ScriptsEnd -->
-    <!-- CustomScriptsStart -->
-    {CustomScripts} 
-    <!-- CustomScriptsEnd -->
-    </body>
+  </div>
  
-    </html>
+  <div id="wb-foot">
+    <div id="wb-foot-in">
+      <footer>
+      <h2 id="wb-nav">Footer</h2>
+ 
+      <!-- FooterStart -->
+      <nav role="navigation">
+      <div id="wet-sft">
+        <h3>Site footer</h3>
+ 
+        <div id="wet-sft-in">
+          <section>
+          <div class="span-2">
+            <h4 class="wet-col-head"><a href="#">About us</a></h4>
+ 
+            <ul>
+              <li><a href="#">Our Mandate</a> 
+              <li><a href="#">Our history</a> </li>
+ 
+            </ul>
+ 
+          </div>
+ </section>
+ 
+          <section>
+          <div class="span-2">
+            <h4 class="wet-col-head"><a href="#">Contact us</a></h4>
+ 
+            <address>
+              <ul>
+                <li><a href="#">Phone numbers</a> 
+                <li><a href="#">Office locations</a> </li>
+ 
+              </ul>
+ 
+            </address>
+ 
+          </div>
+ </section>
+ 
+          <section>
+          <div class="span-2">
+            <h4 class="wet-col-head"><a href="#">News</a></h4>
+ 
+            <ul>
+              <li><a href="#">News releases</a> 
+              <li><a href="#">Media advisories</a> 
+              <li><a href="#">Multimedia</a> </li>
+ 
+            </ul>
+ 
+          </div>
+ </section>
+ 
+          <section>
+          <div class="span-2">
+            <h4 class="wet-col-head"><a href="#">Stay connected</a></h4>
+ 
+            <ul>
+              <li><a href="#" rel="external">YouTube</a> 
+              <li><a href="#" rel="external">Twitter</a> 
+              <li><a href="#">Feeds</a> </li>
+ 
+            </ul>
+ 
+          </div>
+ </section>
+ 
+        </div>
+ 
+      </div>
+ </nav>
+ 
+      <!-- FooterEnd -->
+      </footer>
+ 
+    </div>
+ 
+  </div>
+</div>
+<!-- ScriptsStart -->
+<script src="../js/settings.js"></script>
+<!--[if lte IE 8]>
+<SCRIPT src=".//js/theme-ie-min.js"></SCRIPT>
+
+<SCRIPT src="../js/pe-ap-ie-min.js"></SCRIPT>
+
+<SCRIPT src="../js/jquerymobile/jquery.mobile-ie.min.js"></SCRIPT>
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<script src=".//js/theme-min.js"></script>
+<script src="../js/pe-ap-min.js"></script>
+<script src="../js/jquerymobile/jquery.mobile.min.js"></script>
+<!--<![endif]-->
+<!-- ScriptsEnd -->
+<!-- CustomScriptsStart -->
+<!-- CustomScriptsEnd -->
+</body>
+</html>
