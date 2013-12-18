@@ -70,7 +70,7 @@ $Scripts = "|";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-FB6B065E
+//Initialize Objects @1-B01F5662
 $Attributes = new clsAttributes("page:");
 $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
@@ -96,12 +96,11 @@ $SiteMenu->PlaceholderName = "SiteMenu";
 $gcwu_psnb = new clssiteMenu("inc/", "gcwu_psnb", $MainPage);
 $gcwu_psnb->Initialize();
 $TopMenu = new clsPanel("TopMenu", $MainPage);
-global $CCProjectDesign;
-$TopMenu->MasterPageInitialize("MasterPage", "/" . "Designs/theme-wet-boew/", "MasterPage.html");
 $TopMenu->PlaceholderName = "TopMenu";
 $gcwu_gcnb = new clstopMenu("inc/", "gcwu_gcnb", $MainPage);
 $gcwu_gcnb->Initialize();
 $Content = new clsPanel("Content", $MainPage);
+$Content->PlaceholderName = "Content";
 $main = new clsmain("", "main", $MainPage);
 $main->Initialize();
 $MainPage->Head = & $Head;
@@ -185,7 +184,7 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-A663C207
+//Show Page @1-21E42DB4
 $Head->Show();
 $Footer->Show();
 $CustomScripts->Show();
@@ -199,6 +198,7 @@ $MasterPage->Tpl->SetVar("Footer", $Tpl->GetVar("Panel Footer"));
 $MasterPage->Tpl->SetVar("cgwu_breadcrum", $Tpl->GetVar("Panel Breadcrum"));
 $MasterPage->Tpl->SetVar("SiteMenu", $Tpl->GetVar("Panel SiteMenu"));
 $MasterPage->Tpl->SetVar("TopMenu", $Tpl->GetVar("Panel TopMenu"));
+$MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
 $MasterPage->Show();
 if (!isset($main_block)) $main_block = $MasterPage->HTML;
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
