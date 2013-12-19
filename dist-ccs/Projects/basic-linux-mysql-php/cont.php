@@ -17,10 +17,6 @@ include_once(RelativePath . "/Navigator.php");
 include_once(RelativePath . "/Designs/theme-wet-boew/MasterPage.php");
 //End Master Page implementation
 
-//Include Page implementation @8-E5D4CE8B
-include_once(RelativePath . "/inc/footer.php");
-//End Include Page implementation
-
 //Include Page implementation @19-5188A416
 include_once(RelativePath . "/inc/breadcrum.php");
 //End Include Page implementation
@@ -33,11 +29,15 @@ include_once(RelativePath . "/inc/siteMenu.php");
 include_once(RelativePath . "/inc/topMenu.php");
 //End Include Page implementation
 
-//Include Page implementation @30-65164D5D
+//Include Page implementation @8-688EB9AC
+include_once(RelativePath . "/inc/footer_gcwu.php");
+//End Include Page implementation
+
+//Include Page implementation @35-65164D5D
 include_once(RelativePath . "/main.php");
 //End Include Page implementation
 
-//Initialize Page @1-9F99DBCB
+//Initialize Page @1-8E51DD49
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -64,31 +64,26 @@ $ContentType = "text/html";
 $PathToRoot = "./";
 $PathToRootOpt = "";
 $Scripts = "|";
+$Charset = $Charset ? $Charset : "utf-8";
 //End Initialize Page
 
 //Before Initialize @1-E870CEBC
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-B01F5662
+//Initialize Objects @1-3C4148A0
 $Attributes = new clsAttributes("page:");
 $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
 
 // Controls
-$MasterPage = new clsMasterPage("/Designs/theme-wet-boew/", "MasterPage", $MainPage);
+$MasterPage = new clsMasterPage("/Designs/" . $CCProjectDesign . "/", "MasterPage", $MainPage);
 $MasterPage->Attributes = $Attributes;
 $MasterPage->Initialize();
 $Head = new clsPanel("Head", $MainPage);
 $Head->PlaceholderName = "Head";
-$Footer = new clsPanel("Footer", $MainPage);
-$Footer->PlaceholderName = "Footer";
-$gcwu_footer = new clsfooter("inc/", "gcwu_footer", $MainPage);
-$gcwu_footer->Initialize();
-$CustomScripts = new clsPanel("CustomScripts", $MainPage);
-$CustomCSS = new clsPanel("CustomCSS", $MainPage);
 $Breadcrum = new clsPanel("Breadcrum", $MainPage);
-$Breadcrum->PlaceholderName = "cgwu_breadcrum";
+$Breadcrum->PlaceholderName = "Breadcrum";
 $gcwu_breadcrum = new clsbreadcrum("inc/", "gcwu_breadcrum", $MainPage);
 $gcwu_breadcrum->Initialize();
 $SiteMenu = new clsPanel("SiteMenu", $MainPage);
@@ -99,27 +94,35 @@ $TopMenu = new clsPanel("TopMenu", $MainPage);
 $TopMenu->PlaceholderName = "TopMenu";
 $gcwu_gcnb = new clstopMenu("inc/", "gcwu_gcnb", $MainPage);
 $gcwu_gcnb->Initialize();
+$CustomScripts = new clsPanel("CustomScripts", $MainPage);
+$CustomScripts->PlaceholderName = "CustomScripts";
+$Footer = new clsPanel("Footer", $MainPage);
+$Footer->PlaceholderName = "Footer";
+$gcwu_footer = new clsfooter_gcwu("inc/", "gcwu_footer", $MainPage);
+$gcwu_footer->Initialize();
+$CustomCCS = new clsPanel("CustomCCS", $MainPage);
+$CustomCCS->PlaceholderName = "CustomCCS";
 $Content = new clsPanel("Content", $MainPage);
 $Content->PlaceholderName = "Content";
 $main = new clsmain("", "main", $MainPage);
 $main->Initialize();
 $MainPage->Head = & $Head;
-$MainPage->Footer = & $Footer;
-$MainPage->gcwu_footer = & $gcwu_footer;
-$MainPage->CustomScripts = & $CustomScripts;
-$MainPage->CustomCSS = & $CustomCSS;
 $MainPage->Breadcrum = & $Breadcrum;
 $MainPage->gcwu_breadcrum = & $gcwu_breadcrum;
 $MainPage->SiteMenu = & $SiteMenu;
 $MainPage->gcwu_psnb = & $gcwu_psnb;
 $MainPage->TopMenu = & $TopMenu;
 $MainPage->gcwu_gcnb = & $gcwu_gcnb;
+$MainPage->CustomScripts = & $CustomScripts;
+$MainPage->Footer = & $Footer;
+$MainPage->gcwu_footer = & $gcwu_footer;
+$MainPage->CustomCCS = & $CustomCCS;
 $MainPage->Content = & $Content;
 $MainPage->main = & $main;
-$Footer->AddComponent("gcwu_footer", $gcwu_footer);
 $Breadcrum->AddComponent("gcwu_breadcrum", $gcwu_breadcrum);
 $SiteMenu->AddComponent("gcwu_psnb", $gcwu_psnb);
 $TopMenu->AddComponent("gcwu_gcnb", $gcwu_gcnb);
+$Footer->AddComponent("gcwu_footer", $gcwu_footer);
 $Content->AddComponent("main", $main);
 $ScriptIncludes = "";
 $SList = explode("|", $Scripts);
@@ -155,28 +158,28 @@ $Attributes->SetValue("pathToRoot", "");
 $Attributes->Show();
 //End Initialize HTML Template
 
-//Execute Components @1-D50AF6A0
+//Execute Components @1-B3F038A3
 $MasterPage->Operations();
 $main->Operations();
+$gcwu_footer->Operations();
 $gcwu_gcnb->Operations();
 $gcwu_psnb->Operations();
 $gcwu_breadcrum->Operations();
-$gcwu_footer->Operations();
 //End Execute Components
 
-//Go to destination page @1-C0156DEF
+//Go to destination page @1-366B46B2
 if($Redirect)
 {
     $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
     header("Location: " . $Redirect);
-    $gcwu_footer->Class_Terminate();
-    unset($gcwu_footer);
     $gcwu_breadcrum->Class_Terminate();
     unset($gcwu_breadcrum);
     $gcwu_psnb->Class_Terminate();
     unset($gcwu_psnb);
     $gcwu_gcnb->Class_Terminate();
     unset($gcwu_gcnb);
+    $gcwu_footer->Class_Terminate();
+    unset($gcwu_footer);
     $main->Class_Terminate();
     unset($main);
     unset($Tpl);
@@ -184,20 +187,22 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-21E42DB4
+//Show Page @1-1551C2E6
 $Head->Show();
-$Footer->Show();
-$CustomScripts->Show();
-$CustomCSS->Show();
 $Breadcrum->Show();
 $SiteMenu->Show();
 $TopMenu->Show();
+$CustomScripts->Show();
+$Footer->Show();
+$CustomCCS->Show();
 $Content->Show();
 $MasterPage->Tpl->SetVar("Head", $Tpl->GetVar("Panel Head"));
-$MasterPage->Tpl->SetVar("Footer", $Tpl->GetVar("Panel Footer"));
-$MasterPage->Tpl->SetVar("cgwu_breadcrum", $Tpl->GetVar("Panel Breadcrum"));
+$MasterPage->Tpl->SetVar("Breadcrum", $Tpl->GetVar("Panel Breadcrum"));
 $MasterPage->Tpl->SetVar("SiteMenu", $Tpl->GetVar("Panel SiteMenu"));
 $MasterPage->Tpl->SetVar("TopMenu", $Tpl->GetVar("Panel TopMenu"));
+$MasterPage->Tpl->SetVar("CustomScripts", $Tpl->GetVar("Panel CustomScripts"));
+$MasterPage->Tpl->SetVar("Footer", $Tpl->GetVar("Panel Footer"));
+$MasterPage->Tpl->SetVar("CustomCCS", $Tpl->GetVar("Panel CustomCCS"));
 $MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
 $MasterPage->Show();
 if (!isset($main_block)) $main_block = $MasterPage->HTML;
@@ -206,17 +211,17 @@ $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
 if ($CCSEventResult) echo $main_block;
 //End Show Page
 
-//Unload Page @1-2802F93B
+//Unload Page @1-1B7A8068
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
 unset($MasterPage);
-$gcwu_footer->Class_Terminate();
-unset($gcwu_footer);
 $gcwu_breadcrum->Class_Terminate();
 unset($gcwu_breadcrum);
 $gcwu_psnb->Class_Terminate();
 unset($gcwu_psnb);
 $gcwu_gcnb->Class_Terminate();
 unset($gcwu_gcnb);
+$gcwu_footer->Class_Terminate();
+unset($gcwu_footer);
 $main->Class_Terminate();
 unset($main);
 unset($Tpl);

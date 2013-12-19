@@ -62,10 +62,10 @@
 	</OAuthProviders>
 	<Groups>
 		<Group id="6" name="everyone" value="1"/>
-<Group id="7" name="authenticated" value="10"/>
-<Group id="8" name="admin" value="100"/>
-<Group id="9" name="sysop" value="1000"/>
-</Groups>
+		<Group id="7" name="authenticated" value="10"/>
+		<Group id="8" name="admin" value="100"/>
+		<Group id="9" name="sysop" value="1000"/>
+	</Groups>
 	<Styles/>
 	<CustomButtons/>
 	<Profiles>
@@ -93,24 +93,24 @@
 			<LocaleInfo overrideDateFormats="False" booleanFormat="1;0;" overrideNumberFormats="False" msValue="3084" phpValue=""/>
 		</Language>
 		<Language name="ru" defaultCountry="RU" encoding="utf-8">
-<LocaleInfo overrideDateFormats="False" booleanFormat="Да;Нет;" overrideNumberFormats="False" msValue="1049" phpValue=""/>
-</Language>
-<Language name="ja" defaultCountry="JP" encoding="utf-8">
-<LocaleInfo overrideDateFormats="False" booleanFormat="1;0;" overrideNumberFormats="False" msValue="1041" phpValue=""/>
-</Language>
-<Language name="pt" defaultCountry="BR" encoding="utf-8">
-<LocaleInfo overrideDateFormats="False" booleanFormat="1;0;" overrideNumberFormats="False" msValue="1046" phpValue=""/>
-</Language>
-<Language name="es" defaultCountry="MX" encoding="utf-8">
-<LocaleInfo overrideDateFormats="False" booleanFormat="1;0;" overrideNumberFormats="False" msValue="2058" phpValue=""/>
-</Language>
-<Language name="it" defaultCountry="IT" encoding="utf-8">
-<LocaleInfo overrideDateFormats="False" booleanFormat="1;0;" overrideNumberFormats="False" msValue="1040" phpValue=""/>
-</Language>
-<Language name="de" defaultCountry="DE" encoding="utf-8">
-<LocaleInfo overrideDateFormats="False" booleanFormat="1;0;" overrideNumberFormats="False" msValue="1031" phpValue=""/>
-</Language>
-</Languages>
+			<LocaleInfo overrideDateFormats="False" booleanFormat="Да;Нет;" overrideNumberFormats="False" msValue="1049" phpValue=""/>
+		</Language>
+		<Language name="ja" defaultCountry="JP" encoding="utf-8">
+			<LocaleInfo overrideDateFormats="False" booleanFormat="1;0;" overrideNumberFormats="False" msValue="1041" phpValue=""/>
+		</Language>
+		<Language name="pt" defaultCountry="BR" encoding="utf-8">
+			<LocaleInfo overrideDateFormats="False" booleanFormat="1;0;" overrideNumberFormats="False" msValue="1046" phpValue=""/>
+		</Language>
+		<Language name="es" defaultCountry="MX" encoding="utf-8">
+			<LocaleInfo overrideDateFormats="False" booleanFormat="1;0;" overrideNumberFormats="False" msValue="2058" phpValue=""/>
+		</Language>
+		<Language name="it" defaultCountry="IT" encoding="utf-8">
+			<LocaleInfo overrideDateFormats="False" booleanFormat="1;0;" overrideNumberFormats="False" msValue="1040" phpValue=""/>
+		</Language>
+		<Language name="de" defaultCountry="DE" encoding="utf-8">
+			<LocaleInfo overrideDateFormats="False" booleanFormat="1;0;" overrideNumberFormats="False" msValue="1031" phpValue=""/>
+		</Language>
+	</Languages>
 	<Events/>
 	<Connections/>
 </Site>

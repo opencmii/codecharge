@@ -69,7 +69,7 @@ class clsMasterPage { //MasterPage class @1-BFE8F48A
     }
 //End Operations Method
 
-//Initialize Method @1-7694EAEC
+//Initialize Method @1-C29182E0
     function Initialize($Path = "")
     {
         global $FileName;
@@ -90,20 +90,12 @@ class clsMasterPage { //MasterPage class @1-BFE8F48A
         $this->Attributes = & $this->Parent->Attributes;
 
         // Create Components
-        $this->CustomCCS = new clsPanel("CustomCCS", $this);
-        $this->CustomCCS->isContentPlaceholder = true;
         $this->Head = new clsPanel("Head", $this);
         $this->Head->isContentPlaceholder = true;
-        $this->Footer = new clsPanel("Footer", $this);
-        $this->Footer->isContentPlaceholder = true;
-        $this->CustomScripts = new clsPanel("CustomScripts", $this);
-        $this->CustomScripts->isContentPlaceholder = true;
-        $this->Content = new clsPanel("Content", $this);
-        $this->Content->isContentPlaceholder = true;
         $this->Breadcrum = new clsPanel("Breadcrum", $this);
         $this->Breadcrum->isContentPlaceholder = true;
-        $this->TopMenu = new clsPanel("TopMenu", $this);
-        $this->TopMenu->isContentPlaceholder = true;
+        $this->Content = new clsPanel("Content", $this);
+        $this->Content->isContentPlaceholder = true;
         $this->SiteMenu = new clsPanel("SiteMenu", $this);
         $this->SiteMenu->isContentPlaceholder = true;
         $this->BindEvents();

@@ -89,3 +89,4 @@ CCS_UploadingError=フィールド {0} のファイル アップロード中に�
 CCS_UploadingTempFolderError={0} で指定したファイルを一時フォルダにアップロード中にエラーが発生しました。エラーの説明: {1}.
 CCS_WrongType=フィールド {0} で指定したファイル形式は不正です。
 gcwu_subsite=
+gcwu_gcnb_lang=
