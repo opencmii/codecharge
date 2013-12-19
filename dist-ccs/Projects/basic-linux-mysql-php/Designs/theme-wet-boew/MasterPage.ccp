@@ -16,11 +16,11 @@
 			<Features/>
 		</ContentPlaceholder>
 		<ContentPlaceholder id="5" name="SiteMenu" PathID="SiteMenu">
-			<Components/>
-			<Events/>
-			<Features/>
-		</ContentPlaceholder>
-	</Components>
+<Components/>
+<Events/>
+<Features/>
+</ContentPlaceholder>
+</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="MasterPage.php" forShow="True" url="MasterPage.php" comment="//" codePage="utf-8"/>
 	</CodeFiles>
