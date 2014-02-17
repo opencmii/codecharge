@@ -4,7 +4,7 @@ demos-ccs: 	Folder that contains CodechargeStudio based demo application, showca
 
 dist-ccs:	Folder that contains the design Templates and demo source code, to be used with CodeCharge
 
-..lh. .lh2 .lh3 .lh4
+..lh. .lh2 .lh3 .lh4 .lpd5
 
 
 
