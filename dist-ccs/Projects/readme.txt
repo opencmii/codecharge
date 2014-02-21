@@ -1,4 +1,2 @@
-demos-php: Quick static demo made from php variant demos to showcase the Design Template. This is not a data driven application.
-cadms:
-obe:
+basic-linux-mysql-php: Basic demo application making use of codecharge php variant to showcase the Design Template. 
 

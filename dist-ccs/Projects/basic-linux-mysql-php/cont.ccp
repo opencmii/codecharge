@@ -60,7 +60,7 @@
 			<Attributes/>
 			<Features/>
 		</Panel>
-		<Panel id="32" visible="True" generateDiv="False" name="CustomCCS" contentPlaceholder="CustomCCS">
+		<Panel id="32" visible="True" generateDiv="False" name="CustomCSS" contentPlaceholder="CustomCSS">
 			<Components/>
 			<Events/>
 			<Attributes/>
