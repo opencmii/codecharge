@@ -99,7 +99,5 @@ CCS_UploadingTempFolderError=Fehler beim Upload der im Feld {0} angegebenen Date
 CCS_WrongType=Der im Feld {0} eingegebene Dateityp ist nicht erlaubt.
 gcwu_gcnb_lang_reverse=English
 gcwu_gcnb_lang_reverse2=en
-gcwu_subsite=
 locale=de
 locale3=deu
-gcwu_gcnb_lang=

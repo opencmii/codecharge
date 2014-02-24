@@ -9,7 +9,7 @@ basic_theme_and_style=Theme and style
 basic_theme_gcwu_fegc_description=The GC Web usability theme was developed to comply with the <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=24227">Standard on Web Usability</a> and is recommended for use with all Government of Canada websites.
 basic_theme_gcwu_fegc_description2=Standard on Web Usability
 basic_theme_gcwu_fegc_description3=and is recommended for use with all Government of Canada websites.
-basic_theme_gcwu_intranet_description1=The GC Intranet usability theme was developed to comply with the <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=24227">Standard on Web Usability</a> and is recommended for use with all Government of Canada intranet sites.
+basic_theme_gcwu_intranet_description=The GC Intranet usability theme was developed to comply with the <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=24227">Standard on Web Usability</a> and is recommended for use with all Government of Canada intranet sites.
 basic_theme_gcwu_intranet_title=GC Intranet usability theme (v3.1)
 basic_theme_light=Light CCS Theme (for demonstration. Incomplete)
 basic_theme_light_description=One of default CCS 5.X theme. Very light.
