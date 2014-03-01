@@ -33,8 +33,8 @@ include_once(RelativePath . "/inc/topMenu.php");
 include_once(RelativePath . "/inc/footer_gcwu.php");
 //End Include Page implementation
 
-//Include Page implementation @35-65164D5D
-include_once(RelativePath . "/main.php");
+//Include Page implementation @35-81A96108
+include_once(RelativePath . "/content_main.php");
 //End Include Page implementation
 
 //Initialize Page @1-8E51DD49
@@ -71,7 +71,7 @@ $Charset = $Charset ? $Charset : "utf-8";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-3C4148A0
+//Initialize Objects @1-CDBFE4D2
 $Attributes = new clsAttributes("page:");
 $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
@@ -100,11 +100,11 @@ $Footer = new clsPanel("Footer", $MainPage);
 $Footer->PlaceholderName = "Footer";
 $gcwu_footer = new clsfooter_gcwu("inc/", "gcwu_footer", $MainPage);
 $gcwu_footer->Initialize();
-$CustomCCS = new clsPanel("CustomCCS", $MainPage);
-$CustomCCS->PlaceholderName = "CustomCCS";
+$CustomCSS = new clsPanel("CustomCSS", $MainPage);
+$CustomCSS->PlaceholderName = "CustomCSS";
 $Content = new clsPanel("Content", $MainPage);
 $Content->PlaceholderName = "Content";
-$main = new clsmain("", "main", $MainPage);
+$main = new clscontent_main("", "main", $MainPage);
 $main->Initialize();
 $MainPage->Head = & $Head;
 $MainPage->Breadcrum = & $Breadcrum;
@@ -116,7 +116,7 @@ $MainPage->gcwu_gcnb = & $gcwu_gcnb;
 $MainPage->CustomScripts = & $CustomScripts;
 $MainPage->Footer = & $Footer;
 $MainPage->gcwu_footer = & $gcwu_footer;
-$MainPage->CustomCCS = & $CustomCCS;
+$MainPage->CustomCSS = & $CustomCSS;
 $MainPage->Content = & $Content;
 $MainPage->main = & $main;
 $Breadcrum->AddComponent("gcwu_breadcrum", $gcwu_breadcrum);
@@ -187,14 +187,14 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-1551C2E6
+//Show Page @1-FC0DB9CB
 $Head->Show();
 $Breadcrum->Show();
 $SiteMenu->Show();
 $TopMenu->Show();
 $CustomScripts->Show();
 $Footer->Show();
-$CustomCCS->Show();
+$CustomCSS->Show();
 $Content->Show();
 $MasterPage->Tpl->SetVar("Head", $Tpl->GetVar("Panel Head"));
 $MasterPage->Tpl->SetVar("Breadcrum", $Tpl->GetVar("Panel Breadcrum"));
@@ -202,7 +202,7 @@ $MasterPage->Tpl->SetVar("SiteMenu", $Tpl->GetVar("Panel SiteMenu"));
 $MasterPage->Tpl->SetVar("TopMenu", $Tpl->GetVar("Panel TopMenu"));
 $MasterPage->Tpl->SetVar("CustomScripts", $Tpl->GetVar("Panel CustomScripts"));
 $MasterPage->Tpl->SetVar("Footer", $Tpl->GetVar("Panel Footer"));
-$MasterPage->Tpl->SetVar("CustomCCS", $Tpl->GetVar("Panel CustomCCS"));
+$MasterPage->Tpl->SetVar("CustomCSS", $Tpl->GetVar("Panel CustomCSS"));
 $MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
 $MasterPage->Show();
 if (!isset($main_block)) $main_block = $MasterPage->HTML;
