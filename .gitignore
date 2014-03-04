@@ -1,3 +1,14 @@
+# Project key files types 
+#*.xml
+#*.php
+#*.ccs
+#*.ccp
+#*.html
+#*.js
+#*.jpg
+#*.txt
+#*.css
+
 # CodeChargeStudio generated temp files
 ~*.*
 ._*
@@ -10,9 +21,11 @@ Thumbs.db
 *.log
 *.bak
 *.lnk
-*.xml
-*.php
-*.ccs
-*.ccp
-*.html
-dist-ccs/Projects/cadms-linux-mysql-php/*
+
+# misc
+*/config/development
+*/logs/log-*.php
+*/logs/!index.html
+*/cache/*
+*/cache/!index.html
+
