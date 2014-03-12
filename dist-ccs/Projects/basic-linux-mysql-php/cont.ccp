@@ -68,12 +68,7 @@
 		</Panel>
 		<Panel id="34" visible="True" generateDiv="False" name="Content" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Content" contentPlaceholder="Content">
 			<Components>
-				<IncludePage id="35" name="main" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Contentmain" page="content_main.ccp">
-					<Components/>
-					<Events/>
-					<Features/>
-				</IncludePage>
-				<IncludePage id="36" name="demo" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Contentdemo" page="content_demo.ccp">
+				<IncludePage id="35" name="main" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Contentmain" page="empty.ccp">
 					<Components/>
 					<Events/>
 					<Features/>

@@ -33,8 +33,8 @@ include_once(RelativePath . "/inc/topMenu.php");
 include_once(RelativePath . "/inc/footer_gcwu.php");
 //End Include Page implementation
 
-//Include Page implementation @35-81A96108
-include_once(RelativePath . "/content_main.php");
+//Include Page implementation @35-1E4CD7C2
+include_once(RelativePath . "/empty.php");
 //End Include Page implementation
 
 //Initialize Page @1-8E51DD49
@@ -71,7 +71,7 @@ $Charset = $Charset ? $Charset : "utf-8";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-CDBFE4D2
+//Initialize Objects @1-0F0EA4CB
 $Attributes = new clsAttributes("page:");
 $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
@@ -104,7 +104,7 @@ $CustomCSS = new clsPanel("CustomCSS", $MainPage);
 $CustomCSS->PlaceholderName = "CustomCSS";
 $Content = new clsPanel("Content", $MainPage);
 $Content->PlaceholderName = "Content";
-$main = new clscontent_main("", "main", $MainPage);
+$main = new clsempty("", "main", $MainPage);
 $main->Initialize();
 $MainPage->Head = & $Head;
 $MainPage->Breadcrum = & $Breadcrum;

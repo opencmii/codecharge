@@ -115,6 +115,4 @@ class clscontent_demo { //content_demo class @1-AB81D3BC
 //End Show Method
 
 } //End content_demo Class @1-FCB6E20C
-
-
 ?>

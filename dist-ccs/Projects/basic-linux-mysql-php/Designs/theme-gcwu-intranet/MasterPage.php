@@ -69,7 +69,7 @@ class clsMasterPage { //MasterPage class @1-BFE8F48A
     }
 //End Operations Method
 
-//Initialize Method @1-83AAC3AB
+//Initialize Method @1-2C669EED
     function Initialize($Path = "")
     {
         global $FileName;
@@ -90,29 +90,8 @@ class clsMasterPage { //MasterPage class @1-BFE8F48A
         $this->Attributes = & $this->Parent->Attributes;
 
         // Create Components
-        $this->self = new clsControl(ccsLink, "self", "self", ccsText, "", CCGetRequestParam("self", ccsGet, NULL), $this);
-        $this->self->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
-        $this->self->Parameters = CCAddParam($this->self->Parameters, "locale", CCGetFromGet("{res:gcwu_gcnb_lang2_reverse}", NULL));
-        $this->self->Page = "{page:Filename}";
-        $this->gcwu_srchbx = new clsPanel("gcwu_srchbx", $this);
-        $this->SubSite = new clsPanel("SubSite", $this);
-        $this->Content = new clsPanel("Content", $this);
-        $this->Content->isContentPlaceholder = true;
         $this->TopMenu = new clsPanel("TopMenu", $this);
         $this->TopMenu->isContentPlaceholder = true;
-        $this->CustomCSS = new clsPanel("CustomCSS", $this);
-        $this->CustomCSS->isContentPlaceholder = true;
-        $this->CustomScripts = new clsPanel("CustomScripts", $this);
-        $this->CustomScripts->isContentPlaceholder = true;
-        $this->Footer = new clsPanel("Footer", $this);
-        $this->Footer->isContentPlaceholder = true;
-        $this->Breadcrum = new clsPanel("Breadcrum", $this);
-        $this->Breadcrum->isContentPlaceholder = true;
-        $this->SiteMenu = new clsPanel("SiteMenu", $this);
-        $this->SiteMenu->isContentPlaceholder = true;
-        $this->Head = new clsPanel("Head", $this);
-        $this->Head->isContentPlaceholder = true;
-        $this->gcwu_srchbx->Visible = false;
         $this->BindEvents();
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "OnInitializeView", $this);
         $this->Tpl = new clsTemplate();
@@ -124,13 +103,11 @@ class clsMasterPage { //MasterPage class @1-BFE8F48A
     }
 //End Initialize Method
 
-//Show Method @1-6F5773E1
+//Show Method @1-D77CB2D6
     function Show()
     {
         global $CCSLocales;
         $this->Tpl->block_path = "/main";
-        $this->Attributes->SetValue("project_name", "Project X");
-        $this->Attributes->SetValue("Filename", CCGetSession("FileName", NULL));
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeShow", $this);
         if(!$this->Visible) {
             $this->Tpl->block_path = $block_path;
@@ -140,9 +117,6 @@ class clsMasterPage { //MasterPage class @1-BFE8F48A
         $this->Tpl->SetVar("CCS_PathToCurrentPage", RelativePath . $this->RelativePath);
         $this->Tpl->SetVar("page:pathToCurrentPage", RelativePath . $this->RelativePath);
         $this->Attributes->Show();
-        $this->self->Show();
-        $this->gcwu_srchbx->Show();
-        $this->SubSite->Show();
         $this->Tpl->block_path = "";
         $this->Tpl->Parse("main", false);
         $this->HTML = $this->Tpl->GetVar("main");
