@@ -18,18 +18,6 @@
 			<Attributes/>
 			<Features/>
 		</Panel>
-		<Panel id="21" visible="True" generateDiv="False" name="SiteMenu" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="SiteMenu" contentPlaceholder="SiteMenu">
-			<Components>
-				<IncludePage id="36" name="gcwu_menu" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="SiteMenugcwu_menu" page="inc/siteMenu.ccp">
-<Components/>
-<Events/>
-<Features/>
-</IncludePage>
-</Components>
-			<Events/>
-			<Attributes/>
-			<Features/>
-		</Panel>
 		<Panel id="14" visible="True" generateDiv="False" name="TopMenu" contentPlaceholder="TopMenu">
 			<Components>
 				<IncludePage id="11" name="gcwu_gcnb" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="TopMenugcwu_gcnb" page="inc/topMenu.ccp">

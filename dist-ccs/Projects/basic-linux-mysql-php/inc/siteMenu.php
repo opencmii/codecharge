@@ -3,7 +3,17 @@
 error_reporting(E_ALL | E_STRICT);
 //End Error reporting
 
-class clsDirectorysiteMenumenu { //menu class @2-6D4C1B44
+//Include Common Files @1-45793FB8
+define("RelativePath", "..");
+define("PathToCurrentPage", "/inc/");
+define("FileName", "siteMenu.php");
+include_once(RelativePath . "/Common.php");
+include_once(RelativePath . "/Template.php");
+include_once(RelativePath . "/Sorter.php");
+include_once(RelativePath . "/Navigator.php");
+//End Include Common Files
+
+class clsDirectorymenu { //menu class @2-D70977A5
 
 //Variables @2-D4D21A31
 
@@ -29,8 +39,8 @@ class clsDirectorysiteMenumenu { //menu class @2-6D4C1B44
     public $Attributes;
 //End Variables
 
-//Class_Initialize Event @2-FF78322D
-    function clsDirectorysiteMenumenu($RelativePath, & $Parent)
+//Class_Initialize Event @2-1C3A8628
+    function clsDirectorymenu($RelativePath, & $Parent)
     {
         global $FileName;
         global $CCSLocales;
@@ -42,15 +52,15 @@ class clsDirectorysiteMenumenu { //menu class @2-6D4C1B44
         $this->Errors = new clsErrors();
         $this->ErrorBlock = "Directory menu";
         $this->Attributes = new clsAttributes($this->ComponentName . ":");
-        $this->DataSource = new clssiteMenumenuDataSource($this);
+        $this->DataSource = new clsmenuDataSource($this);
         $this->ds = & $this->DataSource;
 
         $this->CategoryLink = new clsControl(ccsLink, "CategoryLink", "CategoryLink", ccsText, "", CCGetRequestParam("CategoryLink", ccsGet, NULL), $this);
-        $this->CategoryLink->Page = $this->RelativePath . "siteMenu.php";
+        $this->CategoryLink->Page = "siteMenu.php";
         $this->SubcategoryLink = new clsControl(ccsLink, "SubcategoryLink", "SubcategoryLink", ccsText, "", CCGetRequestParam("SubcategoryLink", ccsGet, NULL), $this);
-        $this->SubcategoryLink->Page = $this->RelativePath . "../cont.php";
+        $this->SubcategoryLink->Page = "../cont.php";
         $this->SubcategoriesTailLink = new clsControl(ccsLink, "SubcategoriesTailLink", "SubcategoriesTailLink", ccsText, "", CCGetRequestParam("SubcategoriesTailLink", ccsGet, NULL), $this);
-        $this->SubcategoriesTailLink->Page = $this->RelativePath . "siteMenu.php";
+        $this->SubcategoriesTailLink->Page = "siteMenu.php";
     }
 //End Class_Initialize Event
 
@@ -209,7 +219,7 @@ class clsDirectorysiteMenumenu { //menu class @2-6D4C1B44
 
 } //End menu Class @2-FCB6E20C
 
-class clssiteMenumenuDataSource extends clsDBbasic_mysql_php {  //menuDataSource Class @2-2CC1FBCD
+class clsmenuDataSource extends clsDBbasic_mysql_php {  //menuDataSource Class @2-B162ECBA
 
 //DataSource Variables @2-FFCA1A20
     public $Parent = "";
@@ -228,8 +238,8 @@ class clssiteMenumenuDataSource extends clsDBbasic_mysql_php {  //menuDataSource
     public $SubcategoriesTailLink;
 //End DataSource Variables
 
-//DataSourceClass_Initialize Event @2-B1861AA3
-    function clssiteMenumenuDataSource(& $Parent)
+//DataSourceClass_Initialize Event @2-27169FF5
+    function clsmenuDataSource(& $Parent)
     {
         $this->Parent = & $Parent;
         $this->ErrorBlock = "Directory menu";
@@ -298,128 +308,104 @@ class clssiteMenumenuDataSource extends clsDBbasic_mysql_php {  //menuDataSource
 
 } //End menuDataSource Class @2-FCB6E20C
 
+//Initialize Page @1-2A38AB94
+// Variables
+$FileName = "";
+$Redirect = "";
+$Tpl = "";
+$TemplateFileName = "";
+$BlockToParse = "";
+$ComponentName = "";
+$Attributes = "";
 
+// Events;
+$CCSEvents = "";
+$CCSEventResult = "";
+$TemplateSource = "";
 
+$FileName = FileName;
+$Redirect = "";
+$TemplateFileName = "siteMenu.html";
+$BlockToParse = "main";
+$TemplateEncoding = "UTF-8";
+$ContentType = "text/html";
+$PathToRoot = "../";
+$PathToRootOpt = "../";
+$Scripts = "|";
+//End Initialize Page
 
+//Before Initialize @1-E870CEBC
+$CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
+//End Before Initialize
 
-class clssiteMenu { //siteMenu class @1-38A3498E
+//Initialize Objects @1-C910C2B7
+$DBbasic_mysql_php = new clsDBbasic_mysql_php();
+$MainPage->Connections["basic_mysql_php"] = & $DBbasic_mysql_php;
+$Attributes = new clsAttributes("page:");
+$Attributes->SetValue("pathToRoot", $PathToRoot);
+$MainPage->Attributes = & $Attributes;
 
-//Variables @1-EEEBE252
-    public $ComponentType = "IncludablePage";
-    public $Connections = array();
-    public $FileName = "";
-    public $Redirect = "";
-    public $Tpl = "";
-    public $TemplateFileName = "";
-    public $BlockToParse = "";
-    public $ComponentName = "";
-    public $Attributes = "";
+// Controls
+$menu = new clsDirectorymenu("", $MainPage);
+$MainPage->menu = & $menu;
+$menu->Initialize();
+$ScriptIncludes = "";
+$SList = explode("|", $Scripts);
+foreach ($SList as $Script) {
+    if ($Script != "") $ScriptIncludes = $ScriptIncludes . "<script src=\"" . $PathToRoot . $Script . "\" type=\"text/javascript\"></script>\n";
+}
+$Attributes->SetValue("scriptIncludes", $ScriptIncludes);
 
-    // Events;
-    public $CCSEvents = "";
-    public $CCSEventResult = "";
-    public $RelativePath;
-    public $Visible;
-    public $Parent;
-    public $TemplateSource;
-//End Variables
+$CCSEventResult = CCGetEvent($CCSEvents, "AfterInitialize", $MainPage);
 
-//Class_Initialize Event @1-16AF8E9E
-    function clssiteMenu($RelativePath, $ComponentName, & $Parent)
-    {
-        global $CCSLocales;
-        global $DefaultDateFormat;
-        $this->ComponentName = $ComponentName;
-        $this->RelativePath = $RelativePath;
-        $this->Visible = true;
-        $this->Parent = & $Parent;
-        $this->FileName = "siteMenu.php";
-        $this->Redirect = "";
-        $this->TemplateFileName = "siteMenu.html";
-        $this->BlockToParse = "main";
-        $this->TemplateEncoding = "UTF-8";
-        $this->ContentType = "text/html";
-    }
-//End Class_Initialize Event
+if ($Charset) {
+    header("Content-Type: " . $ContentType . "; charset=" . $Charset);
+} else {
+    header("Content-Type: " . $ContentType);
+}
+//End Initialize Objects
 
-//Class_Terminate Event @1-44EDC05F
-    function Class_Terminate()
-    {
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeUnload", $this);
-        unset($this->menu);
-    }
-//End Class_Terminate Event
+//Initialize HTML Template @1-7B7D0F52
+$CCSEventResult = CCGetEvent($CCSEvents, "OnInitializeView", $MainPage);
+$Tpl = new clsTemplate($FileEncoding, $TemplateEncoding);
+if (strlen($TemplateSource)) {
+    $Tpl->LoadTemplateFromStr($TemplateSource, $BlockToParse, "UTF-8", "replace");
+} else {
+    $Tpl->LoadTemplate(PathToCurrentPage . $TemplateFileName, $BlockToParse, "UTF-8", "replace");
+}
+$Tpl->SetVar("CCS_PathToRoot", $PathToRoot);
+$Tpl->block_path = "/$BlockToParse";
+$CCSEventResult = CCGetEvent($CCSEvents, "BeforeShow", $MainPage);
+$Attributes->SetValue("pathToRoot", "../");
+$Attributes->Show();
+//End Initialize HTML Template
 
-//BindEvents Method @1-0DAD0D56
-    function BindEvents()
-    {
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "AfterInitialize", $this);
-    }
-//End BindEvents Method
+//Go to destination page @1-4BA4352C
+if($Redirect)
+{
+    $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
+    $DBbasic_mysql_php->close();
+    header("Location: " . $Redirect);
+    unset($menu);
+    unset($Tpl);
+    exit;
+}
+//End Go to destination page
 
-//Operations Method @1-7E2A14CF
-    function Operations()
-    {
-        global $Redirect;
-        if(!$this->Visible)
-            return "";
-    }
-//End Operations Method
+//Show Page @1-2D94C46F
+$menu->Show();
+$Tpl->block_path = "";
+$Tpl->Parse($BlockToParse, false);
+if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
+$main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
+$CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
+if ($CCSEventResult) echo $main_block;
+//End Show Page
 
-//Initialize Method @1-E87E9A78
-    function Initialize($Path = "")
-    {
-        global $FileName;
-        global $CCSLocales;
-        global $DefaultDateFormat;
-        global $Scripts;
-        $IncScripts = "|";
-        $SList = explode("|", $IncScripts);
-        foreach ($SList as $Script) {
-            if ($Script != "" && strpos($Scripts, "|" . $Script . "|") === false)  $Scripts = $Scripts . $Script . "|";
-        }
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeInitialize", $this);
-        if(!$this->Visible)
-            return "";
-        $this->Attributes = & $this->Parent->Attributes;
-        $this->DBbasic_mysql_php = new clsDBbasic_mysql_php();
-        $this->Connections["basic_mysql_php"] = & $this->DBbasic_mysql_php;
-
-        // Create Components
-        $this->menu = new clsDirectorysiteMenumenu($this->RelativePath, $this);
-        $this->menu->Initialize();
-        $this->BindEvents();
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "OnInitializeView", $this);
-    }
-//End Initialize Method
-
-//Show Method @1-39AF2D80
-    function Show()
-    {
-        global $Tpl;
-        global $CCSLocales;
-        $block_path = $Tpl->block_path;
-        if ($this->TemplateSource) {
-            $Tpl->LoadTemplateFromStr($this->TemplateSource, $this->ComponentName, $this->TemplateEncoding);
-        } else {
-            $Tpl->LoadTemplate("/inc/" . $this->TemplateFileName, $this->ComponentName, $this->TemplateEncoding, "remove");
-        }
-        $Tpl->block_path = $Tpl->block_path . "/" . $this->ComponentName;
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeShow", $this);
-        if(!$this->Visible) {
-            $Tpl->block_path = $block_path;
-            $Tpl->SetVar($this->ComponentName, "");
-            return "";
-        }
-        $this->Attributes->Show();
-        $this->menu->Show();
-        $Tpl->Parse();
-        $Tpl->block_path = $block_path;
-        $TplData = $Tpl->GetVar($this->ComponentName);
-        $Tpl->SetVar($this->ComponentName, $TplData);
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeOutput", $this);
-    }
-//End Show Method
-
-} //End siteMenu Class @1-FCB6E20C
+//Unload Page @1-CB02991E
+$CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
+$DBbasic_mysql_php->close();
+unset($menu);
+unset($Tpl);
+//End Unload Page
 ?>

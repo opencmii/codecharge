@@ -62,10 +62,10 @@
 	</OAuthProviders>
 	<Groups>
 		<Group id="6" name="everyone" value="1"/>
-<Group id="7" name="authenticated" value="10"/>
-<Group id="8" name="admin" value="100"/>
-<Group id="9" name="sysop" value="1000"/>
-</Groups>
+		<Group id="7" name="authenticated" value="10"/>
+		<Group id="8" name="admin" value="100"/>
+		<Group id="9" name="sysop" value="1000"/>
+	</Groups>
 	<Styles/>
 	<CustomButtons/>
 	<Profiles>
@@ -79,7 +79,7 @@
 				<Connection id="5" serverDatabase="ANSI" DBNameUppercase="True" OptimizeSQL="True" PHPDBLib="MySQL" database="ANSI" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" serverPersistentConnection="False" serverUseODBCCursor="0" name="basic_mysql_php"/>
 			</Connections>
 		</Profile>
-		<Profile name="DEV_local_satops" FTPFolder="" FTPLogin="" FTPPassiveMode="True" FTPPassword="" FTPSecureConnection="False" FTPServer="" FTPServerURL="" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" __specValue="" fileExtension=".php" localServerPath="D:\htdocs\dev\basic" localServerURL="http://localhost/dev/basic" location="Local" publishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;jpeg;png;apng;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;svg;swf;master;res;ico" publishingExceptMask="" publishingType="ExceptMask">
+		<Profile name="DEV_local_satops" FTPFolder="" FTPLogin="" FTPPassiveMode="True" FTPPassword="" FTPSecureConnection="False" FTPServer="" FTPServerURL="" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" __specValue="" fileExtension=".php" localServerPath="D:\htdocs\dev\basic5" localServerURL="http://localhost/dev/basic5" location="Local" publishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;jpeg;png;apng;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;svg;swf;master;res;ico" publishingExceptMask="" publishingType="ExceptMask">
 			<Connections>
 				<Connection id="5" serverDatabase="ANSI" DBNameUppercase="True" OptimizeSQL="True" PHPDBLib="MySQL" database="MySQL" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" serverPersistentConnection="False" serverUseODBCCursor="0" connectionType="mysql_native" connectionString="localhost;Port=3306;Database=intranet" name="basic_mysql_php" ddXMLPath="basic_mysql_php_DataDictionary.xml" login="root" catalog="intranet" typeMode="Simple" serverSameAsDesign="True" connection="basic_mysql_php"/>
 			</Connections>

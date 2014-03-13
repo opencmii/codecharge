@@ -15,7 +15,13 @@
 			<Events/>
 			<Features/>
 		</ContentPlaceholder>
-	</Components>
+		<Link id="6" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Link1" PathID="Link1" hrefSource="../../cont.ccp" wizardUseTemplateBlock="False" linkProperties="{'textSource':'{res:app_no}','textSourceDB':'','hrefSource':'../../cont.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}"><Components/>
+<Events/>
+<LinkParameters/>
+<Attributes/>
+<Features/>
+</Link>
+</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="MasterPage.php" forShow="True" url="MasterPage.php" comment="//" codePage="utf-8"/>
 	</CodeFiles>

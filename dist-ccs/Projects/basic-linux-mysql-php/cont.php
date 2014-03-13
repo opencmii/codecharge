@@ -21,10 +21,6 @@ include_once(RelativePath . "/Designs/theme-gcwu-intranet/MasterPage.php");
 include_once(RelativePath . "/inc/breadcrum.php");
 //End Include Page implementation
 
-//Include Page implementation @36-A45EDC57
-include_once(RelativePath . "/inc/siteMenu.php");
-//End Include Page implementation
-
 //Include Page implementation @11-2813BFAB
 include_once(RelativePath . "/inc/topMenu.php");
 //End Include Page implementation
@@ -71,7 +67,7 @@ $Charset = $Charset ? $Charset : "utf-8";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-81CB4CCC
+//Initialize Objects @1-A180A7B0
 $Attributes = new clsAttributes("page:");
 $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
@@ -86,10 +82,6 @@ $Breadcrum = new clsPanel("Breadcrum", $MainPage);
 $Breadcrum->PlaceholderName = "Breadcrum";
 $gcwu_breadcrum = new clsbreadcrum("inc/", "gcwu_breadcrum", $MainPage);
 $gcwu_breadcrum->Initialize();
-$SiteMenu = new clsPanel("SiteMenu", $MainPage);
-$SiteMenu->PlaceholderName = "SiteMenu";
-$gcwu_menu = new clssiteMenu("inc/", "gcwu_menu", $MainPage);
-$gcwu_menu->Initialize();
 $TopMenu = new clsPanel("TopMenu", $MainPage);
 $TopMenu->PlaceholderName = "TopMenu";
 $gcwu_gcnb = new clstopMenu("inc/", "gcwu_gcnb", $MainPage);
@@ -109,8 +101,6 @@ $main->Initialize();
 $MainPage->Head = & $Head;
 $MainPage->Breadcrum = & $Breadcrum;
 $MainPage->gcwu_breadcrum = & $gcwu_breadcrum;
-$MainPage->SiteMenu = & $SiteMenu;
-$MainPage->gcwu_menu = & $gcwu_menu;
 $MainPage->TopMenu = & $TopMenu;
 $MainPage->gcwu_gcnb = & $gcwu_gcnb;
 $MainPage->CustomScripts = & $CustomScripts;
@@ -120,7 +110,6 @@ $MainPage->CustomCSS = & $CustomCSS;
 $MainPage->Content = & $Content;
 $MainPage->main = & $main;
 $Breadcrum->AddComponent("gcwu_breadcrum", $gcwu_breadcrum);
-$SiteMenu->AddComponent("gcwu_menu", $gcwu_menu);
 $TopMenu->AddComponent("gcwu_gcnb", $gcwu_gcnb);
 $Footer->AddComponent("gcwu_footer", $gcwu_footer);
 $Content->AddComponent("main", $main);
@@ -158,24 +147,21 @@ $Attributes->SetValue("pathToRoot", "");
 $Attributes->Show();
 //End Initialize HTML Template
 
-//Execute Components @1-800BDF5A
+//Execute Components @1-44B09A91
 $MasterPage->Operations();
 $main->Operations();
 $gcwu_footer->Operations();
 $gcwu_gcnb->Operations();
-$gcwu_menu->Operations();
 $gcwu_breadcrum->Operations();
 //End Execute Components
 
-//Go to destination page @1-50D38F57
+//Go to destination page @1-0DF08385
 if($Redirect)
 {
     $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
     header("Location: " . $Redirect);
     $gcwu_breadcrum->Class_Terminate();
     unset($gcwu_breadcrum);
-    $gcwu_menu->Class_Terminate();
-    unset($gcwu_menu);
     $gcwu_gcnb->Class_Terminate();
     unset($gcwu_gcnb);
     $gcwu_footer->Class_Terminate();
@@ -187,10 +173,9 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-FC0DB9CB
+//Show Page @1-8E69DB5C
 $Head->Show();
 $Breadcrum->Show();
-$SiteMenu->Show();
 $TopMenu->Show();
 $CustomScripts->Show();
 $Footer->Show();
@@ -198,7 +183,6 @@ $CustomCSS->Show();
 $Content->Show();
 $MasterPage->Tpl->SetVar("Head", $Tpl->GetVar("Panel Head"));
 $MasterPage->Tpl->SetVar("Breadcrum", $Tpl->GetVar("Panel Breadcrum"));
-$MasterPage->Tpl->SetVar("SiteMenu", $Tpl->GetVar("Panel SiteMenu"));
 $MasterPage->Tpl->SetVar("TopMenu", $Tpl->GetVar("Panel TopMenu"));
 $MasterPage->Tpl->SetVar("CustomScripts", $Tpl->GetVar("Panel CustomScripts"));
 $MasterPage->Tpl->SetVar("Footer", $Tpl->GetVar("Panel Footer"));
@@ -211,13 +195,11 @@ $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
 if ($CCSEventResult) echo $main_block;
 //End Show Page
 
-//Unload Page @1-86961B95
+//Unload Page @1-E40F185C
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
 unset($MasterPage);
 $gcwu_breadcrum->Class_Terminate();
 unset($gcwu_breadcrum);
-$gcwu_menu->Class_Terminate();
-unset($gcwu_menu);
 $gcwu_gcnb->Class_Terminate();
 unset($gcwu_gcnb);
 $gcwu_footer->Class_Terminate();
