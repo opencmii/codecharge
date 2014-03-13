@@ -21,7 +21,7 @@ include_once(RelativePath . "/Designs/theme-gcwu-intranet/MasterPage.php");
 include_once(RelativePath . "/inc/breadcrum.php");
 //End Include Page implementation
 
-//Include Page implementation @22-A45EDC57
+//Include Page implementation @36-A45EDC57
 include_once(RelativePath . "/inc/siteMenu.php");
 //End Include Page implementation
 
@@ -33,8 +33,8 @@ include_once(RelativePath . "/inc/topMenu.php");
 include_once(RelativePath . "/inc/footer_gcwu.php");
 //End Include Page implementation
 
-//Include Page implementation @35-1E4CD7C2
-include_once(RelativePath . "/empty.php");
+//Include Page implementation @35-05A9CD95
+include_once(RelativePath . "/content_empty.php");
 //End Include Page implementation
 
 //Initialize Page @1-8E51DD49
@@ -71,7 +71,7 @@ $Charset = $Charset ? $Charset : "utf-8";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-0F0EA4CB
+//Initialize Objects @1-81CB4CCC
 $Attributes = new clsAttributes("page:");
 $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
@@ -88,8 +88,8 @@ $gcwu_breadcrum = new clsbreadcrum("inc/", "gcwu_breadcrum", $MainPage);
 $gcwu_breadcrum->Initialize();
 $SiteMenu = new clsPanel("SiteMenu", $MainPage);
 $SiteMenu->PlaceholderName = "SiteMenu";
-$gcwu_psnb = new clssiteMenu("inc/", "gcwu_psnb", $MainPage);
-$gcwu_psnb->Initialize();
+$gcwu_menu = new clssiteMenu("inc/", "gcwu_menu", $MainPage);
+$gcwu_menu->Initialize();
 $TopMenu = new clsPanel("TopMenu", $MainPage);
 $TopMenu->PlaceholderName = "TopMenu";
 $gcwu_gcnb = new clstopMenu("inc/", "gcwu_gcnb", $MainPage);
@@ -104,13 +104,13 @@ $CustomCSS = new clsPanel("CustomCSS", $MainPage);
 $CustomCSS->PlaceholderName = "CustomCSS";
 $Content = new clsPanel("Content", $MainPage);
 $Content->PlaceholderName = "Content";
-$main = new clsempty("", "main", $MainPage);
+$main = new clscontent_empty("", "main", $MainPage);
 $main->Initialize();
 $MainPage->Head = & $Head;
 $MainPage->Breadcrum = & $Breadcrum;
 $MainPage->gcwu_breadcrum = & $gcwu_breadcrum;
 $MainPage->SiteMenu = & $SiteMenu;
-$MainPage->gcwu_psnb = & $gcwu_psnb;
+$MainPage->gcwu_menu = & $gcwu_menu;
 $MainPage->TopMenu = & $TopMenu;
 $MainPage->gcwu_gcnb = & $gcwu_gcnb;
 $MainPage->CustomScripts = & $CustomScripts;
@@ -120,7 +120,7 @@ $MainPage->CustomCSS = & $CustomCSS;
 $MainPage->Content = & $Content;
 $MainPage->main = & $main;
 $Breadcrum->AddComponent("gcwu_breadcrum", $gcwu_breadcrum);
-$SiteMenu->AddComponent("gcwu_psnb", $gcwu_psnb);
+$SiteMenu->AddComponent("gcwu_menu", $gcwu_menu);
 $TopMenu->AddComponent("gcwu_gcnb", $gcwu_gcnb);
 $Footer->AddComponent("gcwu_footer", $gcwu_footer);
 $Content->AddComponent("main", $main);
@@ -158,24 +158,24 @@ $Attributes->SetValue("pathToRoot", "");
 $Attributes->Show();
 //End Initialize HTML Template
 
-//Execute Components @1-B3F038A3
+//Execute Components @1-800BDF5A
 $MasterPage->Operations();
 $main->Operations();
 $gcwu_footer->Operations();
 $gcwu_gcnb->Operations();
-$gcwu_psnb->Operations();
+$gcwu_menu->Operations();
 $gcwu_breadcrum->Operations();
 //End Execute Components
 
-//Go to destination page @1-366B46B2
+//Go to destination page @1-50D38F57
 if($Redirect)
 {
     $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
     header("Location: " . $Redirect);
     $gcwu_breadcrum->Class_Terminate();
     unset($gcwu_breadcrum);
-    $gcwu_psnb->Class_Terminate();
-    unset($gcwu_psnb);
+    $gcwu_menu->Class_Terminate();
+    unset($gcwu_menu);
     $gcwu_gcnb->Class_Terminate();
     unset($gcwu_gcnb);
     $gcwu_footer->Class_Terminate();
@@ -211,13 +211,13 @@ $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
 if ($CCSEventResult) echo $main_block;
 //End Show Page
 
-//Unload Page @1-1B7A8068
+//Unload Page @1-86961B95
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
 unset($MasterPage);
 $gcwu_breadcrum->Class_Terminate();
 unset($gcwu_breadcrum);
-$gcwu_psnb->Class_Terminate();
-unset($gcwu_psnb);
+$gcwu_menu->Class_Terminate();
+unset($gcwu_menu);
 $gcwu_gcnb->Class_Terminate();
 unset($gcwu_gcnb);
 $gcwu_footer->Class_Terminate();

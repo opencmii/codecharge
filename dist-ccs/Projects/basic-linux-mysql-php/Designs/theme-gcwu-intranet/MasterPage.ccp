@@ -5,6 +5,16 @@
 			<Events/>
 			<Features/>
 		</ContentPlaceholder>
+		<ContentPlaceholder id="4" name="Content" PathID="Content">
+			<Components/>
+			<Events/>
+			<Features/>
+		</ContentPlaceholder>
+		<ContentPlaceholder id="5" name="Breadcrum" PathID="Breadcrum">
+			<Components/>
+			<Events/>
+			<Features/>
+		</ContentPlaceholder>
 	</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="MasterPage.php" forShow="True" url="MasterPage.php" comment="//" codePage="utf-8"/>
