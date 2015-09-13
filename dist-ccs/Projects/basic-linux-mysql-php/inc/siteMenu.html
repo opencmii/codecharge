@@ -1,37 +1,29 @@
-<meta name="GENERATOR" content="CodeCharge Studio 5.1.1.18990">
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-       <div id="gcwu-psnb">
- <!--      <h2>Site menu</h2> -->
- 
-        <div id="gcwu-psnb-in">
-          <div class="wet-boew-menubar mb-mega">
-            <div>
-              <ul class="mb-menu" data-ajax-replace="/inc/menu-{res:locale}.txt">
-                <li>
-                <div>
-					<a href="http://wet-boew.github.io/wet-boew/index-{res:locale}.html">{res:gcwu_wet_project}</a> 
-                </div>
- 				</li>
- 
-                <li>
-                <div>
-					<a href="#">Section 2</a> 
-                </div>
- 				</li>
- 
-                <li>
-                <div>
-					<a href="#">Section 3</a> 
-                </div>
-			   </li>
- 
-              </ul>
- 
-            </div>
- 
-          </div>
- 
-        </div>
- 
-      </div>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<!-- BEGIN Directory menu -->
+<!-- BEGIN Category -->
+<li><section><a href="{CategoryLink_Src}">{CategoryLink}</a> 
+<div class="mb-sm">
+  <div class="span-2">
+    <ul>
+      <!-- BEGIN Subcategory -->
+      <li><a href="{SubcategoryLink_Src}">{SubcategoryLink}</a> <!-- END Subcategory -->
+      <!-- BEGIN SubcategorySeparator --><!-- END SubcategorySeparator -->
+      <!-- BEGIN SubcategoriesTail -->
+      <li><a href="{SubcategoriesTailLink_Src}">{res:CCS_More}</a><!-- END SubcategoriesTail --><!-- END Category -->
+      <!-- BEGIN CategorySeparator --></li>
+    </ul>
+  </div>
+</div>
+</section></li>
+<!-- CategorySeparator -->
+<!-- END CategorySeparator -->
+<!-- BEGIN ColumnSeparator -->
+<!-- ColumnSeparator -->
+<!-- END ColumnSeparator -->
+<!-- BEGIN NoCategories -->{res:CCS_NoCategories}<!-- END NoCategories --><!-- END Directory menu --><br>
+</body>
+</html>

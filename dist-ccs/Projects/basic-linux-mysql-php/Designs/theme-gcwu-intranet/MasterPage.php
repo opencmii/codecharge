@@ -69,7 +69,7 @@ class clsMasterPage { //MasterPage class @1-BFE8F48A
     }
 //End Operations Method
 
-//Initialize Method @1-2C669EED
+//Initialize Method @1-58158BCF
     function Initialize($Path = "")
     {
         global $FileName;
@@ -90,8 +90,15 @@ class clsMasterPage { //MasterPage class @1-BFE8F48A
         $this->Attributes = & $this->Parent->Attributes;
 
         // Create Components
+        $this->Link1 = new clsControl(ccsLink, "Link1", "Link1", ccsText, "", CCGetRequestParam("Link1", ccsGet, NULL), $this);
+        $this->Link1->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
+        $this->Link1->Page = "../../cont.php";
         $this->TopMenu = new clsPanel("TopMenu", $this);
         $this->TopMenu->isContentPlaceholder = true;
+        $this->Content = new clsPanel("Content", $this);
+        $this->Content->isContentPlaceholder = true;
+        $this->Breadcrum = new clsPanel("Breadcrum", $this);
+        $this->Breadcrum->isContentPlaceholder = true;
         $this->BindEvents();
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "OnInitializeView", $this);
         $this->Tpl = new clsTemplate();
@@ -103,7 +110,7 @@ class clsMasterPage { //MasterPage class @1-BFE8F48A
     }
 //End Initialize Method
 
-//Show Method @1-D77CB2D6
+//Show Method @1-DA81E050
     function Show()
     {
         global $CCSLocales;
@@ -117,6 +124,7 @@ class clsMasterPage { //MasterPage class @1-BFE8F48A
         $this->Tpl->SetVar("CCS_PathToCurrentPage", RelativePath . $this->RelativePath);
         $this->Tpl->SetVar("page:pathToCurrentPage", RelativePath . $this->RelativePath);
         $this->Attributes->Show();
+        $this->Link1->Show();
         $this->Tpl->block_path = "";
         $this->Tpl->Parse("main", false);
         $this->HTML = $this->Tpl->GetVar("main");

@@ -18,18 +18,6 @@
 			<Attributes/>
 			<Features/>
 		</Panel>
-		<Panel id="21" visible="True" generateDiv="False" name="SiteMenu" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="SiteMenu" contentPlaceholder="SiteMenu">
-			<Components>
-				<IncludePage id="22" name="gcwu_psnb" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="SiteMenugcwu_psnb" page="inc/siteMenu.ccp">
-					<Components/>
-					<Events/>
-					<Features/>
-				</IncludePage>
-			</Components>
-			<Events/>
-			<Attributes/>
-			<Features/>
-		</Panel>
 		<Panel id="14" visible="True" generateDiv="False" name="TopMenu" contentPlaceholder="TopMenu">
 			<Components>
 				<IncludePage id="11" name="gcwu_gcnb" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="TopMenugcwu_gcnb" page="inc/topMenu.ccp">
@@ -68,7 +56,7 @@
 		</Panel>
 		<Panel id="34" visible="True" generateDiv="False" name="Content" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Content" contentPlaceholder="Content">
 			<Components>
-				<IncludePage id="35" name="main" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Contentmain" page="empty.ccp">
+				<IncludePage id="35" name="main" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Contentmain" page="content_empty.ccp">
 					<Components/>
 					<Events/>
 					<Features/>

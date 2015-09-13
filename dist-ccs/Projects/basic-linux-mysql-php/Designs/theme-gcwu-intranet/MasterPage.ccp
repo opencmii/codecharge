@@ -5,7 +5,23 @@
 			<Events/>
 			<Features/>
 		</ContentPlaceholder>
-	</Components>
+		<ContentPlaceholder id="4" name="Content" PathID="Content">
+			<Components/>
+			<Events/>
+			<Features/>
+		</ContentPlaceholder>
+		<ContentPlaceholder id="5" name="Breadcrum" PathID="Breadcrum">
+			<Components/>
+			<Events/>
+			<Features/>
+		</ContentPlaceholder>
+		<Link id="6" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Link1" PathID="Link1" hrefSource="../../cont.ccp" wizardUseTemplateBlock="False" linkProperties="{'textSource':'{res:app_no}','textSourceDB':'','hrefSource':'../../cont.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}"><Components/>
+<Events/>
+<LinkParameters/>
+<Attributes/>
+<Features/>
+</Link>
+</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="MasterPage.php" forShow="True" url="MasterPage.php" comment="//" codePage="utf-8"/>
 	</CodeFiles>
