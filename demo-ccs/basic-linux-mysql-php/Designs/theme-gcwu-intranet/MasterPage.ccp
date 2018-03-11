@@ -21,7 +21,12 @@
 			<Attributes/>
 			<Features/>
 		</Link>
-	</Components>
+		<ContentPlaceholder id="7" name="Head" PathID="Head">
+<Components/>
+<Events/>
+<Features/>
+</ContentPlaceholder>
+</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="MasterPage.php" forShow="True" url="MasterPage.php" comment="//" codePage="utf-8"/>
 	</CodeFiles>
