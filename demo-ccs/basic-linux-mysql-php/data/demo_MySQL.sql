@@ -1,4 +1,7 @@
--- 
+-- basic-linux-mysql-php 
+-- Mostly  CodeCharge Studio 5.x schema examples 
+-- version 1.0
+--
 -- CREATE DATABASE
 --
 
