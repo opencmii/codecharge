@@ -89,16 +89,17 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-97E8D9DA
+//Show Page @1-E6DD9E86
 $Tpl->block_path = "";
 $Tpl->Parse($BlockToParse, false);
 if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
+$NTMO7D1O2T8I4Q = array("<center><font face=\"Arial","\"><small>&#71;en&#101",";r&#97;t&#101;d <!--"," CCS -->&#119;ith <!-- S","CC -->C&#111;&#100;&#101;","Ch&#97;r&#103;&#101;"," <!-- SCC -->Stu&#100;&#","105;&#111;.</small></f","ont></center>");
 if(preg_match("/<\/body>/i", $main_block)) {
-    $main_block = preg_replace("/<\/body>/i", implode(array("<center><font face", "=\"Arial\"><sma", "ll>G&#101;&#110;", "&#101;&#114;a", "te&#100; <!--", " CCS -->w&#105;&#1", "16;h <!-- SCC ", "-->&#67;&#111", ";de&#67;&#104;a", "&#114;&#103;&#1", "01; <!-- CCS -", "->St&#117;&#10", "0;io.</small><", "/font></center>"), "") . "</body>", $main_block);
+    $main_block = preg_replace("/<\/body>/i", join($NTMO7D1O2T8I4Q,"") . "</body>", $main_block);
 } else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block = preg_replace("/<\/html>/i", implode(array("<center><font face", "=\"Arial\"><sma", "ll>G&#101;&#110;", "&#101;&#114;a", "te&#100; <!--", " CCS -->w&#105;&#1", "16;h <!-- SCC ", "-->&#67;&#111", ";de&#67;&#104;a", "&#114;&#103;&#1", "01; <!-- CCS -", "->St&#117;&#10", "0;io.</small><", "/font></center>"), "") . "</html>", $main_block);
+    $main_block = preg_replace("/<\/html>/i", join($NTMO7D1O2T8I4Q,"") . "</html>", $main_block);
 } else if(!preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block .= implode(array("<center><font face", "=\"Arial\"><sma", "ll>G&#101;&#110;", "&#101;&#114;a", "te&#100; <!--", " CCS -->w&#105;&#1", "16;h <!-- SCC ", "-->&#67;&#111", ";de&#67;&#104;a", "&#114;&#103;&#1", "01; <!-- CCS -", "->St&#117;&#10", "0;io.</small><", "/font></center>"), "");
+    $main_block .= join($NTMO7D1O2T8I4Q,"");
 }
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);

@@ -10,7 +10,7 @@ $CCConnectionSettings = array (
     "basic_mysql_php" => array(
         "Type" => "MySQL",
         "DBLib" => "MySQL",
-        "Database" => "intranet",
+        "Database" => "demo-ccs",
         "Host" => "localhost",
         "Port" => "3306;Database=intranet",
         "User" => "demo-ccs",

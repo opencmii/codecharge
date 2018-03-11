@@ -7,7 +7,7 @@
 	$uri .= $_SERVER['HTTP_HOST'];
 	// Initial CodeCharge Studio demo featuring Common Look and Feel (clf) framework
 	// https://github.com/opencmii/wet-boew-codecharge
-	header('Location: '.$uri.'./basic-linux-mysql-php');
+	header('Location: '.$uri.'/demo-ccs/basic-linux-mysql-php');
 	exit;
 ?>
 Something is wrong with wet-boew-codecharge demo-ccs installation. 

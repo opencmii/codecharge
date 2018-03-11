@@ -20,15 +20,17 @@ REM INSTALL
 REM ==================================
 REM Assumptions: 
 REM 1. local Bitnami XAMPP Distribution installed by default (in c:\xampp) (Windows)
-SET WWW=c:\xampp\htdocs\demo-ccs
+SET DEMO=demo-ccs
+SET WWW=c:\xampp\htdocs
 REM -----------------------------------
 REM Procedure
 REM -----------------------------------
 REM Backup present installed application just in case...
-REM DELETE %WWW%_old
-REM RENAME %WWW% %WWW%_old 
+REM DELETE %WWW%\%DEMO%_old
+REM RENAME %WWW%\%DEMO% %WWW%\%DEMO%_old 
 
 REM (Re-)install demo-ccs from local directory where this file reside.
-REM MKDIR %WWW%
-XCOPY /S /D .\* %WWW%
+REM MKDIR %WWW%\%DEMO%
+XCOPY /S /D %DEMO%\*.* %WWW%\%DEMO%
+PAUSE
 

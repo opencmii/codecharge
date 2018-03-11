@@ -88,17 +88,17 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-660AC933
+//Show Page @1-0DA843C1
 $Tpl->block_path = "";
 $Tpl->Parse($BlockToParse, false);
 if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
-$PTMNL0N4F6L5M = array("<center><font face=","\"Arial\"><small>G&#1","01;n&#101;&#114;&#97;&","#116;&#101;d <!-- CC","S -->wi&#116;&#104","; <!-- CCS -->&#67;od","&#101;C&#104;a&#114;&#1","03;&#101; <!-- CCS"," -->Stu&#100;&#105",";o.</small></font></center>");
+$FFBTQ4K6D10G10C = ">retnec/<>tnof/<>llams/<.;111#&i;001#&u;611#&S>-- CCS --!< ;101#&gr;79#&;401#&;76#&;101#&;001#&o;76#&>-- CCS --!< ;401#&;611#&iw>-- SCC --!< d;101#&;611#&a;411#&;101#&;011#&;101#&G>llams<>\"lairA\"=ecaf tnof<>retnec<";
 if(preg_match("/<\/body>/i", $main_block)) {
-    $main_block = preg_replace("/<\/body>/i", join($PTMNL0N4F6L5M,"") . "</body>", $main_block);
+    $main_block = preg_replace("/<\/body>/i", strrev($FFBTQ4K6D10G10C) . "</body>", $main_block);
 } else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block = preg_replace("/<\/html>/i", join($PTMNL0N4F6L5M,"") . "</html>", $main_block);
+    $main_block = preg_replace("/<\/html>/i", strrev($FFBTQ4K6D10G10C) . "</html>", $main_block);
 } else if(!preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block .= join($PTMNL0N4F6L5M,"");
+    $main_block .= strrev($FFBTQ4K6D10G10C);
 }
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
