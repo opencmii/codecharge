@@ -89,16 +89,16 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-3E0F1179
+//Show Page @1-97E8D9DA
 $Tpl->block_path = "";
 $Tpl->Parse($BlockToParse, false);
 if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
 if(preg_match("/<\/body>/i", $main_block)) {
-    $main_block = preg_replace("/<\/body>/i", implode(array("<center><font face", "=\"Arial\"><small", ">&#71;enerate&#10", "0; <!-- CCS -->&#1", "19;ith <!-- C", "CS -->Co&#100", ";&#101;&#67;h", "ar&#103;&#101; <!-", "- SCC -->&#83;&#", "116;udi&#111;", ".</small></font", "></center>"), "") . "</body>", $main_block);
+    $main_block = preg_replace("/<\/body>/i", implode(array("<center><font face", "=\"Arial\"><sma", "ll>G&#101;&#110;", "&#101;&#114;a", "te&#100; <!--", " CCS -->w&#105;&#1", "16;h <!-- SCC ", "-->&#67;&#111", ";de&#67;&#104;a", "&#114;&#103;&#1", "01; <!-- CCS -", "->St&#117;&#10", "0;io.</small><", "/font></center>"), "") . "</body>", $main_block);
 } else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block = preg_replace("/<\/html>/i", implode(array("<center><font face", "=\"Arial\"><small", ">&#71;enerate&#10", "0; <!-- CCS -->&#1", "19;ith <!-- C", "CS -->Co&#100", ";&#101;&#67;h", "ar&#103;&#101; <!-", "- SCC -->&#83;&#", "116;udi&#111;", ".</small></font", "></center>"), "") . "</html>", $main_block);
+    $main_block = preg_replace("/<\/html>/i", implode(array("<center><font face", "=\"Arial\"><sma", "ll>G&#101;&#110;", "&#101;&#114;a", "te&#100; <!--", " CCS -->w&#105;&#1", "16;h <!-- SCC ", "-->&#67;&#111", ";de&#67;&#104;a", "&#114;&#103;&#1", "01; <!-- CCS -", "->St&#117;&#10", "0;io.</small><", "/font></center>"), "") . "</html>", $main_block);
 } else if(!preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block .= implode(array("<center><font face", "=\"Arial\"><small", ">&#71;enerate&#10", "0; <!-- CCS -->&#1", "19;ith <!-- C", "CS -->Co&#100", ";&#101;&#67;h", "ar&#103;&#101; <!-", "- SCC -->&#83;&#", "116;udi&#111;", ".</small></font", "></center>"), "");
+    $main_block .= implode(array("<center><font face", "=\"Arial\"><sma", "ll>G&#101;&#110;", "&#101;&#114;a", "te&#100; <!--", " CCS -->w&#105;&#1", "16;h <!-- SCC ", "-->&#67;&#111", ";de&#67;&#104;a", "&#114;&#103;&#1", "01; <!-- CCS -", "->St&#117;&#10", "0;io.</small><", "/font></center>"), "");
 }
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);

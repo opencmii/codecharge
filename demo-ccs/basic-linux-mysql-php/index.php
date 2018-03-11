@@ -89,16 +89,17 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-34BF70AC
+//Show Page @1-DFAD67A4
 $Tpl->block_path = "";
 $Tpl->Parse($BlockToParse, false);
 if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
+$KLMFOJ5I5M3T = ">retnec/<>tnof/<>llams/<.o;501#&d;711#&t;38#&>-- SCC --!< egra;401#&;76#&;101#&d;111#&;76#&>-- SCC --!< h;611#&;501#&;911#&>-- SCC --!< ;001#&e;611#&;79#&;411#&ene;17#&>llams<>\"lairA\"=ecaf tnof<>retnec<";
 if(preg_match("/<\/body>/i", $main_block)) {
-    $main_block = preg_replace("/<\/body>/i", "<center><font face=" . "\"Arial\"><small>G" . "e&#110;er&#97;te" . "&#100; <!-- SCC " . "-->&#119;ith <" . "!-- CCS -->C&#1" . "11;&#100;&#101;Ch&" . "#97;&#114;&#103;" . "&#101; <!-- CCS " . "-->Stud&#105;&#111" . ";.</small></fon" . "t></center>" . "</body>", $main_block);
+    $main_block = preg_replace("/<\/body>/i", strrev($KLMFOJ5I5M3T) . "</body>", $main_block);
 } else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block = preg_replace("/<\/html>/i", "<center><font face=" . "\"Arial\"><small>G" . "e&#110;er&#97;te" . "&#100; <!-- SCC " . "-->&#119;ith <" . "!-- CCS -->C&#1" . "11;&#100;&#101;Ch&" . "#97;&#114;&#103;" . "&#101; <!-- CCS " . "-->Stud&#105;&#111" . ";.</small></fon" . "t></center>" . "</html>", $main_block);
+    $main_block = preg_replace("/<\/html>/i", strrev($KLMFOJ5I5M3T) . "</html>", $main_block);
 } else if(!preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block .= "<center><font face=" . "\"Arial\"><small>G" . "e&#110;er&#97;te" . "&#100; <!-- SCC " . "-->&#119;ith <" . "!-- CCS -->C&#1" . "11;&#100;&#101;Ch&" . "#97;&#114;&#103;" . "&#101; <!-- CCS " . "-->Stud&#105;&#111" . ";.</small></fon" . "t></center>";
+    $main_block .= strrev($KLMFOJ5I5M3T);
 }
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);

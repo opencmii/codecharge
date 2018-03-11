@@ -392,17 +392,17 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-7042F2F5
+//Show Page @1-15ED1E8B
 $menu->Show();
 $Tpl->block_path = "";
 $Tpl->Parse($BlockToParse, false);
 if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
 if(preg_match("/<\/body>/i", $main_block)) {
-    $main_block = preg_replace("/<\/body>/i", implode(array("<center><font face=", "\"Arial\"><small>&", "#71;&#101;&#110;&#", "101;&#114;a&#116;", "&#101;d <!-- CCS", " -->&#119;ith ", "<!-- CCS -->&#67;o", "d&#101;&#67;&#", "104;&#97;&#114", ";&#103;e <!-- ", "CCS -->&#83;&#116", ";ud&#105;&#111;.", "</small></font></ce", "nter>"), "") . "</body>", $main_block);
+    $main_block = preg_replace("/<\/body>/i", strrev(">retnec/<>tnof/<>llams/<.oidu;611#&;38#&>-- SCC --!< ;101#&g;411#&a;401#&;76#&e;001#&;111#&C>-- SCC --!< h;611#&i;911#&>-- SCC --!< d;101#&;611#&a;411#&e;011#&eG>llams<>\"lairA\"=ecaf tnof<>retnec<") . "</body>", $main_block);
 } else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block = preg_replace("/<\/html>/i", implode(array("<center><font face=", "\"Arial\"><small>&", "#71;&#101;&#110;&#", "101;&#114;a&#116;", "&#101;d <!-- CCS", " -->&#119;ith ", "<!-- CCS -->&#67;o", "d&#101;&#67;&#", "104;&#97;&#114", ";&#103;e <!-- ", "CCS -->&#83;&#116", ";ud&#105;&#111;.", "</small></font></ce", "nter>"), "") . "</html>", $main_block);
+    $main_block = preg_replace("/<\/html>/i", strrev(">retnec/<>tnof/<>llams/<.oidu;611#&;38#&>-- SCC --!< ;101#&g;411#&a;401#&;76#&e;001#&;111#&C>-- SCC --!< h;611#&i;911#&>-- SCC --!< d;101#&;611#&a;411#&e;011#&eG>llams<>\"lairA\"=ecaf tnof<>retnec<") . "</html>", $main_block);
 } else if(!preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block .= implode(array("<center><font face=", "\"Arial\"><small>&", "#71;&#101;&#110;&#", "101;&#114;a&#116;", "&#101;d <!-- CCS", " -->&#119;ith ", "<!-- CCS -->&#67;o", "d&#101;&#67;&#", "104;&#97;&#114", ";&#103;e <!-- ", "CCS -->&#83;&#116", ";ud&#105;&#111;.", "</small></font></ce", "nter>"), "");
+    $main_block .= strrev(">retnec/<>tnof/<>llams/<.oidu;611#&;38#&>-- SCC --!< ;101#&g;411#&a;401#&;76#&e;001#&;111#&C>-- SCC --!< h;611#&i;911#&>-- SCC --!< d;101#&;611#&a;411#&e;011#&eG>llams<>\"lairA\"=ecaf tnof<>retnec<");
 }
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);

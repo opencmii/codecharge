@@ -173,7 +173,7 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-5099EBAA
+//Show Page @1-CC99EF87
 $Head->Show();
 $Breadcrum->Show();
 $TopMenu->Show();
@@ -190,12 +190,13 @@ $MasterPage->Tpl->SetVar("CustomCSS", $Tpl->GetVar("Panel CustomCSS"));
 $MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
 $MasterPage->Show();
 if (!isset($main_block)) $main_block = $MasterPage->HTML;
+$GHFGG3G6Q6Q7I4B = array("<center><font face=","\"Arial\"><small>G&#1","01;&#110;er&#97;ted <","!-- SCC -->&#119;&#105;&","#116;h <!-- CCS -->&","#67;od&#101;C&#104;","a&#114;g&#101; <!--"," SCC -->&#83;t&#117",";&#100;&#105;o.</small>","</font></center>");
 if(preg_match("/<\/body>/i", $main_block)) {
-    $main_block = preg_replace("/<\/body>/i", "<center><font face=\"Arial\"><small>&#71;ene&#114;&#97;t&#101;&#100; <!-- CCS -->&#119;it&#104; <!-- SCC -->&#67;od&#101;&#67;h&#97;rg&#101; <!-- CCS -->&#83;&#116;ud&#105;&#111;.</small></font></center>" . "</body>", $main_block);
+    $main_block = preg_replace("/<\/body>/i", join($GHFGG3G6Q6Q7I4B,"") . "</body>", $main_block);
 } else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block = preg_replace("/<\/html>/i", "<center><font face=\"Arial\"><small>&#71;ene&#114;&#97;t&#101;&#100; <!-- CCS -->&#119;it&#104; <!-- SCC -->&#67;od&#101;&#67;h&#97;rg&#101; <!-- CCS -->&#83;&#116;ud&#105;&#111;.</small></font></center>" . "</html>", $main_block);
+    $main_block = preg_replace("/<\/html>/i", join($GHFGG3G6Q6Q7I4B,"") . "</html>", $main_block);
 } else if(!preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block .= "<center><font face=\"Arial\"><small>&#71;ene&#114;&#97;t&#101;&#100; <!-- CCS -->&#119;it&#104; <!-- SCC -->&#67;od&#101;&#67;h&#97;rg&#101; <!-- CCS -->&#83;&#116;ud&#105;&#111;.</small></font></center>";
+    $main_block .= join($GHFGG3G6Q6Q7I4B,"");
 }
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
