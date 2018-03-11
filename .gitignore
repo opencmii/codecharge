@@ -9,7 +9,7 @@
 #*.txt
 #*.css
 
-# CodeChargeStudio generated temp files
+# Temp files
 ~*.*
 ._*
 .*
@@ -21,11 +21,3 @@ Thumbs.db
 *.log
 *.bak
 *.lnk
-
-# misc
-*/config/development
-*/logs/log-*.php
-*/logs/!index.html
-*/cache/*
-*/cache/!index.html
-
