@@ -50,3 +50,10 @@ To run demo using ASP/dotnet/JSP/Coldfusion: Get CodechargeStudio, open demo pro
 
 To run demo with MSAccess/Oracle/MSSQL/DB2/PostgresSQL: Get CodechargeStudio, , open demo project file, change database connections, and re-generate demo. Conversion of schema from MySQL SQL syntax to the other SQL dbms may be required.
 
+
+FILES
+dist-ccs\Projects:		Folder that contains a generated demo application, using the re-useable design component (clf)
+dist-ccs\Components:	Folder that contains the re-useable CodeChargeStudio 5.X Design Templates, 
+						starting with theme-gcwu-intranet
+
+
