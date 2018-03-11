@@ -1,0 +1,43 @@
+1. Provide other language resource files (other than en,fr) for all WET supported languages:
+R. Need to parse via script WET to extract them all into a set of resources files, one by language.
+    Afrikaans
+    Albanian
+    Arabic
+    Armenian
+    Bulgarian
+    Chinese
+    Chinese (Simplified)
+    Czech
+    Dutch
+    Estonian
+    German
+    Greek
+    Hindi
+    Hungarian
+    Icelandic
+    Indonesian
+    Italian
+    Japanese
+    Korean
+    Latvian
+    Lithuanian
+    Polish
+    Portuguese
+    Portuguese (Brazilian)
+    Russian
+    Slovak
+    Spanish
+    Thai
+    Turkish
+    Ukranian
+    Vietnamese
+
+2. Provide Master pages for all other theme (besides intranet) showcased in WET.	
+   ref: http://wet-boew.github.io/wet-boew/docs/ref/themesstyle-en.html
+
+a. Base theme - A theme template to aid in the creation of new themes.
+b. Canada.ca theme
+c. Government of Canada Web Usability Theme
+d. Government of Canada Intranet theme (provided partially)
+e. Open Government Platform (OGPL) theme
+f. Web Experience Toolkit (WET) theme
