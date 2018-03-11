@@ -4,23 +4,25 @@
 # These files are text and should be normalized (convert crlf => lf)
 # Les fichiers suivants sont du texte et doivent être normalisés (crlf => lf)  
 
-# Extension standards
-#*.js      text
-#*.css     text
-#*.html    text
-#*.php     text
-#*.xml     text
-#*.txt     text
+# demo-ccs Extension standards
+*.js      text
+*.css     text
+*.html    text
+*.php     text
+*.xml     text
+*.txt     text
+*.ccp     text
+*.ccs     text
 
 # Extensions spécifiques à CodechargeStudio
 # These files are generated and hardely mergeable.
 # lock mechanism recommended, one page (.html,.ccp,.php) at a time.
-*.ccs 	binary
-*.ccp	binary
-*.html  binary
-*.php   binary
-*.js    binary
-*.css   binary
+#*.ccs 	binary
+#*.ccp	binary
+#*.html  binary
+#*.php   binary
+#*.js    binary
+#*.css   binary
 
 # Images should be treated as binary.
 # Images doivent être traitées comme des fichiers binaires.
