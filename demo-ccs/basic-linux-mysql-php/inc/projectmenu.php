@@ -88,17 +88,16 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-0DA843C1
+//Show Page @1-EBDEC950
 $Tpl->block_path = "";
 $Tpl->Parse($BlockToParse, false);
 if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
-$FFBTQ4K6D10G10C = ">retnec/<>tnof/<>llams/<.;111#&i;001#&u;611#&S>-- CCS --!< ;101#&gr;79#&;401#&;76#&;101#&;001#&o;76#&>-- CCS --!< ;401#&;611#&iw>-- SCC --!< d;101#&;611#&a;411#&;101#&;011#&;101#&G>llams<>\"lairA\"=ecaf tnof<>retnec<";
 if(preg_match("/<\/body>/i", $main_block)) {
-    $main_block = preg_replace("/<\/body>/i", strrev($FFBTQ4K6D10G10C) . "</body>", $main_block);
+    $main_block = preg_replace("/<\/body>/i", "<center><font fac" . "e=\"Arial\"><small>&#71;" . "&#101;n&#101;&#114" . ";&#97;te&#100; <!-- " . "SCC -->wi&#116;&#10" . "4; <!-- CCS -->&#6" . "7;o&#100;e&#67;&#104;" . "a&#114;&#103;e <!-- " . "CCS -->&#83;tu&#100;&" . "#105;o.</small></" . "font></center>" . "</body>", $main_block);
 } else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block = preg_replace("/<\/html>/i", strrev($FFBTQ4K6D10G10C) . "</html>", $main_block);
+    $main_block = preg_replace("/<\/html>/i", "<center><font fac" . "e=\"Arial\"><small>&#71;" . "&#101;n&#101;&#114" . ";&#97;te&#100; <!-- " . "SCC -->wi&#116;&#10" . "4; <!-- CCS -->&#6" . "7;o&#100;e&#67;&#104;" . "a&#114;&#103;e <!-- " . "CCS -->&#83;tu&#100;&" . "#105;o.</small></" . "font></center>" . "</html>", $main_block);
 } else if(!preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block .= strrev($FFBTQ4K6D10G10C);
+    $main_block .= "<center><font fac" . "e=\"Arial\"><small>&#71;" . "&#101;n&#101;&#114" . ";&#97;te&#100; <!-- " . "SCC -->wi&#116;&#10" . "4; <!-- CCS -->&#6" . "7;o&#100;e&#67;&#104;" . "a&#114;&#103;e <!-- " . "CCS -->&#83;tu&#100;&" . "#105;o.</small></" . "font></center>";
 }
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);

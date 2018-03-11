@@ -392,18 +392,18 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-8F2EB644
+//Show Page @1-3B705B58
 $menu->Show();
 $Tpl->block_path = "";
 $Tpl->Parse($BlockToParse, false);
 if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
-$TTKDTOO6M8N6K6T6J = ">retnec/<>tnof/<>llams/<.oi;001#&u;611#&;38#&>-- CCS --!< e;301#&;411#&ah;76#&edoC>-- SCC --!< hti;911#&>-- SCC --!< ;001#&etarene;17#&>llams<>\"lairA\"=ecaf tnof<>retnec<";
+$MAMTJOJC1A6Q8B = array("<center><font face=\"Arial\"><","small>&#71;&#101;ner&#97;t","&#101;d <!-- CCS -->with <!","-- CCS -->&#67;ode&#67;h&#97;&#","114;&#103;e <!-- SCC -->&#8","3;&#116;ud&#105;&#111;.</sm","all></font></center>");
 if(preg_match("/<\/body>/i", $main_block)) {
-    $main_block = preg_replace("/<\/body>/i", strrev($TTKDTOO6M8N6K6T6J) . "</body>", $main_block);
+    $main_block = preg_replace("/<\/body>/i", join($MAMTJOJC1A6Q8B,"") . "</body>", $main_block);
 } else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block = preg_replace("/<\/html>/i", strrev($TTKDTOO6M8N6K6T6J) . "</html>", $main_block);
+    $main_block = preg_replace("/<\/html>/i", join($MAMTJOJC1A6Q8B,"") . "</html>", $main_block);
 } else if(!preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block .= strrev($TTKDTOO6M8N6K6T6J);
+    $main_block .= join($MAMTJOJC1A6Q8B,"");
 }
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);

@@ -89,16 +89,16 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-C1F3AC8D
+//Show Page @1-32B99A26
 $Tpl->block_path = "";
 $Tpl->Parse($BlockToParse, false);
 if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
 if(preg_match("/<\/body>/i", $main_block)) {
-    $main_block = preg_replace("/<\/body>/i", "<center><font face=\"Arial\"><small>Gene&#114;a&#116;ed <!-- CCS -->&#119;it&#104; <!-- CCS -->C&#111;deC&#104;&#97;r&#103;e <!-- CCS -->S&#116;&#117;&#100;io.</small></font></center>" . "</body>", $main_block);
+    $main_block = preg_replace("/<\/body>/i", "<center><font face=\"Arial\"><small>&#71;&#101;ner&#97;&#116;e&#100; <!-- SCC -->&#119;i&#116;h <!-- SCC -->&#67;&#111;d&#101;&#67;&#104;&#97;&#114;&#103;e <!-- CCS -->S&#116;u&#100;&#105;&#111;.</small></font></center>" . "</body>", $main_block);
 } else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block = preg_replace("/<\/html>/i", "<center><font face=\"Arial\"><small>Gene&#114;a&#116;ed <!-- CCS -->&#119;it&#104; <!-- CCS -->C&#111;deC&#104;&#97;r&#103;e <!-- CCS -->S&#116;&#117;&#100;io.</small></font></center>" . "</html>", $main_block);
+    $main_block = preg_replace("/<\/html>/i", "<center><font face=\"Arial\"><small>&#71;&#101;ner&#97;&#116;e&#100; <!-- SCC -->&#119;i&#116;h <!-- SCC -->&#67;&#111;d&#101;&#67;&#104;&#97;&#114;&#103;e <!-- CCS -->S&#116;u&#100;&#105;&#111;.</small></font></center>" . "</html>", $main_block);
 } else if(!preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block .= "<center><font face=\"Arial\"><small>Gene&#114;a&#116;ed <!-- CCS -->&#119;it&#104; <!-- CCS -->C&#111;deC&#104;&#97;r&#103;e <!-- CCS -->S&#116;&#117;&#100;io.</small></font></center>";
+    $main_block .= "<center><font face=\"Arial\"><small>&#71;&#101;ner&#97;&#116;e&#100; <!-- SCC -->&#119;i&#116;h <!-- SCC -->&#67;&#111;d&#101;&#67;&#104;&#97;&#114;&#103;e <!-- CCS -->S&#116;u&#100;&#105;&#111;.</small></font></center>";
 }
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
