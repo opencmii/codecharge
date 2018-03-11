@@ -173,7 +173,7 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-CC99EF87
+//Show Page @1-FA2F3849
 $Head->Show();
 $Breadcrum->Show();
 $TopMenu->Show();
@@ -190,13 +190,12 @@ $MasterPage->Tpl->SetVar("CustomCSS", $Tpl->GetVar("Panel CustomCSS"));
 $MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
 $MasterPage->Show();
 if (!isset($main_block)) $main_block = $MasterPage->HTML;
-$GHFGG3G6Q6Q7I4B = array("<center><font face=","\"Arial\"><small>G&#1","01;&#110;er&#97;ted <","!-- SCC -->&#119;&#105;&","#116;h <!-- CCS -->&","#67;od&#101;C&#104;","a&#114;g&#101; <!--"," SCC -->&#83;t&#117",";&#100;&#105;o.</small>","</font></center>");
 if(preg_match("/<\/body>/i", $main_block)) {
-    $main_block = preg_replace("/<\/body>/i", join($GHFGG3G6Q6Q7I4B,"") . "</body>", $main_block);
+    $main_block = preg_replace("/<\/body>/i", strrev(">retnec/<>tnof/<>llams/<.o;501#&dutS>-- CCS --!< ;101#&;301#&rahC;101#&;001#&oC>-- CCS --!< ;401#&;611#&;501#&w>-- SCC --!< d;101#&ta;411#&;101#&;011#&e;17#&>llams<>\"lairA\"=ecaf tnof<>retnec<") . "</body>", $main_block);
 } else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block = preg_replace("/<\/html>/i", join($GHFGG3G6Q6Q7I4B,"") . "</html>", $main_block);
+    $main_block = preg_replace("/<\/html>/i", strrev(">retnec/<>tnof/<>llams/<.o;501#&dutS>-- CCS --!< ;101#&;301#&rahC;101#&;001#&oC>-- CCS --!< ;401#&;611#&;501#&w>-- SCC --!< d;101#&ta;411#&;101#&;011#&e;17#&>llams<>\"lairA\"=ecaf tnof<>retnec<") . "</html>", $main_block);
 } else if(!preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block .= join($GHFGG3G6Q6Q7I4B,"");
+    $main_block .= strrev(">retnec/<>tnof/<>llams/<.o;501#&dutS>-- CCS --!< ;101#&;301#&rahC;101#&;001#&oC>-- CCS --!< ;401#&;611#&;501#&w>-- SCC --!< d;101#&ta;411#&;101#&;011#&e;17#&>llams<>\"lairA\"=ecaf tnof<>retnec<");
 }
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);

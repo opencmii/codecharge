@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<title>GC Web Usability Intranet theme - Working examples - Web Experience Toolkit (WET)</title>
+<meta name="description" content="The GC Web usability intranet theme adapts the GC Web usability theme for intranet sites.">
+<meta name="dcterms.creator" content="Web Experience Toolkit (WET) project">
+<meta name="dcterms.title" content="GC Web Usability Intranet theme - Working examples - Web Experience Toolkit (WET)">
+<meta name="dcterms.issued" title="W3CDTF" content="2013-03-02">
+<meta name="dcterms.modified" title="W3CDTF" content="2013-03-02">
+<meta name="dcterms.subject" title="gccore" content="Internet;Standards;Design">
+<meta name="dcterms.language" title="ISO639-2" content="eng">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if lte IE 8]>
+<script src="Designs/js/jquery-ie.min.js"></script>
+<script src="Designs/js/polyfills/html5shiv-min.js"></script>
+<link rel="stylesheet" href="Designs/grids/css/util-ie-min.css" />
+<link rel="stylesheet" href="Designs/js/css/pe-ap-ie-min.css" />
+<link rel="stylesheet" href="Designs/theme-gcwu-intranet/css/theme-ie-min.css" />
+<noscript><link rel="stylesheet" href="Designs/theme-gcwu-intranet/css/theme-ns-ie-min.css" /></noscript>
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<script src="Designs/js/jquery.min.js"></script>
+<link rel="stylesheet" href="Designs/grids/css/util-min.css" />
+<link rel="stylesheet" href="Designs/js/css/pe-ap-min.css" />
+<link rel="stylesheet" href="Designs/theme-gcwu-intranet/css/theme-min.css" />
+</head>
+<body>
+<noscript>
+<link rel="stylesheet" href="Designs/theme-gcwu-intranet/css/theme-ns-min.css" />
+</noscript>
+<!--<![endif]-->
+<!-- CustomCSSStart -->
+<!-- CustomCSSEnd -->
+<div id="wb-body">
+  <div id="wb-skip">
+    <ul id="wb-tphp">
+      <li id="wb-skip1"><a href="#wb-cont">Skip to main content</a></li>
+ 
+      <li id="wb-skip2"><a href="#wb-nav">Skip to footer</a></li>
+ 
+    </ul>
+ 
+  </div>
+ 
+  <div id="wb-head">
+    <div id="wb-head-in">
+      <header>
+      <!-- HeaderStart -->
+      <nav role="navigation">
+      <div id="gcwu-gcnb">
+        <h2>Intranet navigation bar</h2>
+ 
+        <div id="gcwu-gcnb-in">
+          <div id="gcwu-intranetnb">
+            <div id="gcwu-intranetnb-in">
+              <ul>
+                {TopMenu} 
+                <li id="gcwu-gcnb-lang"><a href="{page:FileName}?locale={res:gcwu_gcnb_lang_reverse2}" id="self">{res:gcwu_gcnb_lang_reverse}</a> </li>
+ 
+              </ul>
+ 
+            </div>
+ 
+          </div>
+ 
+          <div id="gcwu-gcnb-fip">
+            <div id="gcwu-sig">
+              <div id="gcwu-sig-in">
+                <object data="Designs/theme-gcwu-intranet/images/sig-blk-en.svg" role="img" tabindex="-1" aria-label="Government of Canada" type="image/svg+xml">
+                  <img src="Designs/theme-gcwu-intranet/images/sig-en.png" alt="Government of Canada" />
+                </object>
+ 
+              </div>
+ 
+            </div>
+ 
+            <div id="gcwu-wmms">
+              <div id="gcwu-wmms-in">
+                <object data="Designs/theme-gcwu-intranet/images/wmms-intra.svg" role="img" tabindex="-1" aria-label="Symbol of the Government of Canada" type="image/svg+xml">
+                  <img src="Designs/theme-gcwu-intranet/images/wmms-alt.png" alt="Symbol of the Government of Canada" />
+                </object>
+ 
+              </div>
+ 
+            </div>
+ 
+          </div>
+ 
+        </div>
+ 
+      </div>
+ </nav>
+ 
+      <div id="gcwu-bnr" role="banner">
+        <div id="gcwu-bnr-in">
+          <div id="gcwu-title">
+            <p id="gcwu-title-in">
+            <a href="{Link1_Src}" id="Link1">{res:app_no}</a>
+            </p>
+ 
+          </div>
+ 
+          <section role="search">
+          <div id="gcwu-srchbx">
+            <h2>Search</h2>
+ 
+            <form action="https://google.ca/search" method="get">
+              <div id="gcwu-srchbx-in">
+                <label for="gcwu-srch">Search website</label><input id="gcwu-srch" name="q" type="search" value="" size="27" maxlength="150" /><input type="hidden" name="q" value="site:wet-boew.github.io OR site:github.com/wet-boew/" /><input id="gcwu-srch-submit" type="submit" value="Search" />
+              </div>
+ 
+            </form>
+ 
+          </div>
+ </section>
+ 
+        </div>
+ 
+      </div>
+ 
+      <nav role="navigation">
+      <div id="gcwu-psnb">
+        <h2>Site menu</h2>
+ 
+        <div id="gcwu-psnb-in">
+          <div class="wet-boew-menubar mb-mega">
+            <div>
+              <ul class="mb-menu" data-ajax-replace="inc/sitemenu.php">
+<!--          <ul class="mb-menu" data-ajax-replace="inc/projectmenu.php"> -->
+<!--
+				<li><div><a href="http://wet-boew.github.io/wet-boew/index-en.html">ZZ WET project</a></div></li>
+				<li><div><a href="http://wet-boew.github.io/wet-boew/docs/gs-cd/impl-en.html">ZZ Implement WET</a></div></li>
+				<li><div><a href="http://wet-boew.github.io/wet-boew/docs/gs-cd/contrib-en.html">ZZ Contribute to WET</a></div></li>
+-->
+              </ul>
+ 
+            </div>
+ 
+          </div>
+ 
+        </div>
+ 
+      </div>
+ 
+      <div id="gcwu-bc">
+        <h2>Breadcrumb trail</h2>
+ 
+        <div id="gcwu-bc-in">
+          <ol>
+            {Breadcrum} 
+          </ol>
+ 
+        </div>
+ 
+      </div>
+ </nav>
+ 
+      <!-- HeaderEnd -->
+      </header>
+ 
+    </div>
+ 
+  </div>
+ 
+  <div id="wb-core">
+    <div id="wb-core-in" class="equalize">
+      <div id="wb-main" role="main">
+        <div id="wb-main-in">
+          <!-- MainContentStart -->
+          {Content} 
+          <!-- MainContentEnd -->
+        </div>
+ 
+      </div>
+ 
+    </div>
+ 
+  </div>
+ 
+  <div id="wb-foot">
+    <div id="wb-foot-in">
+      <footer>
+      <h2 id="wb-nav">Footer</h2>
+ 
+      <!-- FooterStart -->
+      <nav role="navigation">
+      <div id="gcwu-sft">
+        <h3>Site footer</h3>
+ 
+        <div id="gcwu-sft-in">
+          <section>
+          <div class="span-2">
+            <h4 class="gcwu-col-head">About</h4>
+ 
+            <ul>
+              <li><a href="http://wet-boew.github.io/wet-boew/index-en.html#about">About the Web Experience Toolkit</a></li>
+ 
+              <li><a href="http://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a></li>
+ 
+            </ul>
+ 
+          </div>
+ </section>
+ 
+          <section>
+          <div class="span-2">
+            <h4 class="gcwu-col-head">Contact us</h4>
+ 
+            <ul>
+              <li><a href="https://github.com/wet-boew/wet-boew/issues/new">Questions or comments?</a></li>
+ 
+            </ul>
+ 
+          </div>
+ </section>
+ 
+          <section>
+          <div class="span-2">
+            <h4 class="gcwu-col-head">News</h4>
+ 
+            <ul>
+              <li><a href="https://github.com/wet-boew/wet-boew/pulse">Recent project activity</a></li>
+ 
+              <li><a href="https://github.com/wet-boew/wet-boew/graphs">Project statistics</a></li>
+ 
+            </ul>
+ 
+          </div>
+ </section>
+ 
+          <section>
+          <div class="span-2">
+            <h4 class="gcwu-col-head">Stay connected</h4>
+ 
+            <ul>
+              <li><a href="https://twitter.com/WebExpToolkit" rel="external">Twitter</a></li>
+ 
+            </ul>
+ 
+          </div>
+ </section>
+ 
+          <div id="gcwu-tctr">
+            <ul>
+              <li class="gcwu-tc"><a href="http://wet-boew.github.io/wet-boew/License-en.html" rel="license">Terms and conditions</a></li>
+ 
+              <li class="gcwu-tr"><a href="http://www.tbs-sct.gc.ca/pd-dp/index-eng.asp">Transparency</a></li>
+ 
+            </ul>
+ 
+          </div>
+ 
+        </div>
+ 
+      </div>
+ </nav>
+ 
+      <!-- FooterEnd -->
+      </footer>
+ 
+    </div>
+ 
+  </div>
+</div>
+<!-- ScriptsStart -->
+<script src="Designs/js/settings.js"></script>
+<!--[if lte IE 8]>
+<script src="Designs/theme-gcwu-intranet/js/theme-ie-min.js"></script>
+<script src="Designs/js/pe-ap-ie-min.js"></script>
+<script src="Designs/js/jquerymobile/jquery.mobile-ie.min.js"></script>
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<script src="Designs/theme-gcwu-intranet/js/theme-min.js"></script>
+<script src="Designs/js/pe-ap-min.js"></script>
+<script src="Designs/js/jquerymobile/jquery.mobile.min.js"></script>
+<!--<![endif]-->
+<!-- ScriptsEnd -->
+<!-- CustomScriptsStart -->
+<!-- CustomScriptsEnd -->
+</body>
+</html>
