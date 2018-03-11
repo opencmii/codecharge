@@ -5,8 +5,10 @@
 		$uri = 'http://';
 	}
 	$uri .= $_SERVER['HTTP_HOST'];
-	header('Location: '.$uri.'/codecharge/dist-ccs/Projects/basic-linux-mysql-php');
+	// Initial CodeCharge Studio demo featuring Common Look and Feel (clf) framework
+	// https://github.com/opencmii/wet-boew-codecharge
+	header('Location: '.$uri.'./basic-linux-mysql-php');
 	exit;
 ?>
-Something is wrong with this application DEV installation. 
+Something is wrong with wet-boew-codecharge demo-ccs installation. 
 Please contact your sysop.
