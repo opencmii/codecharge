@@ -25,7 +25,7 @@ class clsPathbreadcrumPath_menu { //Path_menu class @2-50DE004B
     public $Attributes = "";
 //End Variables
 
-//Class_Initialize Event @2-06671A28
+//Class_Initialize Event @2-DA83BC71
     function clsPathbreadcrumPath_menu($RelativePath, & $Parent)
     {
         global $FileName;
@@ -43,9 +43,9 @@ class clsPathbreadcrumPath_menu { //Path_menu class @2-50DE004B
 
         $this->PathBeginLink = new clsControl(ccsLink, "PathBeginLink", "PathBeginLink", ccsText, "", CCGetRequestParam("PathBeginLink", ccsGet, NULL), $this);
         $this->PathBeginLink->Parameters = CCGetQueryString("QueryString", array("menu_id", "ccsForm"));
-        $this->PathBeginLink->Page = $this->RelativePath . "../cont.php";
+        $this->PathBeginLink->Page = $this->RelativePath . "../main.php";
         $this->PathCategory = new clsControl(ccsLink, "PathCategory", "PathCategory", ccsText, "", CCGetRequestParam("PathCategory", ccsGet, NULL), $this);
-        $this->PathCategory->Page = $this->RelativePath . "../cont.php";
+        $this->PathCategory->Page = $this->RelativePath . "../main.php";
         $this->CurrentCategory = new clsControl(ccsLabel, "CurrentCategory", "CurrentCategory", ccsText, "", CCGetRequestParam("CurrentCategory", ccsGet, NULL), $this);
     }
 //End Class_Initialize Event

@@ -44,10 +44,22 @@ $Charset = $Charset ? $Charset : "utf-8";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-EC146B92
+//Initialize Objects @1-3637DF26
 $Attributes = new clsAttributes("page:");
 $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
+
+// Controls
+$English = new clsControl(ccsLink, "English", "English", ccsText, "", CCGetRequestParam("English", ccsGet, NULL), $MainPage);
+$English->Page = "main.php";
+$French = new clsControl(ccsLink, "French", "French", ccsText, "", CCGetRequestParam("French", ccsGet, NULL), $MainPage);
+$French->Page = "main.php";
+$MainPage->English = & $English;
+$MainPage->French = & $French;
+$English->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
+$English->Parameters = CCAddParam($English->Parameters, "locale", en);
+$French->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
+$French->Parameters = CCAddParam($French->Parameters, "locale", fr);
 $ScriptIncludes = "";
 $SList = explode("|", $Scripts);
 foreach ($SList as $Script) {
@@ -89,17 +101,19 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-4D8C2A7A
+//Show Page @1-0AF2C533
+$English->Show();
+$French->Show();
 $Tpl->block_path = "";
 $Tpl->Parse($BlockToParse, false);
 if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
-$BDBGFIN0L8C4H2A = explode("|", "<center><font f|ace=\"Arial\"><small>G|&#101;&#110;e&#1|14;&#97;t&#101;&#10|0; <!-- SCC -->w&#|105;&#116;&#104; <|!-- SCC -->C&#111|;de&#67;h&#97;&|#114;ge <!-- SCC -->|&#83;tu&#100;io.</sm|all></font></center|>");
+$NACLPMT7S1B0C3S2Q = "<center><font face=\"Arial\"><small>Ge&#110;er&#97;&#116;&#101;d <!-- SCC -->w&#105;&#116;h <!-- SCC -->&#67;o&#100;&#101;Cha&#114;&#103;e <!-- CCS -->&#83;tudi&#111;.</small></font></center>";
 if(preg_match("/<\/body>/i", $main_block)) {
-    $main_block = preg_replace("/<\/body>/i", join($BDBGFIN0L8C4H2A,"") . "</body>", $main_block);
+    $main_block = preg_replace("/<\/body>/i", $NACLPMT7S1B0C3S2Q . "</body>", $main_block);
 } else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block = preg_replace("/<\/html>/i", join($BDBGFIN0L8C4H2A,"") . "</html>", $main_block);
+    $main_block = preg_replace("/<\/html>/i", $NACLPMT7S1B0C3S2Q . "</html>", $main_block);
 } else if(!preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block .= join($BDBGFIN0L8C4H2A,"");
+    $main_block .= $NACLPMT7S1B0C3S2Q;
 }
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);

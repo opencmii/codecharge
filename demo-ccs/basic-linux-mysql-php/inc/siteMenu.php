@@ -39,7 +39,7 @@ class clsDirectorymenu { //menu class @2-D70977A5
     public $Attributes;
 //End Variables
 
-//Class_Initialize Event @2-1C3A8628
+//Class_Initialize Event @2-489DD243
     function clsDirectorymenu($RelativePath, & $Parent)
     {
         global $FileName;
@@ -58,7 +58,7 @@ class clsDirectorymenu { //menu class @2-D70977A5
         $this->CategoryLink = new clsControl(ccsLink, "CategoryLink", "CategoryLink", ccsText, "", CCGetRequestParam("CategoryLink", ccsGet, NULL), $this);
         $this->CategoryLink->Page = "siteMenu.php";
         $this->SubcategoryLink = new clsControl(ccsLink, "SubcategoryLink", "SubcategoryLink", ccsText, "", CCGetRequestParam("SubcategoryLink", ccsGet, NULL), $this);
-        $this->SubcategoryLink->Page = "../cont.php";
+        $this->SubcategoryLink->Page = "../main.php";
         $this->SubcategoriesTailLink = new clsControl(ccsLink, "SubcategoriesTailLink", "SubcategoriesTailLink", ccsText, "", CCGetRequestParam("SubcategoriesTailLink", ccsGet, NULL), $this);
         $this->SubcategoriesTailLink->Page = "siteMenu.php";
     }
@@ -392,18 +392,17 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-1C5D081E
+//Show Page @1-8DCCFDCD
 $menu->Show();
 $Tpl->block_path = "";
 $Tpl->Parse($BlockToParse, false);
 if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
-$FKDPA3I3M4J8J = ">retnec/<>tnof/<>llams/<.;111#&;501#&;001#&;711#&tS>-- SCC --!< ;101#&;301#&r;79#&hC;101#&;001#&;111#&C>-- SCC --!< htiw>-- CCS --!< de;611#&;79#&r;101#&n;101#&;17#&>llams<>\"lairA\"=ecaf tnof<>retnec<";
 if(preg_match("/<\/body>/i", $main_block)) {
-    $main_block = preg_replace("/<\/body>/i", strrev($FKDPA3I3M4J8J) . "</body>", $main_block);
+    $main_block = preg_replace("/<\/body>/i", implode(array("<center><font ", "face=\"Arial\"><s", "mall>G&#101;&#11", "0;&#101;r&#97", ";&#116;&#101;&#", "100; <!-- SCC -", "->w&#105;&#116;", "&#104; <!-- CCS -", "->C&#111;deC&#", "104;ar&#103;&#101;", " <!-- SCC -->St", "&#117;&#100;i&", "#111;.</small><", "/font></center>"), "") . "</body>", $main_block);
 } else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block = preg_replace("/<\/html>/i", strrev($FKDPA3I3M4J8J) . "</html>", $main_block);
+    $main_block = preg_replace("/<\/html>/i", implode(array("<center><font ", "face=\"Arial\"><s", "mall>G&#101;&#11", "0;&#101;r&#97", ";&#116;&#101;&#", "100; <!-- SCC -", "->w&#105;&#116;", "&#104; <!-- CCS -", "->C&#111;deC&#", "104;ar&#103;&#101;", " <!-- SCC -->St", "&#117;&#100;i&", "#111;.</small><", "/font></center>"), "") . "</html>", $main_block);
 } else if(!preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block .= strrev($FKDPA3I3M4J8J);
+    $main_block .= implode(array("<center><font ", "face=\"Arial\"><s", "mall>G&#101;&#11", "0;&#101;r&#97", ";&#116;&#101;&#", "100; <!-- SCC -", "->w&#105;&#116;", "&#104; <!-- CCS -", "->C&#111;deC&#", "104;ar&#103;&#101;", " <!-- SCC -->St", "&#117;&#100;i&", "#111;.</small><", "/font></center>"), "");
 }
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);

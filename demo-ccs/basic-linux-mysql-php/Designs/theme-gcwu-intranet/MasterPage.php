@@ -69,7 +69,7 @@ class clsMasterPage { //MasterPage class @1-BFE8F48A
     }
 //End Operations Method
 
-//Initialize Method @1-79F7D4FC
+//Initialize Method @1-779DF114
     function Initialize($Path = "")
     {
         global $FileName;
@@ -92,9 +92,9 @@ class clsMasterPage { //MasterPage class @1-BFE8F48A
         // Create Components
         $this->Banner = new clsControl(ccsLink, "Banner", "Banner", ccsText, "", CCGetRequestParam("Banner", ccsGet, NULL), $this);
         $this->Banner->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
-        $this->Banner->Page = "../../cont.php";
-        $this->TopMenu = new clsPanel("TopMenu", $this);
-        $this->TopMenu->isContentPlaceholder = true;
+        $this->Banner->Page = "../../main.php";
+        $this->NavigationBar = new clsPanel("NavigationBar", $this);
+        $this->NavigationBar->isContentPlaceholder = true;
         $this->Content = new clsPanel("Content", $this);
         $this->Content->isContentPlaceholder = true;
         $this->Breadcrum = new clsPanel("Breadcrum", $this);

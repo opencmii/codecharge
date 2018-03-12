@@ -11,7 +11,7 @@
 					<Attributes/>
 					<Features/>
 				</Link>
-				<Link id="13" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="SubcategoryLink" fieldSource="sub_menu_name" hrefSource="../cont.ccp" PathID="menuSubcategoryLink" wizardUseTemplateBlock="False" linkProperties="{'textSource':'','textSourceDB':'sub_menu_name','hrefSource':'../cont.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'0':{'sourceType':'DataField','parameterSource':'sub_menu_id','parameterName':'menu_id'},'length':1,'objectType':'linkParameters'}}"><Components/>
+				<Link id="13" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="SubcategoryLink" fieldSource="sub_menu_name" hrefSource="../main.ccp" PathID="menuSubcategoryLink" wizardUseTemplateBlock="False" linkProperties="{'textSource':'','textSourceDB':'sub_menu_name','hrefSource':'../cont.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'0':{'sourceType':'DataField','parameterSource':'sub_menu_id','parameterName':'menu_id'},'length':1,'objectType':'linkParameters'}}"><Components/>
 					<Events/>
 					<LinkParameters>
 						<LinkParameter id="14" sourceType="DataField" format="yyyy-mm-dd" name="menu_id" source="sub_menu_id"/>

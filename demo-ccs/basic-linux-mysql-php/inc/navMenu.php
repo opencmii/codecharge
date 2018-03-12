@@ -89,16 +89,17 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-28F5206F
+//Show Page @1-905C4CB8
 $Tpl->block_path = "";
 $Tpl->Parse($BlockToParse, false);
 if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
+$LNTTJBMS10J8J1C7C0M = array("<center><font fa","ce=\"Arial\"><small",">Ge&#110;er&#97;te","d <!-- SCC -->&#119",";&#105;th <!--"," CCS -->&#67;od","e&#67;harge <!-- SC","C -->&#83;&#116;&#","117;&#100;i&#1","11;.</small></","font></center>");
 if(preg_match("/<\/body>/i", $main_block)) {
-    $main_block = preg_replace("/<\/body>/i", "<center><font face=\"Arial\"><small>Gener&#97;t&#101;d <!-- SCC -->wi&#116;&#104; <!-- SCC -->C&#111;&#100;&#101;C&#104;ar&#103;&#101; <!-- CCS -->St&#117;d&#105;&#111;.</small></font></center>" . "</body>", $main_block);
+    $main_block = preg_replace("/<\/body>/i", join($LNTTJBMS10J8J1C7C0M,"") . "</body>", $main_block);
 } else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block = preg_replace("/<\/html>/i", "<center><font face=\"Arial\"><small>Gener&#97;t&#101;d <!-- SCC -->wi&#116;&#104; <!-- SCC -->C&#111;&#100;&#101;C&#104;ar&#103;&#101; <!-- CCS -->St&#117;d&#105;&#111;.</small></font></center>" . "</html>", $main_block);
+    $main_block = preg_replace("/<\/html>/i", join($LNTTJBMS10J8J1C7C0M,"") . "</html>", $main_block);
 } else if(!preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block .= "<center><font face=\"Arial\"><small>Gener&#97;t&#101;d <!-- SCC -->wi&#116;&#104; <!-- SCC -->C&#111;&#100;&#101;C&#104;ar&#103;&#101; <!-- CCS -->St&#117;d&#105;&#111;.</small></font></center>";
+    $main_block .= join($LNTTJBMS10J8J1C7C0M,"");
 }
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);

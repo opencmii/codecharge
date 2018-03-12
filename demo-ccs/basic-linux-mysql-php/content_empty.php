@@ -1,4 +1,5 @@
 <?php
+
 //Error reporting @1-8F636958
 error_reporting(E_ALL | E_STRICT);
 //End Error reporting
@@ -87,7 +88,7 @@ class clscontent_empty { //content_empty class @1-ACB30078
     }
 //End Initialize Method
 
-//Show Method @1-FCFC26D7
+//Show Method @1-FEAEB78D
     function Show()
     {
         global $Tpl;
@@ -99,6 +100,7 @@ class clscontent_empty { //content_empty class @1-ACB30078
             $Tpl->LoadTemplate("/" . $this->TemplateFileName, $this->ComponentName, $this->TemplateEncoding, "remove");
         }
         $Tpl->block_path = $Tpl->block_path . "/" . $this->ComponentName;
+        $this->Attributes->SetValue("Filename", "");
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeShow", $this);
         if(!$this->Visible) {
             $Tpl->block_path = $block_path;
@@ -115,4 +117,7 @@ class clscontent_empty { //content_empty class @1-ACB30078
 //End Show Method
 
 } //End content_empty Class @1-FCB6E20C
+
+
 ?>
+
