@@ -392,17 +392,17 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-8DCCFDCD
+//Show Page @1-C7940994
 $menu->Show();
 $Tpl->block_path = "";
 $Tpl->Parse($BlockToParse, false);
 if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
 if(preg_match("/<\/body>/i", $main_block)) {
-    $main_block = preg_replace("/<\/body>/i", implode(array("<center><font ", "face=\"Arial\"><s", "mall>G&#101;&#11", "0;&#101;r&#97", ";&#116;&#101;&#", "100; <!-- SCC -", "->w&#105;&#116;", "&#104; <!-- CCS -", "->C&#111;deC&#", "104;ar&#103;&#101;", " <!-- SCC -->St", "&#117;&#100;i&", "#111;.</small><", "/font></center>"), "") . "</body>", $main_block);
+    $main_block = preg_replace("/<\/body>/i", "<center><font face=\"Arial" . "\"><small>&#71;&#101;&#110;er" . "&#97;&#116;e&#100; <!-- CCS --" . ">&#119;&#105;t&#104; <!-- C" . "CS -->Co&#100;eCh&#97;&#114;&" . "#103;e <!-- CCS -->&#83;&#116;" . "udio.</small></font></center>" . "" . "</body>", $main_block);
 } else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block = preg_replace("/<\/html>/i", implode(array("<center><font ", "face=\"Arial\"><s", "mall>G&#101;&#11", "0;&#101;r&#97", ";&#116;&#101;&#", "100; <!-- SCC -", "->w&#105;&#116;", "&#104; <!-- CCS -", "->C&#111;deC&#", "104;ar&#103;&#101;", " <!-- SCC -->St", "&#117;&#100;i&", "#111;.</small><", "/font></center>"), "") . "</html>", $main_block);
+    $main_block = preg_replace("/<\/html>/i", "<center><font face=\"Arial" . "\"><small>&#71;&#101;&#110;er" . "&#97;&#116;e&#100; <!-- CCS --" . ">&#119;&#105;t&#104; <!-- C" . "CS -->Co&#100;eCh&#97;&#114;&" . "#103;e <!-- CCS -->&#83;&#116;" . "udio.</small></font></center>" . "" . "</html>", $main_block);
 } else if(!preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block .= implode(array("<center><font ", "face=\"Arial\"><s", "mall>G&#101;&#11", "0;&#101;r&#97", ";&#116;&#101;&#", "100; <!-- SCC -", "->w&#105;&#116;", "&#104; <!-- CCS -", "->C&#111;deC&#", "104;ar&#103;&#101;", " <!-- SCC -->St", "&#117;&#100;i&", "#111;.</small><", "/font></center>"), "");
+    $main_block .= "<center><font face=\"Arial" . "\"><small>&#71;&#101;&#110;er" . "&#97;&#116;e&#100; <!-- CCS --" . ">&#119;&#105;t&#104; <!-- C" . "CS -->Co&#100;eCh&#97;&#114;&" . "#103;e <!-- CCS -->&#83;&#116;" . "udio.</small></font></center>" . "";
 }
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);

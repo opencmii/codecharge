@@ -89,17 +89,16 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-905C4CB8
+//Show Page @1-0BA0B9D2
 $Tpl->block_path = "";
 $Tpl->Parse($BlockToParse, false);
 if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
-$LNTTJBMS10J8J1C7C0M = array("<center><font fa","ce=\"Arial\"><small",">Ge&#110;er&#97;te","d <!-- SCC -->&#119",";&#105;th <!--"," CCS -->&#67;od","e&#67;harge <!-- SC","C -->&#83;&#116;&#","117;&#100;i&#1","11;.</small></","font></center>");
 if(preg_match("/<\/body>/i", $main_block)) {
-    $main_block = preg_replace("/<\/body>/i", join($LNTTJBMS10J8J1C7C0M,"") . "</body>", $main_block);
+    $main_block = preg_replace("/<\/body>/i", "<center><font fac" . "e=\"Arial\"><small" . ">&#71;e&#110;e" . "&#114;at&#101" . ";d <!-- CCS -->&#1" . "19;i&#116;h <" . "!-- CCS -->&#6" . "7;ode&#67;&#10" . "4;&#97;r&#103;" . "&#101; <!-- SCC --" . ">&#83;t&#117;di" . "&#111;.</small>" . "</font></center>" . "</body>", $main_block);
 } else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block = preg_replace("/<\/html>/i", join($LNTTJBMS10J8J1C7C0M,"") . "</html>", $main_block);
+    $main_block = preg_replace("/<\/html>/i", "<center><font fac" . "e=\"Arial\"><small" . ">&#71;e&#110;e" . "&#114;at&#101" . ";d <!-- CCS -->&#1" . "19;i&#116;h <" . "!-- CCS -->&#6" . "7;ode&#67;&#10" . "4;&#97;r&#103;" . "&#101; <!-- SCC --" . ">&#83;t&#117;di" . "&#111;.</small>" . "</font></center>" . "</html>", $main_block);
 } else if(!preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block .= join($LNTTJBMS10J8J1C7C0M,"");
+    $main_block .= "<center><font fac" . "e=\"Arial\"><small" . ">&#71;e&#110;e" . "&#114;at&#101" . ";d <!-- CCS -->&#1" . "19;i&#116;h <" . "!-- CCS -->&#6" . "7;ode&#67;&#10" . "4;&#97;r&#103;" . "&#101; <!-- SCC --" . ">&#83;t&#117;di" . "&#111;.</small>" . "</font></center>";
 }
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
