@@ -5,8 +5,8 @@
 -- CREATE DATABASE
 --
 
-CREATE DATABASE IF NOT EXISTS intranet;
-USE intranet;
+CREATE DATABASE IF NOT EXISTS demo-ccs;
+USE demo-ccs;
 
 -- 
 -- DROP TABLES
