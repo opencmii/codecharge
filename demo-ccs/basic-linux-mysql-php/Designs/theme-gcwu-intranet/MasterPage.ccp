@@ -15,7 +15,7 @@
 			<Events/>
 			<Features/>
 		</ContentPlaceholder>
-		<Link id="6" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Banner" PathID="Banner" hrefSource="../../main.ccp" wizardUseTemplateBlock="False" linkProperties="{'textSource':'{res:app_no}','textSourceDB':'','hrefSource':'../../cont.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}"><Components/>
+		<Link id="6" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Banner" PathID="Banner" hrefSource="../../main.ccp" wizardUseTemplateBlock="False" linkProperties="{'textSource':'{res:app_no}','textSourceDB':'','hrefSource':'../../main.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}"><Components/>
 			<Events/>
 			<LinkParameters/>
 			<Attributes/>
@@ -28,7 +28,7 @@
 		</ContentPlaceholder>
 	</Components>
 	<CodeFiles>
-		<CodeFile id="Code" language="PHPTemplates" name="MasterPage.php" forShow="True" url="MasterPage.php" comment="//" codePage="utf-8"/>
+		<CodeFile id="Code" language="PHPTemplates" name="MasterPage.php" forShow="True" url="MasterPage.php" comment="//Copyright(c) 2018 Apex Sciences." codePage="utf-8"/>
 	</CodeFiles>
 	<SecurityGroups/>
 	<CachingParameters/>
