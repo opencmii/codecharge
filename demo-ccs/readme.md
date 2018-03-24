@@ -19,7 +19,4 @@ INSTALLATION
 
 4. modify the default application username and password credential as found in demo-ccs\basic-linux-mysql-php\Common.php file. 
 
-IMPORTNANT NOTE: This file should not be readable from the internet, only accessible by the local application.
-
-
-
+IMPORTANT NOTE: Common.php file should not be readable from the internet, only accessible by the local application, as it contains critical Access Control information.
