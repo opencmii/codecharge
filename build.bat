@@ -31,6 +31,6 @@ REM RENAME %WWW%\%DEMO% %WWW%\%DEMO%_old
 
 REM (Re-)install demo-ccs from local directory where this file reside.
 REM MKDIR %WWW%\%DEMO%
-XCOPY /S /D %DEMO%\*.* %WWW%\%DEMO%
+XCOPY /S /D .\*.* %WWW%\%DEMO%
 PAUSE
 
