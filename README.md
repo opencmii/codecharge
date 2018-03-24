@@ -42,9 +42,8 @@ Last, all user interface language variables are defined in external resource tex
 Although demo provided is generated ready for a LAMP system architecture environment (Linux Apache MySQL PHP), it can be re-generated for other combination of language/dbms. The capability to re-generate the demo-ccs demo application in a different languages and DBMS is an awesome feature of CodechargeStudio, which requires however a full licensed copy of CCS.
 
 FILES
-dist-ccs\demo-ccs:	Folder that contains a generated demo application, using the re-useable design component (clf)
-
-dist-ccs\dist-ccs:	Folder that contains the re-useable CodeChargeStudio 5.X Design Templates, 
+* dist-ccs\demo-ccs:	Folder that contains a generated demo application, using the re-useable design component (clf)
+* dist-ccs\dist-ccs:	Folder that contains the re-useable CodeChargeStudio 5.X Design Templates, 
 						starting with theme-gcwu-intranet
 
 
