@@ -1,9 +1,7 @@
 NOTE
 
-<i>In construction</i>
-
 Release Note
-theme-gcwu-intranet design template for codecharge studio is currently being developped within the demo-ccs folder, along with first demo application. Once ready, will be copied here as a new CodeCharge Studio standalone Design template.
+theme-gcwu-intranet design template for codecharge studio is developped first within the demo-ccs Design folder, and copied over when ready, as a standalone contribution.
 
 <h2>Using theme-gcwu-intranet Codecharge variant</h2>
 
