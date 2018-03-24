@@ -11,14 +11,13 @@ Version: WET 3.1.X
 
 This features WET based Design templates for use with YesSoftware CodeCharge Studio 5.x (CCS).
 CCS facilitates Rapid web Application Development (RAD) in ASP, dotnet, Coldfusion, JSP, Perl,or php.
-Application can be generated to run on IIS or Apache web server, and to support a variety of databases (MySQL, Oracle, DB2, MSSQL, PostgreSQL,...).
+Application can be generated to run on IIS or Apache web server, and to support a variety of databases (MySQL, Oracle, DB2, MSSQL, PostgreSQL,...). Default language and DBMS for provided Design templates are php/MySQL, the most common one.
 
 ##Benefits
 
-* Provides CodeChargeStudio developers with a clf compliant Master Template for existing and new projects, starting with the boew-intranet-theme. 
+* Provides CodeChargeStudio developers with a clf compliant Master Design Template for existing and new projects, starting with the boew-intranet-theme. 
 * Only one web page per subject, regardless of the number of user languages or theme used.
 * Interface language labels completely separated from the page, managed in simple text based resource text files.
-* Static text content pages can have all translated text saved on same page yet only one language shown for better configuration control.
 * Truly separates look and feel format and content development for easier web development effort.
 
 * Conforms to WCAG 2.0 AA
@@ -27,32 +26,23 @@ Application can be generated to run on IIS or Apache web server, and to support 
 
 ##Minimum Requirements
 
-* Design Template: CodeCharge Studio 5.X
-* Demos: LAMP stack** (Linux-Apache-MySQL-PHP). 
+* Design Template: CodeCharge Studio 5.X .The design template provided needs to be added either to the installed CodeChargeStudio files or in the Design folder of an existing project.
+* Demos: The demo application was generated to be used in a LAMP stack** (Linux-Apache-MySQL-PHP). By example, if using Bitnami LAMPP distribution based on XAMPP, the demo applicaiton needs to be copied into c:\xampp\htdocs folder, and have the schema found in the data folder created on the corresponding MySQL database, using the default credential (username/password) found in the Common.php (which should be changed by the user).
 
 ##Additional Notes
 
 * wet-boew-codecharge vs wet-boew-php:
+wet-boew-codecharge provides re-useable Design template to implement clf while wet-boew-php is a full php based framework to be used to make php based pages. wet-boew-codecharge requries the use of CodechargeStudio 5.x while wet-boew-php only need php.
 
-Codecharge variant provides re-usable Master Templates for CodeCharge, which are independent of the generator language used (php,.net,perl,C##,...)
-Some demos are provided, all generated in php, ready to use on any Apache MySQL PHP infrastructure. They showcase the re-usability of the clf themes 
-and a MVC based application framework. Web developers can focus on content, and re-use the same content across all themes provided.
-Html and php code files are completely separated (.php and .html), keeping a clear separation between presentation and code.
-All user interface language variables are defined in external resource text file, one per language, for easier maintenance.
+Also, in wet-boew-codecharge, presentation and domain code are clearly separated respectively in .html and .php code files.
+Last, all user interface language variables are defined in external resource text file, one per language, for easier maintenance.
 
 * Demo environment tailoring**
 
-Although demo provided is generated ready for a LAMP system architecture environment (Linux Apache MySQL PHP), it can be re-generated for other combination of language/dbms. This capability requires a licensed copy of CCS.
-
-To run demo on Windows: Get CodechargeStudio, open demo project file, change output file format from Unix/Linux to Windows, and re-generate demo.
-
-To run demo using ASP/dotnet/JSP/Coldfusion: Get CodechargeStudio, open demo project file, change Code Language, and re-generate demo.
-
-To run demo with MSAccess/Oracle/MSSQL/DB2/PostgresSQL: Get CodechargeStudio, , open demo project file, change database connections, and re-generate demo. Conversion of schema from MySQL SQL syntax to the other SQL dbms may be required.
-
+Although demo provided is generated ready for a LAMP system architecture environment (Linux Apache MySQL PHP), it can be re-generated for other combination of language/dbms. The capability to re-generate the demo-ccs demo application in a different languages and DBMS is an awesome feature of CodechargeStudio, which requires however a full licensed copy of CCS.
 
 FILES
-dist-ccs\Projects:		Folder that contains a generated demo application, using the re-useable design component (clf)
+dist-ccs\Projects:	Folder that contains a generated demo application, using the re-useable design component (clf)
 dist-ccs\Components:	Folder that contains the re-useable CodeChargeStudio 5.X Design Templates, 
 						starting with theme-gcwu-intranet
 
