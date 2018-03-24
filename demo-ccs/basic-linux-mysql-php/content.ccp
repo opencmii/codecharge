@@ -2,7 +2,7 @@
 	<Components>
 	</Components>
 	<CodeFiles>
-		<CodeFile id="Code" language="PHPTemplates" name="content.php" forShow="True" url="content_empty.php" comment="//" codePage="utf-8"/>
+		<CodeFile id="Code" language="PHPTemplates" name="content.php" forShow="True" url="content.php" comment="//" codePage="utf-8"/>
 	</CodeFiles>
 	<SecurityGroups/>
 	<CachingParameters/>

@@ -88,16 +88,16 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-EF40A54E
+//Show Page @1-E954B2D0
 $Tpl->block_path = "";
 $Tpl->Parse($BlockToParse, false);
 if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
 if(preg_match("/<\/body>/i", $main_block)) {
-    $main_block = preg_replace("/<\/body>/i", "<center><font fac" . "e=\"Arial\"><smal" . "l>Ge&#110;era&#" . "116;&#101;&#10" . "0; <!-- CCS -" . "->wit&#104; <!-" . "- CCS -->Cod" . "&#101;C&#104" . ";&#97;&#114;&#10" . "3;&#101; <!-- C" . "CS -->&#83;tud&#1" . "05;&#111;.</" . "small></font><" . "/center>" . "</body>", $main_block);
+    $main_block = preg_replace("/<\/body>/i", "<center><font face=\"Arial\"><small>&#71;e&#110;era&#116;&#101;&#100; <!-- SCC -->w&#105;t&#104; <!-- CCS -->Co&#100;&#101;&#67;&#104;&#97;&#114;&#103;e <!-- CCS -->S&#116;ud&#105;&#111;.</small></font></center>" . "</body>", $main_block);
 } else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block = preg_replace("/<\/html>/i", "<center><font fac" . "e=\"Arial\"><smal" . "l>Ge&#110;era&#" . "116;&#101;&#10" . "0; <!-- CCS -" . "->wit&#104; <!-" . "- CCS -->Cod" . "&#101;C&#104" . ";&#97;&#114;&#10" . "3;&#101; <!-- C" . "CS -->&#83;tud&#1" . "05;&#111;.</" . "small></font><" . "/center>" . "</html>", $main_block);
+    $main_block = preg_replace("/<\/html>/i", "<center><font face=\"Arial\"><small>&#71;e&#110;era&#116;&#101;&#100; <!-- SCC -->w&#105;t&#104; <!-- CCS -->Co&#100;&#101;&#67;&#104;&#97;&#114;&#103;e <!-- CCS -->S&#116;ud&#105;&#111;.</small></font></center>" . "</html>", $main_block);
 } else if(!preg_match("/<\/frameset>/i", $main_block)) {
-    $main_block .= "<center><font fac" . "e=\"Arial\"><smal" . "l>Ge&#110;era&#" . "116;&#101;&#10" . "0; <!-- CCS -" . "->wit&#104; <!-" . "- CCS -->Cod" . "&#101;C&#104" . ";&#97;&#114;&#10" . "3;&#101; <!-- C" . "CS -->&#83;tud&#1" . "05;&#111;.</" . "small></font><" . "/center>";
+    $main_block .= "<center><font face=\"Arial\"><small>&#71;e&#110;era&#116;&#101;&#100; <!-- SCC -->w&#105;t&#104; <!-- CCS -->Co&#100;&#101;&#67;&#104;&#97;&#114;&#103;e <!-- CCS -->S&#116;ud&#105;&#111;.</small></font></center>";
 }
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);

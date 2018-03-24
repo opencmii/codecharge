@@ -4,7 +4,7 @@
 error_reporting(E_ALL | E_STRICT);
 //End Error reporting
 
-class clscontent_empty { //content_empty class @1-ACB30078
+class clscontent { //content class @1-AA011ECD
 
 //Variables @1-EEEBE252
     public $ComponentType = "IncludablePage";
@@ -26,8 +26,8 @@ class clscontent_empty { //content_empty class @1-ACB30078
     public $TemplateSource;
 //End Variables
 
-//Class_Initialize Event @1-6B91444E
-    function clscontent_empty($RelativePath, $ComponentName, & $Parent)
+//Class_Initialize Event @1-DBB87975
+    function clscontent($RelativePath, $ComponentName, & $Parent)
     {
         global $CCSLocales;
         global $DefaultDateFormat;
@@ -35,9 +35,9 @@ class clscontent_empty { //content_empty class @1-ACB30078
         $this->RelativePath = $RelativePath;
         $this->Visible = true;
         $this->Parent = & $Parent;
-        $this->FileName = "content_empty.php";
+        $this->FileName = "content.php";
         $this->Redirect = "";
-        $this->TemplateFileName = "content_empty.html";
+        $this->TemplateFileName = "content.html";
         $this->BlockToParse = "main";
         $this->TemplateEncoding = "UTF-8";
         $this->ContentType = "text/html";
@@ -116,7 +116,7 @@ class clscontent_empty { //content_empty class @1-ACB30078
     }
 //End Show Method
 
-} //End content_empty Class @1-FCB6E20C
+} //End content Class @1-FCB6E20C
 
 
 ?>

@@ -24,7 +24,7 @@ $CCConnectionSettings = array (
 );
 //End Connection Settings
 
-//Initialize Common Variables @0-5C6ECB90
+//Initialize Common Variables @0-4978D954
 $PHPVersion = explode(".",  phpversion());
 if (($PHPVersion[0] < 4) || ($PHPVersion[0] == 4  && $PHPVersion[1] < 1)) {
     echo "Sorry. This program requires PHP 4.1 and above to run. You may upgrade your php at <a href='http://www.php.net/downloads.php'>http://www.php.net/downloads.php</a>";
@@ -60,7 +60,7 @@ $Charset = "utf-8";
 if ($PHPLocale = $CCSLocales->GetFormatInfo("PHPLocale"))
     setlocale(LC_ALL, $PHPLocale);
 CCConvertDataArrays();
-$CCProjectStyle = "";
+$CCProjectStyle = "Basic";
 $CCProjectDesign = "theme-gcwu-intranet";
 CCSelectProjectDesign();
 //for compatibility
